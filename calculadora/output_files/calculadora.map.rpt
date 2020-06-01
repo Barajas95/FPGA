@@ -1,0 +1,1427 @@
+Analysis & Synthesis report for calculadora
+Wed Nov 04 06:54:08 2015
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Port Connectivity Checks: "div:elemento_4|iteradiv:elemento_8"
+ 14. Port Connectivity Checks: "div:elemento_4|iteradiv:elemento_1|restador:elemento_2|fullad:elemento_8"
+ 15. Port Connectivity Checks: "div:elemento_4|iteradiv:elemento_1|sumador:elemento_1|fullad:elemento_8"
+ 16. Port Connectivity Checks: "div:elemento_4|iteradiv:elemento_1"
+ 17. Port Connectivity Checks: "div:elemento_4"
+ 18. Port Connectivity Checks: "mult:elemento_3|itera:elemento_9"
+ 19. Port Connectivity Checks: "resta:elemento_2|fullad:elemento_8"
+ 20. Port Connectivity Checks: "suma:elemento_1|fullad:elemento_8"
+ 21. Elapsed Time Per Partition
+ 22. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Nov 04 06:54:08 2015           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; calculadora                                     ;
+; Top-level Entity Name              ; calculadora                                     ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 702                                             ;
+;     Total combinational functions  ; 496                                             ;
+;     Dedicated logic registers      ; 278                                             ;
+; Total registers                    ; 278                                             ;
+; Total pins                         ; 43                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C70F896C6       ;                    ;
+; Top-level entity name                                                      ; calculadora        ; calculadora        ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                               ;
++----------------------------------+-----------------+-----------------------+---------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                                  ; Library ;
++----------------------------------+-----------------+-----------------------+---------------------------------------------------------------+---------+
+; calculadora.vhd                  ; yes             ; User VHDL File        ; C:/altera/13.0sp1/calculadora 2.0/calculadora/calculadora.vhd ;         ;
+; suma.vhd                         ; yes             ; Auto-Found VHDL File  ; C:/altera/13.0sp1/calculadora 2.0/calculadora/suma.vhd        ;         ;
+; had.vhd                          ; yes             ; Auto-Found VHDL File  ; C:/altera/13.0sp1/calculadora 2.0/calculadora/had.vhd         ;         ;
+; fullad.vhd                       ; yes             ; Auto-Found VHDL File  ; C:/altera/13.0sp1/calculadora 2.0/calculadora/fullad.vhd      ;         ;
+; resta.vhd                        ; yes             ; Auto-Found VHDL File  ; C:/altera/13.0sp1/calculadora 2.0/calculadora/resta.vhd       ;         ;
+; mult.vhd                         ; yes             ; Auto-Found VHDL File  ; C:/altera/13.0sp1/calculadora 2.0/calculadora/mult.vhd        ;         ;
+; genvectores.vhd                  ; yes             ; Auto-Found VHDL File  ; C:/altera/13.0sp1/calculadora 2.0/calculadora/genvectores.vhd ;         ;
+; itera.vhd                        ; yes             ; Auto-Found VHDL File  ; C:/altera/13.0sp1/calculadora 2.0/calculadora/itera.vhd       ;         ;
+; pvsel.vhd                        ; yes             ; Auto-Found VHDL File  ; C:/altera/13.0sp1/calculadora 2.0/calculadora/pvsel.vhd       ;         ;
+; sum17.vhd                        ; yes             ; Auto-Found VHDL File  ; C:/altera/13.0sp1/calculadora 2.0/calculadora/sum17.vhd       ;         ;
+; shift.vhd                        ; yes             ; Auto-Found VHDL File  ; C:/altera/13.0sp1/calculadora 2.0/calculadora/shift.vhd       ;         ;
+; div.vhd                          ; yes             ; Auto-Found VHDL File  ; C:/altera/13.0sp1/calculadora 2.0/calculadora/div.vhd         ;         ;
+; iteradiv.vhd                     ; yes             ; Auto-Found VHDL File  ; C:/altera/13.0sp1/calculadora 2.0/calculadora/iteradiv.vhd    ;         ;
+; sumador.vhd                      ; yes             ; Auto-Found VHDL File  ; C:/altera/13.0sp1/calculadora 2.0/calculadora/sumador.vhd     ;         ;
+; restador.vhd                     ; yes             ; Auto-Found VHDL File  ; C:/altera/13.0sp1/calculadora 2.0/calculadora/restador.vhd    ;         ;
++----------------------------------+-----------------+-----------------------+---------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 702   ;
+;                                             ;       ;
+; Total combinational functions               ; 496   ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 295   ;
+;     -- 3 input functions                    ; 156   ;
+;     -- <=2 input functions                  ; 45    ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 496   ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 278   ;
+;     -- Dedicated logic registers            ; 278   ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 43    ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 278   ;
+; Total fan-out                               ; 2318  ;
+; Average fan-out                             ; 2.84  ;
++---------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                 ;
++----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node       ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                   ; Library Name ;
++----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------+--------------+
+; |calculadora                     ; 496 (47)          ; 278 (0)      ; 0           ; 0            ; 0       ; 0         ; 43   ; 0            ; |calculadora                                                                          ; work         ;
+;    |div:elemento_4|              ; 239 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4                                                           ; work         ;
+;       |iteradiv:elemento_1|      ; 16 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_1                                       ; work         ;
+;          |restador:elemento_2|   ; 16 (9)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_1|restador:elemento_2                   ; work         ;
+;             |FULLAD:elemento_2|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_1|restador:elemento_2|FULLAD:elemento_2 ; work         ;
+;             |FULLAD:elemento_3|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_1|restador:elemento_2|FULLAD:elemento_3 ; work         ;
+;             |FULLAD:elemento_4|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_1|restador:elemento_2|FULLAD:elemento_4 ; work         ;
+;             |FULLAD:elemento_5|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_1|restador:elemento_2|FULLAD:elemento_5 ; work         ;
+;             |FULLAD:elemento_7|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_1|restador:elemento_2|FULLAD:elemento_7 ; work         ;
+;             |FULLAD:elemento_8|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_1|restador:elemento_2|FULLAD:elemento_8 ; work         ;
+;             |HAD:elemento_1|     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_1|restador:elemento_2|HAD:elemento_1    ; work         ;
+;       |iteradiv:elemento_2|      ; 34 (8)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_2                                       ; work         ;
+;          |restador:elemento_2|   ; 13 (1)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_2|restador:elemento_2                   ; work         ;
+;             |FULLAD:elemento_2|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_2|restador:elemento_2|FULLAD:elemento_2 ; work         ;
+;             |FULLAD:elemento_3|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_2|restador:elemento_2|FULLAD:elemento_3 ; work         ;
+;             |FULLAD:elemento_4|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_2|restador:elemento_2|FULLAD:elemento_4 ; work         ;
+;             |FULLAD:elemento_5|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_2|restador:elemento_2|FULLAD:elemento_5 ; work         ;
+;             |FULLAD:elemento_6|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_2|restador:elemento_2|FULLAD:elemento_6 ; work         ;
+;             |FULLAD:elemento_7|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_2|restador:elemento_2|FULLAD:elemento_7 ; work         ;
+;          |sumador:elemento_1|    ; 13 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_2|sumador:elemento_1                    ; work         ;
+;             |FULLAD:elemento_2|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_2|sumador:elemento_1|FULLAD:elemento_2  ; work         ;
+;             |FULLAD:elemento_3|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_2|sumador:elemento_1|FULLAD:elemento_3  ; work         ;
+;             |FULLAD:elemento_4|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_2|sumador:elemento_1|FULLAD:elemento_4  ; work         ;
+;             |FULLAD:elemento_5|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_2|sumador:elemento_1|FULLAD:elemento_5  ; work         ;
+;             |FULLAD:elemento_6|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_2|sumador:elemento_1|FULLAD:elemento_6  ; work         ;
+;             |FULLAD:elemento_7|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_2|sumador:elemento_1|FULLAD:elemento_7  ; work         ;
+;             |HAD:elemento_1|     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_2|sumador:elemento_1|HAD:elemento_1     ; work         ;
+;       |iteradiv:elemento_3|      ; 39 (9)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_3                                       ; work         ;
+;          |restador:elemento_2|   ; 15 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_3|restador:elemento_2                   ; work         ;
+;             |FULLAD:elemento_2|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_3|restador:elemento_2|FULLAD:elemento_2 ; work         ;
+;             |FULLAD:elemento_3|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_3|restador:elemento_2|FULLAD:elemento_3 ; work         ;
+;             |FULLAD:elemento_4|  ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_3|restador:elemento_2|FULLAD:elemento_4 ; work         ;
+;             |FULLAD:elemento_5|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_3|restador:elemento_2|FULLAD:elemento_5 ; work         ;
+;             |FULLAD:elemento_6|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_3|restador:elemento_2|FULLAD:elemento_6 ; work         ;
+;             |FULLAD:elemento_7|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_3|restador:elemento_2|FULLAD:elemento_7 ; work         ;
+;             |FULLAD:elemento_8|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_3|restador:elemento_2|FULLAD:elemento_8 ; work         ;
+;          |sumador:elemento_1|    ; 15 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_3|sumador:elemento_1                    ; work         ;
+;             |FULLAD:elemento_2|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_3|sumador:elemento_1|FULLAD:elemento_2  ; work         ;
+;             |FULLAD:elemento_3|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_3|sumador:elemento_1|FULLAD:elemento_3  ; work         ;
+;             |FULLAD:elemento_4|  ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_3|sumador:elemento_1|FULLAD:elemento_4  ; work         ;
+;             |FULLAD:elemento_5|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_3|sumador:elemento_1|FULLAD:elemento_5  ; work         ;
+;             |FULLAD:elemento_6|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_3|sumador:elemento_1|FULLAD:elemento_6  ; work         ;
+;             |FULLAD:elemento_7|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_3|sumador:elemento_1|FULLAD:elemento_7  ; work         ;
+;             |FULLAD:elemento_8|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_3|sumador:elemento_1|FULLAD:elemento_8  ; work         ;
+;       |iteradiv:elemento_4|      ; 34 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_4                                       ; work         ;
+;          |restador:elemento_2|   ; 9 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_4|restador:elemento_2                   ; work         ;
+;             |FULLAD:elemento_2|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_4|restador:elemento_2|FULLAD:elemento_2 ; work         ;
+;             |FULLAD:elemento_3|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_4|restador:elemento_2|FULLAD:elemento_3 ; work         ;
+;             |FULLAD:elemento_4|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_4|restador:elemento_2|FULLAD:elemento_4 ; work         ;
+;             |FULLAD:elemento_5|  ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_4|restador:elemento_2|FULLAD:elemento_5 ; work         ;
+;             |FULLAD:elemento_6|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_4|restador:elemento_2|FULLAD:elemento_6 ; work         ;
+;          |sumador:elemento_1|    ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_4|sumador:elemento_1                    ; work         ;
+;             |FULLAD:elemento_2|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_4|sumador:elemento_1|FULLAD:elemento_2  ; work         ;
+;             |FULLAD:elemento_3|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_4|sumador:elemento_1|FULLAD:elemento_3  ; work         ;
+;             |FULLAD:elemento_5|  ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_4|sumador:elemento_1|FULLAD:elemento_5  ; work         ;
+;             |FULLAD:elemento_6|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_4|sumador:elemento_1|FULLAD:elemento_6  ; work         ;
+;       |iteradiv:elemento_5|      ; 30 (13)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_5                                       ; work         ;
+;          |restador:elemento_2|   ; 9 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_5|restador:elemento_2                   ; work         ;
+;             |FULLAD:elemento_2|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_5|restador:elemento_2|FULLAD:elemento_2 ; work         ;
+;             |FULLAD:elemento_3|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_5|restador:elemento_2|FULLAD:elemento_3 ; work         ;
+;             |FULLAD:elemento_4|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_5|restador:elemento_2|FULLAD:elemento_4 ; work         ;
+;             |FULLAD:elemento_5|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_5|restador:elemento_2|FULLAD:elemento_5 ; work         ;
+;             |FULLAD:elemento_6|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_5|restador:elemento_2|FULLAD:elemento_6 ; work         ;
+;             |FULLAD:elemento_7|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_5|restador:elemento_2|FULLAD:elemento_7 ; work         ;
+;          |sumador:elemento_1|    ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_5|sumador:elemento_1                    ; work         ;
+;             |FULLAD:elemento_2|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_5|sumador:elemento_1|FULLAD:elemento_2  ; work         ;
+;             |FULLAD:elemento_3|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_5|sumador:elemento_1|FULLAD:elemento_3  ; work         ;
+;             |FULLAD:elemento_4|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_5|sumador:elemento_1|FULLAD:elemento_4  ; work         ;
+;             |FULLAD:elemento_5|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_5|sumador:elemento_1|FULLAD:elemento_5  ; work         ;
+;             |FULLAD:elemento_6|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_5|sumador:elemento_1|FULLAD:elemento_6  ; work         ;
+;       |iteradiv:elemento_6|      ; 33 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_6                                       ; work         ;
+;          |restador:elemento_2|   ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_6|restador:elemento_2                   ; work         ;
+;             |FULLAD:elemento_2|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_6|restador:elemento_2|FULLAD:elemento_2 ; work         ;
+;             |FULLAD:elemento_4|  ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_6|restador:elemento_2|FULLAD:elemento_4 ; work         ;
+;             |FULLAD:elemento_5|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_6|restador:elemento_2|FULLAD:elemento_5 ; work         ;
+;             |FULLAD:elemento_6|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_6|restador:elemento_2|FULLAD:elemento_6 ; work         ;
+;          |sumador:elemento_1|    ; 9 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_6|sumador:elemento_1                    ; work         ;
+;             |FULLAD:elemento_2|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_6|sumador:elemento_1|FULLAD:elemento_2  ; work         ;
+;             |FULLAD:elemento_4|  ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_6|sumador:elemento_1|FULLAD:elemento_4  ; work         ;
+;             |FULLAD:elemento_5|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_6|sumador:elemento_1|FULLAD:elemento_5  ; work         ;
+;             |FULLAD:elemento_6|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_6|sumador:elemento_1|FULLAD:elemento_6  ; work         ;
+;       |iteradiv:elemento_7|      ; 29 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_7                                       ; work         ;
+;          |restador:elemento_2|   ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_7|restador:elemento_2                   ; work         ;
+;             |FULLAD:elemento_2|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_7|restador:elemento_2|FULLAD:elemento_2 ; work         ;
+;             |FULLAD:elemento_3|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_7|restador:elemento_2|FULLAD:elemento_3 ; work         ;
+;             |FULLAD:elemento_4|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_7|restador:elemento_2|FULLAD:elemento_4 ; work         ;
+;             |FULLAD:elemento_5|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_7|restador:elemento_2|FULLAD:elemento_5 ; work         ;
+;             |FULLAD:elemento_6|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_7|restador:elemento_2|FULLAD:elemento_6 ; work         ;
+;          |sumador:elemento_1|    ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_7|sumador:elemento_1                    ; work         ;
+;             |FULLAD:elemento_2|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_7|sumador:elemento_1|FULLAD:elemento_2  ; work         ;
+;             |FULLAD:elemento_3|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_7|sumador:elemento_1|FULLAD:elemento_3  ; work         ;
+;             |FULLAD:elemento_4|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_7|sumador:elemento_1|FULLAD:elemento_4  ; work         ;
+;             |FULLAD:elemento_5|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_7|sumador:elemento_1|FULLAD:elemento_5  ; work         ;
+;             |FULLAD:elemento_6|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_7|sumador:elemento_1|FULLAD:elemento_6  ; work         ;
+;       |iteradiv:elemento_8|      ; 24 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_8                                       ; work         ;
+;          |restador:elemento_2|   ; 16 (8)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_8|restador:elemento_2                   ; work         ;
+;             |FULLAD:elemento_2|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_8|restador:elemento_2|FULLAD:elemento_2 ; work         ;
+;             |FULLAD:elemento_5|  ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_8|restador:elemento_2|FULLAD:elemento_5 ; work         ;
+;             |FULLAD:elemento_6|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_8|restador:elemento_2|FULLAD:elemento_6 ; work         ;
+;             |FULLAD:elemento_8|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_8|restador:elemento_2|FULLAD:elemento_8 ; work         ;
+;          |sumador:elemento_1|    ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_8|sumador:elemento_1                    ; work         ;
+;             |FULLAD:elemento_2|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_8|sumador:elemento_1|FULLAD:elemento_2  ; work         ;
+;             |FULLAD:elemento_5|  ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_8|sumador:elemento_1|FULLAD:elemento_5  ; work         ;
+;             |FULLAD:elemento_6|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_8|sumador:elemento_1|FULLAD:elemento_6  ; work         ;
+;             |FULLAD:elemento_8|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|div:elemento_4|iteradiv:elemento_8|sumador:elemento_1|FULLAD:elemento_8  ; work         ;
+;    |mult:elemento_3|             ; 194 (0)           ; 278 (15)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3                                                          ; work         ;
+;       |GenVectores:elemento_1|   ; 25 (25)           ; 24 (24)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|GenVectores:elemento_1                                   ; work         ;
+;       |itera:elemento_2|         ; 8 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_2                                         ; work         ;
+;          |PvSel:elemento_1|      ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_2|PvSel:elemento_1                        ; work         ;
+;       |itera:elemento_3|         ; 23 (0)            ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_3                                         ; work         ;
+;          |PvSel:elemento_1|      ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_3|PvSel:elemento_1                        ; work         ;
+;          |sum17:elemento_2|      ; 15 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_3|sum17:elemento_2                        ; work         ;
+;             |FULLAD:elemento_10| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_3|sum17:elemento_2|FULLAD:elemento_10     ; work         ;
+;             |FULLAD:elemento_11| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_3|sum17:elemento_2|FULLAD:elemento_11     ; work         ;
+;             |FULLAD:elemento_12| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_3|sum17:elemento_2|FULLAD:elemento_12     ; work         ;
+;             |FULLAD:elemento_13| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_3|sum17:elemento_2|FULLAD:elemento_13     ; work         ;
+;             |FULLAD:elemento_14| ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_3|sum17:elemento_2|FULLAD:elemento_14     ; work         ;
+;             |FULLAD:elemento_15| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_3|sum17:elemento_2|FULLAD:elemento_15     ; work         ;
+;             |FULLAD:elemento_16| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_3|sum17:elemento_2|FULLAD:elemento_16     ; work         ;
+;             |FULLAD:elemento_17| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_3|sum17:elemento_2|FULLAD:elemento_17     ; work         ;
+;       |itera:elemento_4|         ; 23 (0)            ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_4                                         ; work         ;
+;          |PvSel:elemento_1|      ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_4|PvSel:elemento_1                        ; work         ;
+;          |sum17:elemento_2|      ; 15 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_4|sum17:elemento_2                        ; work         ;
+;             |FULLAD:elemento_10| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_4|sum17:elemento_2|FULLAD:elemento_10     ; work         ;
+;             |FULLAD:elemento_11| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_4|sum17:elemento_2|FULLAD:elemento_11     ; work         ;
+;             |FULLAD:elemento_12| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_4|sum17:elemento_2|FULLAD:elemento_12     ; work         ;
+;             |FULLAD:elemento_13| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_4|sum17:elemento_2|FULLAD:elemento_13     ; work         ;
+;             |FULLAD:elemento_14| ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_4|sum17:elemento_2|FULLAD:elemento_14     ; work         ;
+;             |FULLAD:elemento_15| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_4|sum17:elemento_2|FULLAD:elemento_15     ; work         ;
+;             |FULLAD:elemento_16| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_4|sum17:elemento_2|FULLAD:elemento_16     ; work         ;
+;             |FULLAD:elemento_17| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_4|sum17:elemento_2|FULLAD:elemento_17     ; work         ;
+;       |itera:elemento_5|         ; 23 (0)            ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_5                                         ; work         ;
+;          |PvSel:elemento_1|      ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_5|PvSel:elemento_1                        ; work         ;
+;          |sum17:elemento_2|      ; 15 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_5|sum17:elemento_2                        ; work         ;
+;             |FULLAD:elemento_10| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_5|sum17:elemento_2|FULLAD:elemento_10     ; work         ;
+;             |FULLAD:elemento_11| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_5|sum17:elemento_2|FULLAD:elemento_11     ; work         ;
+;             |FULLAD:elemento_12| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_5|sum17:elemento_2|FULLAD:elemento_12     ; work         ;
+;             |FULLAD:elemento_13| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_5|sum17:elemento_2|FULLAD:elemento_13     ; work         ;
+;             |FULLAD:elemento_14| ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_5|sum17:elemento_2|FULLAD:elemento_14     ; work         ;
+;             |FULLAD:elemento_15| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_5|sum17:elemento_2|FULLAD:elemento_15     ; work         ;
+;             |FULLAD:elemento_16| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_5|sum17:elemento_2|FULLAD:elemento_16     ; work         ;
+;             |FULLAD:elemento_17| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_5|sum17:elemento_2|FULLAD:elemento_17     ; work         ;
+;       |itera:elemento_6|         ; 23 (0)            ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_6                                         ; work         ;
+;          |PvSel:elemento_1|      ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_6|PvSel:elemento_1                        ; work         ;
+;          |sum17:elemento_2|      ; 15 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_6|sum17:elemento_2                        ; work         ;
+;             |FULLAD:elemento_10| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_6|sum17:elemento_2|FULLAD:elemento_10     ; work         ;
+;             |FULLAD:elemento_11| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_6|sum17:elemento_2|FULLAD:elemento_11     ; work         ;
+;             |FULLAD:elemento_12| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_6|sum17:elemento_2|FULLAD:elemento_12     ; work         ;
+;             |FULLAD:elemento_13| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_6|sum17:elemento_2|FULLAD:elemento_13     ; work         ;
+;             |FULLAD:elemento_14| ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_6|sum17:elemento_2|FULLAD:elemento_14     ; work         ;
+;             |FULLAD:elemento_15| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_6|sum17:elemento_2|FULLAD:elemento_15     ; work         ;
+;             |FULLAD:elemento_16| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_6|sum17:elemento_2|FULLAD:elemento_16     ; work         ;
+;             |FULLAD:elemento_17| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_6|sum17:elemento_2|FULLAD:elemento_17     ; work         ;
+;       |itera:elemento_7|         ; 23 (0)            ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_7                                         ; work         ;
+;          |PvSel:elemento_1|      ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_7|PvSel:elemento_1                        ; work         ;
+;          |sum17:elemento_2|      ; 15 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_7|sum17:elemento_2                        ; work         ;
+;             |FULLAD:elemento_10| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_7|sum17:elemento_2|FULLAD:elemento_10     ; work         ;
+;             |FULLAD:elemento_11| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_7|sum17:elemento_2|FULLAD:elemento_11     ; work         ;
+;             |FULLAD:elemento_12| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_7|sum17:elemento_2|FULLAD:elemento_12     ; work         ;
+;             |FULLAD:elemento_13| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_7|sum17:elemento_2|FULLAD:elemento_13     ; work         ;
+;             |FULLAD:elemento_14| ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_7|sum17:elemento_2|FULLAD:elemento_14     ; work         ;
+;             |FULLAD:elemento_15| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_7|sum17:elemento_2|FULLAD:elemento_15     ; work         ;
+;             |FULLAD:elemento_16| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_7|sum17:elemento_2|FULLAD:elemento_16     ; work         ;
+;             |FULLAD:elemento_17| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_7|sum17:elemento_2|FULLAD:elemento_17     ; work         ;
+;       |itera:elemento_8|         ; 23 (0)            ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_8                                         ; work         ;
+;          |PvSel:elemento_1|      ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_8|PvSel:elemento_1                        ; work         ;
+;          |sum17:elemento_2|      ; 15 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_8|sum17:elemento_2                        ; work         ;
+;             |FULLAD:elemento_10| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_8|sum17:elemento_2|FULLAD:elemento_10     ; work         ;
+;             |FULLAD:elemento_11| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_8|sum17:elemento_2|FULLAD:elemento_11     ; work         ;
+;             |FULLAD:elemento_12| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_8|sum17:elemento_2|FULLAD:elemento_12     ; work         ;
+;             |FULLAD:elemento_13| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_8|sum17:elemento_2|FULLAD:elemento_13     ; work         ;
+;             |FULLAD:elemento_14| ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_8|sum17:elemento_2|FULLAD:elemento_14     ; work         ;
+;             |FULLAD:elemento_15| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_8|sum17:elemento_2|FULLAD:elemento_15     ; work         ;
+;             |FULLAD:elemento_16| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_8|sum17:elemento_2|FULLAD:elemento_16     ; work         ;
+;             |FULLAD:elemento_17| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_8|sum17:elemento_2|FULLAD:elemento_17     ; work         ;
+;       |itera:elemento_9|         ; 23 (0)            ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_9                                         ; work         ;
+;          |PvSel:elemento_1|      ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_9|PvSel:elemento_1                        ; work         ;
+;          |sum17:elemento_2|      ; 15 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_9|sum17:elemento_2                        ; work         ;
+;             |FULLAD:elemento_10| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_9|sum17:elemento_2|FULLAD:elemento_10     ; work         ;
+;             |FULLAD:elemento_11| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_9|sum17:elemento_2|FULLAD:elemento_11     ; work         ;
+;             |FULLAD:elemento_12| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_9|sum17:elemento_2|FULLAD:elemento_12     ; work         ;
+;             |FULLAD:elemento_13| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_9|sum17:elemento_2|FULLAD:elemento_13     ; work         ;
+;             |FULLAD:elemento_14| ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_9|sum17:elemento_2|FULLAD:elemento_14     ; work         ;
+;             |FULLAD:elemento_15| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_9|sum17:elemento_2|FULLAD:elemento_15     ; work         ;
+;             |FULLAD:elemento_16| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_9|sum17:elemento_2|FULLAD:elemento_16     ; work         ;
+;             |FULLAD:elemento_17| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mult:elemento_3|itera:elemento_9|sum17:elemento_2|FULLAD:elemento_17     ; work         ;
+;    |resta:elemento_2|            ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|resta:elemento_2                                                         ; work         ;
+;       |FULLAD:elemento_2|        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|resta:elemento_2|FULLAD:elemento_2                                       ; work         ;
+;       |FULLAD:elemento_3|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|resta:elemento_2|FULLAD:elemento_3                                       ; work         ;
+;       |FULLAD:elemento_4|        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|resta:elemento_2|FULLAD:elemento_4                                       ; work         ;
+;       |FULLAD:elemento_5|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|resta:elemento_2|FULLAD:elemento_5                                       ; work         ;
+;       |FULLAD:elemento_6|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|resta:elemento_2|FULLAD:elemento_6                                       ; work         ;
+;       |FULLAD:elemento_7|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|resta:elemento_2|FULLAD:elemento_7                                       ; work         ;
+;    |suma:elemento_1|             ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|suma:elemento_1                                                          ; work         ;
+;       |FULLAD:elemento_2|        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|suma:elemento_1|FULLAD:elemento_2                                        ; work         ;
+;       |FULLAD:elemento_3|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|suma:elemento_1|FULLAD:elemento_3                                        ; work         ;
+;       |FULLAD:elemento_4|        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|suma:elemento_1|FULLAD:elemento_4                                        ; work         ;
+;       |FULLAD:elemento_5|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|suma:elemento_1|FULLAD:elemento_5                                        ; work         ;
+;       |FULLAD:elemento_6|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|suma:elemento_1|FULLAD:elemento_6                                        ; work         ;
+;       |FULLAD:elemento_7|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|suma:elemento_1|FULLAD:elemento_7                                        ; work         ;
++----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                                                        ;
++-----------------------------------------------------------------+-----------------------------------------------------------------+------------------------+
+; Latch Name                                                      ; Latch Enable Signal                                             ; Free of Timing Hazards ;
++-----------------------------------------------------------------+-----------------------------------------------------------------+------------------------+
+; Res[0]$latch                                                    ; Res[7]                                                          ; yes                    ;
+; Res[1]$latch                                                    ; Res[7]                                                          ; yes                    ;
+; Res[2]$latch                                                    ; Res[7]                                                          ; yes                    ;
+; Res[3]$latch                                                    ; Res[7]                                                          ; yes                    ;
+; Res[4]$latch                                                    ; Res[7]                                                          ; yes                    ;
+; Res[5]$latch                                                    ; Res[7]                                                          ; yes                    ;
+; Res[6]$latch                                                    ; Res[7]                                                          ; yes                    ;
+; Res[7]$latch                                                    ; Res[7]                                                          ; yes                    ;
+; Resmul[0]$latch                                                 ; Equal2                                                          ; yes                    ;
+; Resmul[1]$latch                                                 ; Equal2                                                          ; yes                    ;
+; Resmul[2]$latch                                                 ; Equal2                                                          ; yes                    ;
+; Resmul[3]$latch                                                 ; Equal2                                                          ; yes                    ;
+; Resmul[4]$latch                                                 ; Equal2                                                          ; yes                    ;
+; Resmul[5]$latch                                                 ; Equal2                                                          ; yes                    ;
+; Resmul[6]$latch                                                 ; Equal2                                                          ; yes                    ;
+; Resmul[7]$latch                                                 ; Equal2                                                          ; yes                    ;
+; Resmul[8]$latch                                                 ; Equal2                                                          ; yes                    ;
+; Resmul[9]$latch                                                 ; Equal2                                                          ; yes                    ;
+; Resmul[10]$latch                                                ; Equal2                                                          ; yes                    ;
+; Resmul[11]$latch                                                ; Equal2                                                          ; yes                    ;
+; Resmul[12]$latch                                                ; Equal2                                                          ; yes                    ;
+; Resmul[13]$latch                                                ; Equal2                                                          ; yes                    ;
+; Resmul[14]$latch                                                ; Equal2                                                          ; yes                    ;
+; Resmul[15]$latch                                                ; Equal2                                                          ; yes                    ;
+; div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[7] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[6] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[5] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[4] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[3] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[2] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[0] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[1] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_7|restador:elemento_2|Btemp[0] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_6|restador:elemento_2|Btemp[7] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_6|restador:elemento_2|Btemp[6] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_6|restador:elemento_2|Btemp[5] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_6|restador:elemento_2|Btemp[4] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_6|restador:elemento_2|Btemp[3] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_6|restador:elemento_2|Btemp[2] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_6|restador:elemento_2|Btemp[0] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_6|restador:elemento_2|Btemp[1] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_5|restador:elemento_2|Btemp[0] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_4|restador:elemento_2|Btemp[7] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_4|restador:elemento_2|Btemp[6] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_4|restador:elemento_2|Btemp[5] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_4|restador:elemento_2|Btemp[4] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_4|restador:elemento_2|Btemp[3] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_4|restador:elemento_2|Btemp[2] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_4|restador:elemento_2|Btemp[0] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_4|restador:elemento_2|Btemp[1] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_3|restador:elemento_2|Btemp[0] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[6] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[5] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[4] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[3] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[2] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[1] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_2|restador:elemento_2|Btemp[7] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_2|restador:elemento_2|Btemp[6] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_2|restador:elemento_2|Btemp[5] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_2|restador:elemento_2|Btemp[4] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_2|restador:elemento_2|Btemp[3] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_2|restador:elemento_2|Btemp[2] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_2|restador:elemento_2|Btemp[1] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_2|restador:elemento_2|Btemp[0] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[7] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_3|restador:elemento_2|Btemp[1] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_3|restador:elemento_2|Btemp[2] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_3|restador:elemento_2|Btemp[3] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_3|restador:elemento_2|Btemp[4] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_3|restador:elemento_2|Btemp[5] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_3|restador:elemento_2|Btemp[6] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_3|restador:elemento_2|Btemp[7] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_5|restador:elemento_2|Btemp[1] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_5|restador:elemento_2|Btemp[2] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_5|restador:elemento_2|Btemp[3] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_5|restador:elemento_2|Btemp[4] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_5|restador:elemento_2|Btemp[5] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_5|restador:elemento_2|Btemp[6] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_5|restador:elemento_2|Btemp[7] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_7|restador:elemento_2|Btemp[1] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_7|restador:elemento_2|Btemp[2] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_7|restador:elemento_2|Btemp[3] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_7|restador:elemento_2|Btemp[4] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_7|restador:elemento_2|Btemp[5] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_7|restador:elemento_2|Btemp[6] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; div:elemento_4|iteradiv:elemento_7|restador:elemento_2|Btemp[7] ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; resta:elemento_2|Btemp[0]                                       ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; resta:elemento_2|Btemp[1]                                       ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; resta:elemento_2|Btemp[2]                                       ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; resta:elemento_2|Btemp[3]                                       ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; resta:elemento_2|Btemp[4]                                       ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; resta:elemento_2|Btemp[5]                                       ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; resta:elemento_2|Btemp[6]                                       ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; resta:elemento_2|Btemp[7]                                       ; div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0] ; yes                    ;
+; mult:elemento_3|itera:elemento_9|PvSel:elemento_1|Vsal1[2]      ; mult:elemento_3|itera:elemento_9|PvSel:elemento_1|Vsal1[16]     ; yes                    ;
+; mult:elemento_3|itera:elemento_9|PvSel:elemento_1|Vsal1[3]      ; mult:elemento_3|itera:elemento_9|PvSel:elemento_1|Vsal1[16]     ; yes                    ;
+; mult:elemento_3|itera:elemento_9|PvSel:elemento_1|Vsal1[4]      ; mult:elemento_3|itera:elemento_9|PvSel:elemento_1|Vsal1[16]     ; yes                    ;
+; mult:elemento_3|itera:elemento_9|PvSel:elemento_1|Vsal1[5]      ; mult:elemento_3|itera:elemento_9|PvSel:elemento_1|Vsal1[16]     ; yes                    ;
+; Number of user-specified and inferred latches = 271             ;                                                                 ;                        ;
++-----------------------------------------------------------------+-----------------------------------------------------------------+------------------------+
+Table restricted to first 100 entries. Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++---------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                      ;
++----------------------------------------------------+----------------------------------------------------+
+; Register name                                      ; Reason for Removal                                 ;
++----------------------------------------------------+----------------------------------------------------+
+; mult:elemento_3|GenVectores:elemento_1|Sv[0..8]    ; Stuck at GND due to stuck port data_in             ;
+; mult:elemento_3|GenVectores:elemento_1|Pv[0,9..16] ; Stuck at GND due to stuck port data_in             ;
+; mult:elemento_3|GenVectores:elemento_1|Av[0..8]    ; Stuck at GND due to stuck port data_in             ;
+; mult:elemento_3|itera:elemento_2|SalS[0..8]        ; Stuck at GND due to stuck port data_in             ;
+; mult:elemento_3|itera:elemento_2|SalA[0..8]        ; Stuck at GND due to stuck port data_in             ;
+; mult:elemento_3|itera:elemento_3|SalS[0..8]        ; Stuck at GND due to stuck port data_in             ;
+; mult:elemento_3|itera:elemento_3|SalA[0..8]        ; Stuck at GND due to stuck port data_in             ;
+; mult:elemento_3|itera:elemento_4|SalS[0..8]        ; Stuck at GND due to stuck port data_in             ;
+; mult:elemento_3|itera:elemento_4|SalA[0..8]        ; Stuck at GND due to stuck port data_in             ;
+; mult:elemento_3|itera:elemento_5|SalS[0..8]        ; Stuck at GND due to stuck port data_in             ;
+; mult:elemento_3|itera:elemento_5|SalA[0..8]        ; Stuck at GND due to stuck port data_in             ;
+; mult:elemento_3|itera:elemento_6|SalS[0..8]        ; Stuck at GND due to stuck port data_in             ;
+; mult:elemento_3|itera:elemento_6|SalA[0..8]        ; Stuck at GND due to stuck port data_in             ;
+; mult:elemento_3|itera:elemento_7|SalS[0..8]        ; Stuck at GND due to stuck port data_in             ;
+; mult:elemento_3|itera:elemento_7|SalA[0..8]        ; Stuck at GND due to stuck port data_in             ;
+; mult:elemento_3|itera:elemento_8|SalS[0..8]        ; Stuck at GND due to stuck port data_in             ;
+; mult:elemento_3|itera:elemento_8|SalA[0..8]        ; Stuck at GND due to stuck port data_in             ;
+; mult:elemento_3|itera:elemento_9|z[16]             ; Merged with mult:elemento_3|itera:elemento_9|z[15] ;
+; mult:elemento_3|itera:elemento_8|z[16]             ; Merged with mult:elemento_3|itera:elemento_8|z[15] ;
+; mult:elemento_3|itera:elemento_7|z[16]             ; Merged with mult:elemento_3|itera:elemento_7|z[15] ;
+; mult:elemento_3|itera:elemento_6|z[16]             ; Merged with mult:elemento_3|itera:elemento_6|z[15] ;
+; mult:elemento_3|itera:elemento_5|z[16]             ; Merged with mult:elemento_3|itera:elemento_5|z[15] ;
+; mult:elemento_3|itera:elemento_4|z[16]             ; Merged with mult:elemento_3|itera:elemento_4|z[15] ;
+; mult:elemento_3|itera:elemento_3|z[16]             ; Merged with mult:elemento_3|itera:elemento_3|z[15] ;
+; mult:elemento_3|itera:elemento_2|z[16]             ; Merged with mult:elemento_3|itera:elemento_2|z[15] ;
+; mult:elemento_3|zmulti[14]                         ; Merged with mult:elemento_3|zmulti[15]             ;
+; Total Number of Removed Registers = 162            ;                                                    ;
++----------------------------------------------------+----------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                    ;
++----------------------------------------------+---------------------------+-------------------------------------------------------------------------------------+
+; Register name                                ; Reason for Removal        ; Registers Removed due to This Register                                              ;
++----------------------------------------------+---------------------------+-------------------------------------------------------------------------------------+
+; mult:elemento_3|GenVectores:elemento_1|Sv[0] ; Stuck at GND              ; mult:elemento_3|itera:elemento_2|SalS[0], mult:elemento_3|itera:elemento_3|SalS[0], ;
+;                                              ; due to stuck port data_in ; mult:elemento_3|itera:elemento_4|SalS[0], mult:elemento_3|itera:elemento_5|SalS[0], ;
+;                                              ;                           ; mult:elemento_3|itera:elemento_6|SalS[0], mult:elemento_3|itera:elemento_7|SalS[0], ;
+;                                              ;                           ; mult:elemento_3|itera:elemento_8|SalS[0]                                            ;
+; mult:elemento_3|GenVectores:elemento_1|Sv[1] ; Stuck at GND              ; mult:elemento_3|itera:elemento_2|SalS[1], mult:elemento_3|itera:elemento_3|SalS[1], ;
+;                                              ; due to stuck port data_in ; mult:elemento_3|itera:elemento_4|SalS[1], mult:elemento_3|itera:elemento_5|SalS[1], ;
+;                                              ;                           ; mult:elemento_3|itera:elemento_6|SalS[1], mult:elemento_3|itera:elemento_7|SalS[1], ;
+;                                              ;                           ; mult:elemento_3|itera:elemento_8|SalS[1]                                            ;
+; mult:elemento_3|GenVectores:elemento_1|Sv[2] ; Stuck at GND              ; mult:elemento_3|itera:elemento_2|SalS[2], mult:elemento_3|itera:elemento_3|SalS[2], ;
+;                                              ; due to stuck port data_in ; mult:elemento_3|itera:elemento_4|SalS[2], mult:elemento_3|itera:elemento_5|SalS[2], ;
+;                                              ;                           ; mult:elemento_3|itera:elemento_6|SalS[2], mult:elemento_3|itera:elemento_7|SalS[2], ;
+;                                              ;                           ; mult:elemento_3|itera:elemento_8|SalS[2]                                            ;
+; mult:elemento_3|GenVectores:elemento_1|Sv[3] ; Stuck at GND              ; mult:elemento_3|itera:elemento_2|SalS[3], mult:elemento_3|itera:elemento_3|SalS[3], ;
+;                                              ; due to stuck port data_in ; mult:elemento_3|itera:elemento_4|SalS[3], mult:elemento_3|itera:elemento_5|SalS[3], ;
+;                                              ;                           ; mult:elemento_3|itera:elemento_6|SalS[3], mult:elemento_3|itera:elemento_7|SalS[3], ;
+;                                              ;                           ; mult:elemento_3|itera:elemento_8|SalS[3]                                            ;
+; mult:elemento_3|GenVectores:elemento_1|Sv[4] ; Stuck at GND              ; mult:elemento_3|itera:elemento_2|SalS[4], mult:elemento_3|itera:elemento_3|SalS[4], ;
+;                                              ; due to stuck port data_in ; mult:elemento_3|itera:elemento_4|SalS[4], mult:elemento_3|itera:elemento_5|SalS[4], ;
+;                                              ;                           ; mult:elemento_3|itera:elemento_6|SalS[4], mult:elemento_3|itera:elemento_7|SalS[4], ;
+;                                              ;                           ; mult:elemento_3|itera:elemento_8|SalS[4]                                            ;
+; mult:elemento_3|GenVectores:elemento_1|Sv[5] ; Stuck at GND              ; mult:elemento_3|itera:elemento_2|SalS[5], mult:elemento_3|itera:elemento_3|SalS[5], ;
+;                                              ; due to stuck port data_in ; mult:elemento_3|itera:elemento_4|SalS[5], mult:elemento_3|itera:elemento_5|SalS[5], ;
+;                                              ;                           ; mult:elemento_3|itera:elemento_6|SalS[5], mult:elemento_3|itera:elemento_7|SalS[5], ;
+;                                              ;                           ; mult:elemento_3|itera:elemento_8|SalS[5]                                            ;
+; mult:elemento_3|GenVectores:elemento_1|Sv[6] ; Stuck at GND              ; mult:elemento_3|itera:elemento_2|SalS[6], mult:elemento_3|itera:elemento_3|SalS[6], ;
+;                                              ; due to stuck port data_in ; mult:elemento_3|itera:elemento_4|SalS[6], mult:elemento_3|itera:elemento_5|SalS[6], ;
+;                                              ;                           ; mult:elemento_3|itera:elemento_6|SalS[6], mult:elemento_3|itera:elemento_7|SalS[6], ;
+;                                              ;                           ; mult:elemento_3|itera:elemento_8|SalS[6]                                            ;
+; mult:elemento_3|GenVectores:elemento_1|Sv[7] ; Stuck at GND              ; mult:elemento_3|itera:elemento_2|SalS[7], mult:elemento_3|itera:elemento_3|SalS[7], ;
+;                                              ; due to stuck port data_in ; mult:elemento_3|itera:elemento_4|SalS[7], mult:elemento_3|itera:elemento_5|SalS[7], ;
+;                                              ;                           ; mult:elemento_3|itera:elemento_6|SalS[7], mult:elemento_3|itera:elemento_7|SalS[7], ;
+;                                              ;                           ; mult:elemento_3|itera:elemento_8|SalS[7]                                            ;
+; mult:elemento_3|GenVectores:elemento_1|Sv[8] ; Stuck at GND              ; mult:elemento_3|itera:elemento_2|SalS[8], mult:elemento_3|itera:elemento_3|SalS[8], ;
+;                                              ; due to stuck port data_in ; mult:elemento_3|itera:elemento_4|SalS[8], mult:elemento_3|itera:elemento_5|SalS[8], ;
+;                                              ;                           ; mult:elemento_3|itera:elemento_6|SalS[8], mult:elemento_3|itera:elemento_7|SalS[8], ;
+;                                              ;                           ; mult:elemento_3|itera:elemento_8|SalS[8]                                            ;
+; mult:elemento_3|GenVectores:elemento_1|Av[0] ; Stuck at GND              ; mult:elemento_3|itera:elemento_2|SalA[0], mult:elemento_3|itera:elemento_3|SalA[0], ;
+;                                              ; due to stuck port data_in ; mult:elemento_3|itera:elemento_4|SalA[0], mult:elemento_3|itera:elemento_5|SalA[0], ;
+;                                              ;                           ; mult:elemento_3|itera:elemento_6|SalA[0], mult:elemento_3|itera:elemento_7|SalA[0], ;
+;                                              ;                           ; mult:elemento_3|itera:elemento_8|SalA[0]                                            ;
+; mult:elemento_3|GenVectores:elemento_1|Av[1] ; Stuck at GND              ; mult:elemento_3|itera:elemento_2|SalA[1], mult:elemento_3|itera:elemento_3|SalA[1], ;
+;                                              ; due to stuck port data_in ; mult:elemento_3|itera:elemento_4|SalA[1], mult:elemento_3|itera:elemento_5|SalA[1], ;
+;                                              ;                           ; mult:elemento_3|itera:elemento_6|SalA[1], mult:elemento_3|itera:elemento_7|SalA[1], ;
+;                                              ;                           ; mult:elemento_3|itera:elemento_8|SalA[1]                                            ;
+; mult:elemento_3|GenVectores:elemento_1|Av[2] ; Stuck at GND              ; mult:elemento_3|itera:elemento_2|SalA[2], mult:elemento_3|itera:elemento_3|SalA[2], ;
+;                                              ; due to stuck port data_in ; mult:elemento_3|itera:elemento_4|SalA[2], mult:elemento_3|itera:elemento_5|SalA[2], ;
+;                                              ;                           ; mult:elemento_3|itera:elemento_6|SalA[2], mult:elemento_3|itera:elemento_7|SalA[2], ;
+;                                              ;                           ; mult:elemento_3|itera:elemento_8|SalA[2]                                            ;
+; mult:elemento_3|GenVectores:elemento_1|Av[3] ; Stuck at GND              ; mult:elemento_3|itera:elemento_2|SalA[3], mult:elemento_3|itera:elemento_3|SalA[3], ;
+;                                              ; due to stuck port data_in ; mult:elemento_3|itera:elemento_4|SalA[3], mult:elemento_3|itera:elemento_5|SalA[3], ;
+;                                              ;                           ; mult:elemento_3|itera:elemento_6|SalA[3], mult:elemento_3|itera:elemento_7|SalA[3], ;
+;                                              ;                           ; mult:elemento_3|itera:elemento_8|SalA[3]                                            ;
+; mult:elemento_3|GenVectores:elemento_1|Av[4] ; Stuck at GND              ; mult:elemento_3|itera:elemento_2|SalA[4], mult:elemento_3|itera:elemento_3|SalA[4], ;
+;                                              ; due to stuck port data_in ; mult:elemento_3|itera:elemento_4|SalA[4], mult:elemento_3|itera:elemento_5|SalA[4], ;
+;                                              ;                           ; mult:elemento_3|itera:elemento_6|SalA[4], mult:elemento_3|itera:elemento_7|SalA[4], ;
+;                                              ;                           ; mult:elemento_3|itera:elemento_8|SalA[4]                                            ;
+; mult:elemento_3|GenVectores:elemento_1|Av[5] ; Stuck at GND              ; mult:elemento_3|itera:elemento_2|SalA[5], mult:elemento_3|itera:elemento_3|SalA[5], ;
+;                                              ; due to stuck port data_in ; mult:elemento_3|itera:elemento_4|SalA[5], mult:elemento_3|itera:elemento_5|SalA[5], ;
+;                                              ;                           ; mult:elemento_3|itera:elemento_6|SalA[5], mult:elemento_3|itera:elemento_7|SalA[5], ;
+;                                              ;                           ; mult:elemento_3|itera:elemento_8|SalA[5]                                            ;
+; mult:elemento_3|GenVectores:elemento_1|Av[6] ; Stuck at GND              ; mult:elemento_3|itera:elemento_2|SalA[6], mult:elemento_3|itera:elemento_3|SalA[6], ;
+;                                              ; due to stuck port data_in ; mult:elemento_3|itera:elemento_4|SalA[6], mult:elemento_3|itera:elemento_5|SalA[6], ;
+;                                              ;                           ; mult:elemento_3|itera:elemento_6|SalA[6], mult:elemento_3|itera:elemento_7|SalA[6], ;
+;                                              ;                           ; mult:elemento_3|itera:elemento_8|SalA[6]                                            ;
+; mult:elemento_3|GenVectores:elemento_1|Av[7] ; Stuck at GND              ; mult:elemento_3|itera:elemento_2|SalA[7], mult:elemento_3|itera:elemento_3|SalA[7], ;
+;                                              ; due to stuck port data_in ; mult:elemento_3|itera:elemento_4|SalA[7], mult:elemento_3|itera:elemento_5|SalA[7], ;
+;                                              ;                           ; mult:elemento_3|itera:elemento_6|SalA[7], mult:elemento_3|itera:elemento_7|SalA[7], ;
+;                                              ;                           ; mult:elemento_3|itera:elemento_8|SalA[7]                                            ;
+; mult:elemento_3|GenVectores:elemento_1|Av[8] ; Stuck at GND              ; mult:elemento_3|itera:elemento_2|SalA[8], mult:elemento_3|itera:elemento_3|SalA[8], ;
+;                                              ; due to stuck port data_in ; mult:elemento_3|itera:elemento_4|SalA[8], mult:elemento_3|itera:elemento_5|SalA[8], ;
+;                                              ;                           ; mult:elemento_3|itera:elemento_6|SalA[8], mult:elemento_3|itera:elemento_7|SalA[8], ;
+;                                              ;                           ; mult:elemento_3|itera:elemento_8|SalA[8]                                            ;
++----------------------------------------------+---------------------------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 278   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------+
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |calculadora|Res[4]                                                      ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |calculadora|mult:elemento_3|itera:elemento_9|PvSel:elemento_1|Vsal2[10] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |calculadora|mult:elemento_3|itera:elemento_8|PvSel:elemento_1|Vsal2[11] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |calculadora|mult:elemento_3|itera:elemento_7|PvSel:elemento_1|Vsal2[9]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |calculadora|mult:elemento_3|itera:elemento_6|PvSel:elemento_1|Vsal2[16] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |calculadora|mult:elemento_3|itera:elemento_5|PvSel:elemento_1|Vsal2[11] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |calculadora|mult:elemento_3|itera:elemento_4|PvSel:elemento_1|Vsal2[9]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |calculadora|mult:elemento_3|itera:elemento_3|PvSel:elemento_1|Vsal2[15] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "div:elemento_4|iteradiv:elemento_8"                                                 ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; sa   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; sm   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "div:elemento_4|iteradiv:elemento_1|restador:elemento_2|fullad:elemento_8"           ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; cofa ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "div:elemento_4|iteradiv:elemento_1|sumador:elemento_1|fullad:elemento_8"            ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; cofa ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------+
+; Port Connectivity Checks: "div:elemento_4|iteradiv:elemento_1" ;
++------+-------+----------+--------------------------------------+
+; Port ; Type  ; Severity ; Details                              ;
++------+-------+----------+--------------------------------------+
+; a    ; Input ; Info     ; Stuck at GND                         ;
++------+-------+----------+--------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "div:elemento_4"                                                                     ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; res  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mult:elemento_3|itera:elemento_9"                                                   ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; z[0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; sala ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; sals ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "resta:elemento_2|fullad:elemento_8"                                                 ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; cofa ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "suma:elemento_1|fullad:elemento_8"                                                  ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; cofa ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed Nov 04 06:54:02 2015
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off calculadora -c calculadora
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file calculadora.vhd
+    Info (12022): Found design unit 1: calculadora-RTL
+    Info (12023): Found entity 1: calculadora
+Info (12127): Elaborating entity "calculadora" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at calculadora.vhd(47): object "resi" assigned a value but never read
+Warning (10492): VHDL Process Statement warning at calculadora.vhd(59): signal "sel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at calculadora.vhd(60): signal "sum" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at calculadora.vhd(62): signal "sel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at calculadora.vhd(63): signal "rest" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at calculadora.vhd(65): signal "sel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at calculadora.vhd(66): signal "mul" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at calculadora.vhd(69): signal "sel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at calculadora.vhd(70): signal "divi" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at calculadora.vhd(57): inferring latch(es) for signal or variable "Res", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at calculadora.vhd(57): inferring latch(es) for signal or variable "Resmul", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "Resmul[0]" at calculadora.vhd(57)
+Info (10041): Inferred latch for "Resmul[1]" at calculadora.vhd(57)
+Info (10041): Inferred latch for "Resmul[2]" at calculadora.vhd(57)
+Info (10041): Inferred latch for "Resmul[3]" at calculadora.vhd(57)
+Info (10041): Inferred latch for "Resmul[4]" at calculadora.vhd(57)
+Info (10041): Inferred latch for "Resmul[5]" at calculadora.vhd(57)
+Info (10041): Inferred latch for "Resmul[6]" at calculadora.vhd(57)
+Info (10041): Inferred latch for "Resmul[7]" at calculadora.vhd(57)
+Info (10041): Inferred latch for "Resmul[8]" at calculadora.vhd(57)
+Info (10041): Inferred latch for "Resmul[9]" at calculadora.vhd(57)
+Info (10041): Inferred latch for "Resmul[10]" at calculadora.vhd(57)
+Info (10041): Inferred latch for "Resmul[11]" at calculadora.vhd(57)
+Info (10041): Inferred latch for "Resmul[12]" at calculadora.vhd(57)
+Info (10041): Inferred latch for "Resmul[13]" at calculadora.vhd(57)
+Info (10041): Inferred latch for "Resmul[14]" at calculadora.vhd(57)
+Info (10041): Inferred latch for "Resmul[15]" at calculadora.vhd(57)
+Info (10041): Inferred latch for "Res[0]" at calculadora.vhd(57)
+Info (10041): Inferred latch for "Res[1]" at calculadora.vhd(57)
+Info (10041): Inferred latch for "Res[2]" at calculadora.vhd(57)
+Info (10041): Inferred latch for "Res[3]" at calculadora.vhd(57)
+Info (10041): Inferred latch for "Res[4]" at calculadora.vhd(57)
+Info (10041): Inferred latch for "Res[5]" at calculadora.vhd(57)
+Info (10041): Inferred latch for "Res[6]" at calculadora.vhd(57)
+Info (10041): Inferred latch for "Res[7]" at calculadora.vhd(57)
+Warning (12125): Using design file suma.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: suma-RTL
+    Info (12023): Found entity 1: suma
+Info (12128): Elaborating entity "suma" for hierarchy "suma:elemento_1"
+Warning (10036): Verilog HDL or VHDL warning at suma.vhd(32): object "co7" assigned a value but never read
+Warning (12125): Using design file had.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: HAD-RTL
+    Info (12023): Found entity 1: HAD
+Info (12128): Elaborating entity "had" for hierarchy "suma:elemento_1|had:elemento_1"
+Warning (12125): Using design file fullad.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: FULLAD-RTL
+    Info (12023): Found entity 1: FULLAD
+Info (12128): Elaborating entity "fullad" for hierarchy "suma:elemento_1|fullad:elemento_2"
+Warning (12125): Using design file resta.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: resta-RTL
+    Info (12023): Found entity 1: resta
+Info (12128): Elaborating entity "resta" for hierarchy "resta:elemento_2"
+Warning (10036): Verilog HDL or VHDL warning at resta.vhd(33): object "co7" assigned a value but never read
+Warning (10492): VHDL Process Statement warning at resta.vhd(51): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta.vhd(52): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta.vhd(56): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta.vhd(57): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta.vhd(61): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta.vhd(62): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta.vhd(66): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta.vhd(67): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta.vhd(71): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta.vhd(72): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta.vhd(76): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta.vhd(77): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta.vhd(81): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta.vhd(82): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta.vhd(86): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta.vhd(87): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at resta.vhd(48): inferring latch(es) for signal or variable "Btemp", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "Btemp[0]" at resta.vhd(48)
+Info (10041): Inferred latch for "Btemp[1]" at resta.vhd(48)
+Info (10041): Inferred latch for "Btemp[2]" at resta.vhd(48)
+Info (10041): Inferred latch for "Btemp[3]" at resta.vhd(48)
+Info (10041): Inferred latch for "Btemp[4]" at resta.vhd(48)
+Info (10041): Inferred latch for "Btemp[5]" at resta.vhd(48)
+Info (10041): Inferred latch for "Btemp[6]" at resta.vhd(48)
+Info (10041): Inferred latch for "Btemp[7]" at resta.vhd(48)
+Warning (12125): Using design file mult.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: mult-RTL
+    Info (12023): Found entity 1: mult
+Info (12128): Elaborating entity "mult" for hierarchy "mult:elemento_3"
+Warning (10036): Verilog HDL or VHDL warning at mult.vhd(37): object "s_a8" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at mult.vhd(37): object "s_s8" assigned a value but never read
+Warning (12125): Using design file genvectores.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: GenVectores-RTL
+    Info (12023): Found entity 1: GenVectores
+Info (12128): Elaborating entity "GenVectores" for hierarchy "mult:elemento_3|GenVectores:elemento_1"
+Warning (10492): VHDL Process Statement warning at genvectores.vhd(25): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at genvectores.vhd(22): inferring latch(es) for signal or variable "Atemp", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "Atemp[0]" at genvectores.vhd(22)
+Info (10041): Inferred latch for "Atemp[1]" at genvectores.vhd(22)
+Info (10041): Inferred latch for "Atemp[2]" at genvectores.vhd(22)
+Info (10041): Inferred latch for "Atemp[3]" at genvectores.vhd(22)
+Info (10041): Inferred latch for "Atemp[4]" at genvectores.vhd(22)
+Info (10041): Inferred latch for "Atemp[5]" at genvectores.vhd(22)
+Info (10041): Inferred latch for "Atemp[6]" at genvectores.vhd(22)
+Info (10041): Inferred latch for "Atemp[7]" at genvectores.vhd(22)
+Warning (12125): Using design file itera.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: itera-RTL
+    Info (12023): Found entity 1: itera
+Info (12128): Elaborating entity "itera" for hierarchy "mult:elemento_3|itera:elemento_2"
+Warning (12125): Using design file pvsel.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: PvSel-RTL
+    Info (12023): Found entity 1: PvSel
+Info (12128): Elaborating entity "PvSel" for hierarchy "mult:elemento_3|itera:elemento_2|PvSel:elemento_1"
+Warning (10631): VHDL Process Statement warning at pvsel.vhd(17): inferring latch(es) for signal or variable "Vsal1", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at pvsel.vhd(17): inferring latch(es) for signal or variable "Vsal2", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "Vsal2[0]" at pvsel.vhd(17)
+Info (10041): Inferred latch for "Vsal2[1]" at pvsel.vhd(17)
+Info (10041): Inferred latch for "Vsal2[2]" at pvsel.vhd(17)
+Info (10041): Inferred latch for "Vsal2[3]" at pvsel.vhd(17)
+Info (10041): Inferred latch for "Vsal2[4]" at pvsel.vhd(17)
+Info (10041): Inferred latch for "Vsal2[5]" at pvsel.vhd(17)
+Info (10041): Inferred latch for "Vsal2[6]" at pvsel.vhd(17)
+Info (10041): Inferred latch for "Vsal2[7]" at pvsel.vhd(17)
+Info (10041): Inferred latch for "Vsal2[8]" at pvsel.vhd(17)
+Info (10041): Inferred latch for "Vsal2[9]" at pvsel.vhd(17)
+Info (10041): Inferred latch for "Vsal2[10]" at pvsel.vhd(17)
+Info (10041): Inferred latch for "Vsal2[11]" at pvsel.vhd(17)
+Info (10041): Inferred latch for "Vsal2[12]" at pvsel.vhd(17)
+Info (10041): Inferred latch for "Vsal2[13]" at pvsel.vhd(17)
+Info (10041): Inferred latch for "Vsal2[14]" at pvsel.vhd(17)
+Info (10041): Inferred latch for "Vsal2[15]" at pvsel.vhd(17)
+Info (10041): Inferred latch for "Vsal2[16]" at pvsel.vhd(17)
+Info (10041): Inferred latch for "Vsal1[0]" at pvsel.vhd(17)
+Info (10041): Inferred latch for "Vsal1[1]" at pvsel.vhd(17)
+Info (10041): Inferred latch for "Vsal1[2]" at pvsel.vhd(17)
+Info (10041): Inferred latch for "Vsal1[3]" at pvsel.vhd(17)
+Info (10041): Inferred latch for "Vsal1[4]" at pvsel.vhd(17)
+Info (10041): Inferred latch for "Vsal1[5]" at pvsel.vhd(17)
+Info (10041): Inferred latch for "Vsal1[6]" at pvsel.vhd(17)
+Info (10041): Inferred latch for "Vsal1[7]" at pvsel.vhd(17)
+Info (10041): Inferred latch for "Vsal1[8]" at pvsel.vhd(17)
+Info (10041): Inferred latch for "Vsal1[9]" at pvsel.vhd(17)
+Info (10041): Inferred latch for "Vsal1[10]" at pvsel.vhd(17)
+Info (10041): Inferred latch for "Vsal1[11]" at pvsel.vhd(17)
+Info (10041): Inferred latch for "Vsal1[12]" at pvsel.vhd(17)
+Info (10041): Inferred latch for "Vsal1[13]" at pvsel.vhd(17)
+Info (10041): Inferred latch for "Vsal1[14]" at pvsel.vhd(17)
+Info (10041): Inferred latch for "Vsal1[15]" at pvsel.vhd(17)
+Info (10041): Inferred latch for "Vsal1[16]" at pvsel.vhd(17)
+Warning (12125): Using design file sum17.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: sum17-RTL
+    Info (12023): Found entity 1: sum17
+Info (12128): Elaborating entity "sum17" for hierarchy "mult:elemento_3|itera:elemento_2|sum17:elemento_2"
+Warning (12125): Using design file shift.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: shift-RTL
+    Info (12023): Found entity 1: shift
+Info (12128): Elaborating entity "shift" for hierarchy "mult:elemento_3|itera:elemento_2|shift:elemento_3"
+Warning (12125): Using design file div.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: div-RTL
+    Info (12023): Found entity 1: div
+Info (12128): Elaborating entity "div" for hierarchy "div:elemento_4"
+Warning (10541): VHDL Signal Declaration warning at div.vhd(11): used implicit default value for signal "Res" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10036): Verilog HDL or VHDL warning at div.vhd(26): object "sa8" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at div.vhd(26): object "sm8" assigned a value but never read
+Warning (10492): VHDL Process Statement warning at div.vhd(42): signal "sq8" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (12125): Using design file iteradiv.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: iteradiv-RTL
+    Info (12023): Found entity 1: iteradiv
+Info (12128): Elaborating entity "iteradiv" for hierarchy "div:elemento_4|iteradiv:elemento_1"
+Warning (10492): VHDL Process Statement warning at iteradiv.vhd(46): signal "A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at iteradiv.vhd(49): signal "suma" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at iteradiv.vhd(54): signal "resta" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at iteradiv.vhd(56): signal "A1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at iteradiv.vhd(57): signal "Q" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at iteradiv.vhd(59): signal "Q" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at iteradiv.vhd(61): signal "A1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at iteradiv.vhd(62): signal "Q1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at iteradiv.vhd(63): signal "M" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (12125): Using design file sumador.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: sumador-RTL
+    Info (12023): Found entity 1: sumador
+Info (12128): Elaborating entity "sumador" for hierarchy "div:elemento_4|iteradiv:elemento_1|sumador:elemento_1"
+Warning (10036): Verilog HDL or VHDL warning at sumador.vhd(34): object "co7" assigned a value but never read
+Warning (10492): VHDL Process Statement warning at sumador.vhd(52): signal "Asum" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at sumador.vhd(52): signal "Q" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (12125): Using design file restador.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: restador-RTL
+    Info (12023): Found entity 1: restador
+Info (12128): Elaborating entity "restador" for hierarchy "div:elemento_4|iteradiv:elemento_1|restador:elemento_2"
+Warning (10036): Verilog HDL or VHDL warning at restador.vhd(34): object "co7" assigned a value but never read
+Warning (10492): VHDL Process Statement warning at restador.vhd(52): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at restador.vhd(53): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at restador.vhd(57): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at restador.vhd(58): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at restador.vhd(62): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at restador.vhd(63): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at restador.vhd(67): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at restador.vhd(68): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at restador.vhd(72): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at restador.vhd(73): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at restador.vhd(77): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at restador.vhd(78): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at restador.vhd(82): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at restador.vhd(83): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at restador.vhd(87): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at restador.vhd(88): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at restador.vhd(91): signal "Asum" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at restador.vhd(91): signal "Q" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at restador.vhd(49): inferring latch(es) for signal or variable "Btemp", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "Btemp[0]" at restador.vhd(49)
+Info (10041): Inferred latch for "Btemp[1]" at restador.vhd(49)
+Info (10041): Inferred latch for "Btemp[2]" at restador.vhd(49)
+Info (10041): Inferred latch for "Btemp[3]" at restador.vhd(49)
+Info (10041): Inferred latch for "Btemp[4]" at restador.vhd(49)
+Info (10041): Inferred latch for "Btemp[5]" at restador.vhd(49)
+Info (10041): Inferred latch for "Btemp[6]" at restador.vhd(49)
+Info (10041): Inferred latch for "Btemp[7]" at restador.vhd(49)
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_2|PvSel:elemento_1|Vsal2[9]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_2|PvSel:elemento_1|Vsal2[10]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_2|PvSel:elemento_1|Vsal2[11]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_2|PvSel:elemento_1|Vsal2[12]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_2|PvSel:elemento_1|Vsal2[13]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_2|PvSel:elemento_1|Vsal2[14]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_2|PvSel:elemento_1|Vsal2[15]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_2|PvSel:elemento_1|Vsal2[16]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_2|PvSel:elemento_1|Vsal1[1]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_2|PvSel:elemento_1|Vsal1[2]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_2|PvSel:elemento_1|Vsal1[3]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_2|PvSel:elemento_1|Vsal1[4]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_2|PvSel:elemento_1|Vsal1[5]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_2|PvSel:elemento_1|Vsal1[6]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_2|PvSel:elemento_1|Vsal1[7]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_2|PvSel:elemento_1|Vsal1[8]" is permanently enabled
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "Resmul[15]$latch" merged with LATCH primitive "Resmul[14]$latch"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[7]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[7]"
+    Info (13026): Duplicate LATCH primitive "resta:elemento_2|Btemp[7]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[7]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_2|restador:elemento_2|Btemp[7]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[7]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_3|restador:elemento_2|Btemp[7]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[7]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_4|restador:elemento_2|Btemp[7]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[7]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_5|restador:elemento_2|Btemp[7]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[7]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_6|restador:elemento_2|Btemp[7]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[7]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_7|restador:elemento_2|Btemp[7]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[7]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[6]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[6]"
+    Info (13026): Duplicate LATCH primitive "resta:elemento_2|Btemp[6]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[6]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_2|restador:elemento_2|Btemp[6]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[6]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_3|restador:elemento_2|Btemp[6]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[6]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_4|restador:elemento_2|Btemp[6]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[6]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_5|restador:elemento_2|Btemp[6]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[6]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_6|restador:elemento_2|Btemp[6]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[6]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_7|restador:elemento_2|Btemp[6]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[6]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[5]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[5]"
+    Info (13026): Duplicate LATCH primitive "resta:elemento_2|Btemp[5]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[5]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_2|restador:elemento_2|Btemp[5]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[5]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_3|restador:elemento_2|Btemp[5]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[5]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_4|restador:elemento_2|Btemp[5]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[5]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_5|restador:elemento_2|Btemp[5]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[5]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_6|restador:elemento_2|Btemp[5]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[5]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_7|restador:elemento_2|Btemp[5]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[5]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[4]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[4]"
+    Info (13026): Duplicate LATCH primitive "resta:elemento_2|Btemp[4]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[4]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_2|restador:elemento_2|Btemp[4]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[4]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_3|restador:elemento_2|Btemp[4]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[4]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_4|restador:elemento_2|Btemp[4]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[4]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_5|restador:elemento_2|Btemp[4]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[4]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_6|restador:elemento_2|Btemp[4]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[4]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_7|restador:elemento_2|Btemp[4]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[4]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[3]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[3]"
+    Info (13026): Duplicate LATCH primitive "resta:elemento_2|Btemp[3]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[3]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_2|restador:elemento_2|Btemp[3]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[3]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_3|restador:elemento_2|Btemp[3]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[3]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_4|restador:elemento_2|Btemp[3]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[3]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_5|restador:elemento_2|Btemp[3]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[3]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_6|restador:elemento_2|Btemp[3]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[3]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_7|restador:elemento_2|Btemp[3]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[3]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[2]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[2]"
+    Info (13026): Duplicate LATCH primitive "resta:elemento_2|Btemp[2]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[2]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_2|restador:elemento_2|Btemp[2]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[2]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_3|restador:elemento_2|Btemp[2]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[2]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_4|restador:elemento_2|Btemp[2]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[2]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_5|restador:elemento_2|Btemp[2]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[2]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_6|restador:elemento_2|Btemp[2]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[2]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_7|restador:elemento_2|Btemp[2]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[2]"
+    Info (13026): Duplicate LATCH primitive "resta:elemento_2|Btemp[0]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[0]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[0]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[0]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_2|restador:elemento_2|Btemp[0]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[0]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_3|restador:elemento_2|Btemp[0]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[0]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_4|restador:elemento_2|Btemp[0]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[0]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_5|restador:elemento_2|Btemp[0]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[0]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_6|restador:elemento_2|Btemp[0]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[0]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_7|restador:elemento_2|Btemp[0]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[0]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_2|restador:elemento_2|Btemp[1]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[1]"
+    Info (13026): Duplicate LATCH primitive "resta:elemento_2|Btemp[1]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[1]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_1|restador:elemento_2|Btemp[1]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[1]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_3|restador:elemento_2|Btemp[1]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[1]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_4|restador:elemento_2|Btemp[1]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[1]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_5|restador:elemento_2|Btemp[1]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[1]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_6|restador:elemento_2|Btemp[1]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[1]"
+    Info (13026): Duplicate LATCH primitive "div:elemento_4|iteradiv:elemento_7|restador:elemento_2|Btemp[1]" merged with LATCH primitive "div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[1]"
+    Info (13026): Duplicate LATCH primitive "mult:elemento_3|itera:elemento_9|PvSel:elemento_1|Vsal1[16]" merged with LATCH primitive "mult:elemento_3|itera:elemento_9|PvSel:elemento_1|Vsal1[15]"
+    Info (13026): Duplicate LATCH primitive "mult:elemento_3|itera:elemento_8|PvSel:elemento_1|Vsal1[16]" merged with LATCH primitive "mult:elemento_3|itera:elemento_8|PvSel:elemento_1|Vsal1[15]"
+    Info (13026): Duplicate LATCH primitive "mult:elemento_3|itera:elemento_7|PvSel:elemento_1|Vsal1[16]" merged with LATCH primitive "mult:elemento_3|itera:elemento_7|PvSel:elemento_1|Vsal1[15]"
+    Info (13026): Duplicate LATCH primitive "mult:elemento_3|itera:elemento_6|PvSel:elemento_1|Vsal1[16]" merged with LATCH primitive "mult:elemento_3|itera:elemento_6|PvSel:elemento_1|Vsal1[15]"
+    Info (13026): Duplicate LATCH primitive "mult:elemento_3|itera:elemento_5|PvSel:elemento_1|Vsal1[16]" merged with LATCH primitive "mult:elemento_3|itera:elemento_5|PvSel:elemento_1|Vsal1[15]"
+    Info (13026): Duplicate LATCH primitive "mult:elemento_3|itera:elemento_4|PvSel:elemento_1|Vsal1[16]" merged with LATCH primitive "mult:elemento_3|itera:elemento_4|PvSel:elemento_1|Vsal1[15]"
+    Info (13026): Duplicate LATCH primitive "mult:elemento_3|itera:elemento_3|PvSel:elemento_1|Vsal1[16]" merged with LATCH primitive "mult:elemento_3|itera:elemento_3|PvSel:elemento_1|Vsal1[15]"
+Warning (13012): Latch Res[0]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal sel[0]
+Warning (13012): Latch Res[1]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal sel[0]
+Warning (13012): Latch Res[2]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal sel[0]
+Warning (13012): Latch Res[3]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal sel[0]
+Warning (13012): Latch Res[4]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal sel[0]
+Warning (13012): Latch Res[5]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal sel[0]
+Warning (13012): Latch Res[6]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal sel[0]
+Warning (13012): Latch Res[7]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal sel[0]
+Warning (13012): Latch div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[7] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal B[0]
+Warning (13012): Latch div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[6] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal B[6]
+Warning (13012): Latch div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal B[0]
+Warning (13012): Latch div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal B[4]
+Warning (13012): Latch div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal B[0]
+Warning (13012): Latch div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal B[2]
+Warning (13012): Latch div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal B[0]
+Warning (13012): Latch div:elemento_4|iteradiv:elemento_8|restador:elemento_2|Btemp[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal B[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_9|PvSel:elemento_1|Vsal2[9] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_8|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_9|PvSel:elemento_1|Vsal2[10] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_8|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_9|PvSel:elemento_1|Vsal2[11] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_8|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_9|PvSel:elemento_1|Vsal2[12] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_8|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_9|PvSel:elemento_1|Vsal2[13] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_8|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_9|PvSel:elemento_1|Vsal2[14] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_8|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_9|PvSel:elemento_1|Vsal2[15] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_8|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_9|PvSel:elemento_1|Vsal2[16] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_8|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_8|PvSel:elemento_1|Vsal1[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_7|z[1]
+Warning (13012): Latch mult:elemento_3|itera:elemento_8|PvSel:elemento_1|Vsal2[9] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_7|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_8|PvSel:elemento_1|Vsal2[10] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_7|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_8|PvSel:elemento_1|Vsal2[11] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_7|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_8|PvSel:elemento_1|Vsal2[12] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_7|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_8|PvSel:elemento_1|Vsal2[13] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_7|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_8|PvSel:elemento_1|Vsal2[14] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_7|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_8|PvSel:elemento_1|Vsal2[15] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_7|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_8|PvSel:elemento_1|Vsal2[16] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_7|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_7|PvSel:elemento_1|Vsal1[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_6|z[1]
+Warning (13012): Latch mult:elemento_3|itera:elemento_7|PvSel:elemento_1|Vsal2[9] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_6|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_7|PvSel:elemento_1|Vsal2[10] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_6|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_7|PvSel:elemento_1|Vsal2[11] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_6|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_7|PvSel:elemento_1|Vsal2[12] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_6|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_7|PvSel:elemento_1|Vsal2[13] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_6|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_7|PvSel:elemento_1|Vsal2[14] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_6|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_7|PvSel:elemento_1|Vsal2[15] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_6|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_7|PvSel:elemento_1|Vsal2[16] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_6|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_6|PvSel:elemento_1|Vsal1[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_5|z[1]
+Warning (13012): Latch mult:elemento_3|itera:elemento_6|PvSel:elemento_1|Vsal2[9] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_5|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_6|PvSel:elemento_1|Vsal2[10] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_5|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_6|PvSel:elemento_1|Vsal2[11] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_5|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_6|PvSel:elemento_1|Vsal2[12] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_5|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_6|PvSel:elemento_1|Vsal2[13] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_5|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_6|PvSel:elemento_1|Vsal2[14] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_5|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_6|PvSel:elemento_1|Vsal2[15] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_5|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_6|PvSel:elemento_1|Vsal2[16] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_5|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_5|PvSel:elemento_1|Vsal1[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_4|z[1]
+Warning (13012): Latch mult:elemento_3|itera:elemento_5|PvSel:elemento_1|Vsal2[9] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_4|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_5|PvSel:elemento_1|Vsal2[10] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_4|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_5|PvSel:elemento_1|Vsal2[11] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_4|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_5|PvSel:elemento_1|Vsal2[12] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_4|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_5|PvSel:elemento_1|Vsal2[13] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_4|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_5|PvSel:elemento_1|Vsal2[14] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_4|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_5|PvSel:elemento_1|Vsal2[15] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_4|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_5|PvSel:elemento_1|Vsal2[16] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_4|z[0]
+Warning (13012): Latch mult:elemento_3|GenVectores:elemento_1|Atemp[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal A[0]
+Warning (13012): Latch mult:elemento_3|GenVectores:elemento_1|Atemp[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal A[0]
+Warning (13012): Latch mult:elemento_3|GenVectores:elemento_1|Atemp[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal A[2]
+Warning (13012): Latch mult:elemento_3|GenVectores:elemento_1|Atemp[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal A[3]
+Warning (13012): Latch mult:elemento_3|GenVectores:elemento_1|Atemp[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal A[4]
+Warning (13012): Latch mult:elemento_3|GenVectores:elemento_1|Atemp[5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal A[0]
+Warning (13012): Latch mult:elemento_3|GenVectores:elemento_1|Atemp[6] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal A[6]
+Warning (13012): Latch mult:elemento_3|GenVectores:elemento_1|Atemp[7] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal A[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_4|PvSel:elemento_1|Vsal1[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_3|z[1]
+Warning (13012): Latch mult:elemento_3|itera:elemento_4|PvSel:elemento_1|Vsal2[9] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_3|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_4|PvSel:elemento_1|Vsal2[10] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_3|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_4|PvSel:elemento_1|Vsal2[11] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_3|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_4|PvSel:elemento_1|Vsal2[12] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_3|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_4|PvSel:elemento_1|Vsal2[13] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_3|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_4|PvSel:elemento_1|Vsal2[14] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_3|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_4|PvSel:elemento_1|Vsal2[15] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_3|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_4|PvSel:elemento_1|Vsal2[16] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_3|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_3|PvSel:elemento_1|Vsal1[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_2|z[1]
+Warning (13012): Latch mult:elemento_3|itera:elemento_3|PvSel:elemento_1|Vsal2[9] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_2|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_3|PvSel:elemento_1|Vsal2[10] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_2|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_3|PvSel:elemento_1|Vsal2[11] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_2|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_3|PvSel:elemento_1|Vsal2[12] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_2|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_3|PvSel:elemento_1|Vsal2[13] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_2|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_3|PvSel:elemento_1|Vsal2[14] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_2|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_3|PvSel:elemento_1|Vsal2[15] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_2|z[0]
+Warning (13012): Latch mult:elemento_3|itera:elemento_3|PvSel:elemento_1|Vsal2[16] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mult:elemento_3|itera:elemento_2|z[0]
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_9|PvSel:elemento_1|Vsal1[2]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_9|PvSel:elemento_1|Vsal1[3]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_9|PvSel:elemento_1|Vsal1[4]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_9|PvSel:elemento_1|Vsal1[5]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_9|PvSel:elemento_1|Vsal1[6]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_9|PvSel:elemento_1|Vsal1[7]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_9|PvSel:elemento_1|Vsal1[8]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_9|PvSel:elemento_1|Vsal2[9]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_9|PvSel:elemento_1|Vsal1[9]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_9|PvSel:elemento_1|Vsal2[10]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_9|PvSel:elemento_1|Vsal1[10]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_9|PvSel:elemento_1|Vsal2[11]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_9|PvSel:elemento_1|Vsal1[11]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_9|PvSel:elemento_1|Vsal2[12]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_9|PvSel:elemento_1|Vsal1[12]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_9|PvSel:elemento_1|Vsal2[13]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_9|PvSel:elemento_1|Vsal1[13]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_9|PvSel:elemento_1|Vsal2[14]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_9|PvSel:elemento_1|Vsal1[14]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_9|PvSel:elemento_1|Vsal2[15]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_9|PvSel:elemento_1|Vsal1[15]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_9|PvSel:elemento_1|Vsal2[16]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_8|PvSel:elemento_1|Vsal1[3]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_8|PvSel:elemento_1|Vsal1[1]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_8|PvSel:elemento_1|Vsal1[2]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_8|PvSel:elemento_1|Vsal1[4]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_8|PvSel:elemento_1|Vsal1[5]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_8|PvSel:elemento_1|Vsal1[6]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_8|PvSel:elemento_1|Vsal1[7]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_8|PvSel:elemento_1|Vsal1[8]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_8|PvSel:elemento_1|Vsal2[9]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_8|PvSel:elemento_1|Vsal1[9]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_8|PvSel:elemento_1|Vsal2[10]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_8|PvSel:elemento_1|Vsal1[10]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_8|PvSel:elemento_1|Vsal2[11]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_8|PvSel:elemento_1|Vsal1[11]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_8|PvSel:elemento_1|Vsal2[12]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_8|PvSel:elemento_1|Vsal1[12]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_8|PvSel:elemento_1|Vsal2[13]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_8|PvSel:elemento_1|Vsal1[13]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_8|PvSel:elemento_1|Vsal2[14]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_8|PvSel:elemento_1|Vsal1[14]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_8|PvSel:elemento_1|Vsal2[15]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_8|PvSel:elemento_1|Vsal1[15]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_8|PvSel:elemento_1|Vsal2[16]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_7|PvSel:elemento_1|Vsal1[4]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_7|PvSel:elemento_1|Vsal1[1]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_7|PvSel:elemento_1|Vsal1[2]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_7|PvSel:elemento_1|Vsal1[3]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_7|PvSel:elemento_1|Vsal1[5]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_7|PvSel:elemento_1|Vsal1[6]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_7|PvSel:elemento_1|Vsal1[7]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_7|PvSel:elemento_1|Vsal1[8]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_7|PvSel:elemento_1|Vsal2[9]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_7|PvSel:elemento_1|Vsal1[9]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_7|PvSel:elemento_1|Vsal2[10]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_7|PvSel:elemento_1|Vsal1[10]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_7|PvSel:elemento_1|Vsal2[11]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_7|PvSel:elemento_1|Vsal1[11]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_7|PvSel:elemento_1|Vsal2[12]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_7|PvSel:elemento_1|Vsal1[12]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_7|PvSel:elemento_1|Vsal2[13]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_7|PvSel:elemento_1|Vsal1[13]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_7|PvSel:elemento_1|Vsal2[14]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_7|PvSel:elemento_1|Vsal1[14]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_7|PvSel:elemento_1|Vsal2[15]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_7|PvSel:elemento_1|Vsal1[15]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_7|PvSel:elemento_1|Vsal2[16]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_6|PvSel:elemento_1|Vsal1[5]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_6|PvSel:elemento_1|Vsal1[1]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_6|PvSel:elemento_1|Vsal1[2]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_6|PvSel:elemento_1|Vsal1[3]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_6|PvSel:elemento_1|Vsal1[4]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_6|PvSel:elemento_1|Vsal1[6]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_6|PvSel:elemento_1|Vsal1[7]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_6|PvSel:elemento_1|Vsal1[8]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_6|PvSel:elemento_1|Vsal2[9]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_6|PvSel:elemento_1|Vsal1[9]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_6|PvSel:elemento_1|Vsal2[10]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_6|PvSel:elemento_1|Vsal1[10]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_6|PvSel:elemento_1|Vsal2[11]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_6|PvSel:elemento_1|Vsal1[11]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_6|PvSel:elemento_1|Vsal2[12]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_6|PvSel:elemento_1|Vsal1[12]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_6|PvSel:elemento_1|Vsal2[13]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_6|PvSel:elemento_1|Vsal1[13]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_6|PvSel:elemento_1|Vsal2[14]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_6|PvSel:elemento_1|Vsal1[14]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_6|PvSel:elemento_1|Vsal2[15]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_6|PvSel:elemento_1|Vsal1[15]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_6|PvSel:elemento_1|Vsal2[16]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_5|PvSel:elemento_1|Vsal1[6]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_5|PvSel:elemento_1|Vsal1[1]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_5|PvSel:elemento_1|Vsal1[2]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_5|PvSel:elemento_1|Vsal1[3]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_5|PvSel:elemento_1|Vsal1[4]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_5|PvSel:elemento_1|Vsal1[5]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_5|PvSel:elemento_1|Vsal1[7]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_5|PvSel:elemento_1|Vsal1[8]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_5|PvSel:elemento_1|Vsal2[9]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_5|PvSel:elemento_1|Vsal1[9]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_5|PvSel:elemento_1|Vsal2[10]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_5|PvSel:elemento_1|Vsal1[10]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_5|PvSel:elemento_1|Vsal2[11]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_5|PvSel:elemento_1|Vsal1[11]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_5|PvSel:elemento_1|Vsal2[12]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_5|PvSel:elemento_1|Vsal1[12]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_5|PvSel:elemento_1|Vsal2[13]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_5|PvSel:elemento_1|Vsal1[13]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_5|PvSel:elemento_1|Vsal2[14]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_5|PvSel:elemento_1|Vsal1[14]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_5|PvSel:elemento_1|Vsal2[15]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_5|PvSel:elemento_1|Vsal1[15]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_5|PvSel:elemento_1|Vsal2[16]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_4|PvSel:elemento_1|Vsal1[7]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_4|PvSel:elemento_1|Vsal1[1]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_4|PvSel:elemento_1|Vsal1[2]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_4|PvSel:elemento_1|Vsal1[3]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_4|PvSel:elemento_1|Vsal1[4]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_4|PvSel:elemento_1|Vsal1[5]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_4|PvSel:elemento_1|Vsal1[6]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_4|PvSel:elemento_1|Vsal1[8]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_4|PvSel:elemento_1|Vsal2[9]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_4|PvSel:elemento_1|Vsal1[9]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_4|PvSel:elemento_1|Vsal2[10]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_4|PvSel:elemento_1|Vsal1[10]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_4|PvSel:elemento_1|Vsal2[11]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_4|PvSel:elemento_1|Vsal1[11]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_4|PvSel:elemento_1|Vsal2[12]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_4|PvSel:elemento_1|Vsal1[12]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_4|PvSel:elemento_1|Vsal2[13]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_4|PvSel:elemento_1|Vsal1[13]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_4|PvSel:elemento_1|Vsal2[14]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_4|PvSel:elemento_1|Vsal1[14]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_4|PvSel:elemento_1|Vsal2[15]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_4|PvSel:elemento_1|Vsal1[15]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_4|PvSel:elemento_1|Vsal2[16]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_3|PvSel:elemento_1|Vsal1[8]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_3|PvSel:elemento_1|Vsal1[1]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_3|PvSel:elemento_1|Vsal1[2]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_3|PvSel:elemento_1|Vsal1[3]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_3|PvSel:elemento_1|Vsal1[4]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_3|PvSel:elemento_1|Vsal1[5]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_3|PvSel:elemento_1|Vsal1[6]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_3|PvSel:elemento_1|Vsal1[7]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_3|PvSel:elemento_1|Vsal2[9]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_3|PvSel:elemento_1|Vsal1[9]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_3|PvSel:elemento_1|Vsal2[10]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_3|PvSel:elemento_1|Vsal1[10]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_3|PvSel:elemento_1|Vsal2[11]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_3|PvSel:elemento_1|Vsal1[11]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_3|PvSel:elemento_1|Vsal2[12]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_3|PvSel:elemento_1|Vsal1[12]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_3|PvSel:elemento_1|Vsal2[13]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_3|PvSel:elemento_1|Vsal1[13]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_3|PvSel:elemento_1|Vsal2[14]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_3|PvSel:elemento_1|Vsal1[14]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_3|PvSel:elemento_1|Vsal2[15]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_3|PvSel:elemento_1|Vsal1[15]" is permanently enabled
+Warning (14026): LATCH primitive "mult:elemento_3|itera:elemento_3|PvSel:elemento_1|Vsal2[16]" is permanently enabled
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 753 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 19 input pins
+    Info (21059): Implemented 24 output pins
+    Info (21061): Implemented 710 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 435 warnings
+    Info: Peak virtual memory: 534 megabytes
+    Info: Processing ended: Wed Nov 04 06:54:08 2015
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:05
+
+

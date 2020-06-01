@@ -1,0 +1,1260 @@
+TimeQuest Timing Analyzer report for Contador_ITE
+Wed Sep 16 13:10:55 2015
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Clocks
+  4. Slow Model Fmax Summary
+  5. Slow Model Setup Summary
+  6. Slow Model Hold Summary
+  7. Slow Model Recovery Summary
+  8. Slow Model Removal Summary
+  9. Slow Model Minimum Pulse Width Summary
+ 10. Slow Model Setup: 'CLK_DE2'
+ 11. Slow Model Setup: 'div_frec:elemento_1|CLK_Prima'
+ 12. Slow Model Hold: 'div_frec:elemento_1|CLK_Prima'
+ 13. Slow Model Hold: 'CLK_DE2'
+ 14. Slow Model Minimum Pulse Width: 'CLK_DE2'
+ 15. Slow Model Minimum Pulse Width: 'div_frec:elemento_1|CLK_Prima'
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Fast Model Setup Summary
+ 19. Fast Model Hold Summary
+ 20. Fast Model Recovery Summary
+ 21. Fast Model Removal Summary
+ 22. Fast Model Minimum Pulse Width Summary
+ 23. Fast Model Setup: 'CLK_DE2'
+ 24. Fast Model Setup: 'div_frec:elemento_1|CLK_Prima'
+ 25. Fast Model Hold: 'div_frec:elemento_1|CLK_Prima'
+ 26. Fast Model Hold: 'CLK_DE2'
+ 27. Fast Model Minimum Pulse Width: 'CLK_DE2'
+ 28. Fast Model Minimum Pulse Width: 'div_frec:elemento_1|CLK_Prima'
+ 29. Clock to Output Times
+ 30. Minimum Clock to Output Times
+ 31. Multicorner Timing Analysis Summary
+ 32. Clock to Output Times
+ 33. Minimum Clock to Output Times
+ 34. Setup Transfers
+ 35. Hold Transfers
+ 36. Report TCCS
+ 37. Report RSKM
+ 38. Unconstrained Paths
+ 39. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                       ;
++--------------------+----------------------------------------------------+
+; Quartus II Version ; Version 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
+; Revision Name      ; Contador_ITE                                       ;
+; Device Family      ; Cyclone II                                         ;
+; Device Name        ; EP2C70F896C6                                       ;
+; Timing Models      ; Final                                              ;
+; Delay Model        ; Combined                                           ;
+; Rise/Fall Delays   ; Unavailable                                        ;
++--------------------+----------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                       ;
++-------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------------+
+; Clock Name                    ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                           ;
++-------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------------+
+; CLK_DE2                       ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLK_DE2 }                       ;
+; div_frec:elemento_1|CLK_Prima ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { div_frec:elemento_1|CLK_Prima } ;
++-------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                                              ;
++------------+-----------------+-------------------------------+-------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name                    ; Note                                                  ;
++------------+-----------------+-------------------------------+-------------------------------------------------------+
+; 294.55 MHz ; 294.55 MHz      ; CLK_DE2                       ;                                                       ;
+; 805.8 MHz  ; 500.0 MHz       ; div_frec:elemento_1|CLK_Prima ; limit due to high minimum pulse width violation (tch) ;
++------------+-----------------+-------------------------------+-------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------------------------------+
+; Slow Model Setup Summary                               ;
++-------------------------------+--------+---------------+
+; Clock                         ; Slack  ; End Point TNS ;
++-------------------------------+--------+---------------+
+; CLK_DE2                       ; -2.395 ; -53.238       ;
+; div_frec:elemento_1|CLK_Prima ; -0.241 ; -0.589        ;
++-------------------------------+--------+---------------+
+
+
++-------------------------------------------------------+
+; Slow Model Hold Summary                               ;
++-------------------------------+-------+---------------+
+; Clock                         ; Slack ; End Point TNS ;
++-------------------------------+-------+---------------+
+; div_frec:elemento_1|CLK_Prima ; 0.391 ; 0.000         ;
+; CLK_DE2                       ; 0.538 ; 0.000         ;
++-------------------------------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++--------------------------------------------------------+
+; Slow Model Minimum Pulse Width Summary                 ;
++-------------------------------+--------+---------------+
+; Clock                         ; Slack  ; End Point TNS ;
++-------------------------------+--------+---------------+
+; CLK_DE2                       ; -1.380 ; -26.380       ;
+; div_frec:elemento_1|CLK_Prima ; -0.500 ; -8.000        ;
++-------------------------------+--------+---------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'CLK_DE2'                                                                                                                    ;
++--------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                      ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; -2.395 ; div_frec:elemento_1|ciclos[23] ; div_frec:elemento_1|ciclos[14] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.431      ;
+; -2.395 ; div_frec:elemento_1|ciclos[23] ; div_frec:elemento_1|ciclos[15] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.431      ;
+; -2.395 ; div_frec:elemento_1|ciclos[23] ; div_frec:elemento_1|ciclos[16] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.431      ;
+; -2.395 ; div_frec:elemento_1|ciclos[23] ; div_frec:elemento_1|ciclos[17] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.431      ;
+; -2.395 ; div_frec:elemento_1|ciclos[23] ; div_frec:elemento_1|ciclos[18] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.431      ;
+; -2.395 ; div_frec:elemento_1|ciclos[23] ; div_frec:elemento_1|ciclos[19] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.431      ;
+; -2.395 ; div_frec:elemento_1|ciclos[23] ; div_frec:elemento_1|ciclos[21] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.431      ;
+; -2.395 ; div_frec:elemento_1|ciclos[23] ; div_frec:elemento_1|ciclos[22] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.431      ;
+; -2.395 ; div_frec:elemento_1|ciclos[23] ; div_frec:elemento_1|ciclos[23] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.431      ;
+; -2.395 ; div_frec:elemento_1|ciclos[23] ; div_frec:elemento_1|ciclos[24] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.431      ;
+; -2.395 ; div_frec:elemento_1|ciclos[23] ; div_frec:elemento_1|ciclos[20] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.431      ;
+; -2.353 ; div_frec:elemento_1|ciclos[20] ; div_frec:elemento_1|ciclos[14] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.389      ;
+; -2.353 ; div_frec:elemento_1|ciclos[20] ; div_frec:elemento_1|ciclos[15] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.389      ;
+; -2.353 ; div_frec:elemento_1|ciclos[20] ; div_frec:elemento_1|ciclos[16] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.389      ;
+; -2.353 ; div_frec:elemento_1|ciclos[20] ; div_frec:elemento_1|ciclos[17] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.389      ;
+; -2.353 ; div_frec:elemento_1|ciclos[20] ; div_frec:elemento_1|ciclos[18] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.389      ;
+; -2.353 ; div_frec:elemento_1|ciclos[20] ; div_frec:elemento_1|ciclos[19] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.389      ;
+; -2.353 ; div_frec:elemento_1|ciclos[20] ; div_frec:elemento_1|ciclos[21] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.389      ;
+; -2.353 ; div_frec:elemento_1|ciclos[20] ; div_frec:elemento_1|ciclos[22] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.389      ;
+; -2.353 ; div_frec:elemento_1|ciclos[20] ; div_frec:elemento_1|ciclos[23] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.389      ;
+; -2.353 ; div_frec:elemento_1|ciclos[20] ; div_frec:elemento_1|ciclos[24] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.389      ;
+; -2.353 ; div_frec:elemento_1|ciclos[20] ; div_frec:elemento_1|ciclos[20] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.389      ;
+; -2.298 ; div_frec:elemento_1|ciclos[24] ; div_frec:elemento_1|ciclos[14] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.334      ;
+; -2.298 ; div_frec:elemento_1|ciclos[24] ; div_frec:elemento_1|ciclos[15] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.334      ;
+; -2.298 ; div_frec:elemento_1|ciclos[24] ; div_frec:elemento_1|ciclos[16] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.334      ;
+; -2.298 ; div_frec:elemento_1|ciclos[24] ; div_frec:elemento_1|ciclos[17] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.334      ;
+; -2.298 ; div_frec:elemento_1|ciclos[24] ; div_frec:elemento_1|ciclos[18] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.334      ;
+; -2.298 ; div_frec:elemento_1|ciclos[24] ; div_frec:elemento_1|ciclos[19] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.334      ;
+; -2.298 ; div_frec:elemento_1|ciclos[24] ; div_frec:elemento_1|ciclos[21] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.334      ;
+; -2.298 ; div_frec:elemento_1|ciclos[24] ; div_frec:elemento_1|ciclos[22] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.334      ;
+; -2.298 ; div_frec:elemento_1|ciclos[24] ; div_frec:elemento_1|ciclos[23] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.334      ;
+; -2.298 ; div_frec:elemento_1|ciclos[24] ; div_frec:elemento_1|ciclos[24] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.334      ;
+; -2.298 ; div_frec:elemento_1|ciclos[24] ; div_frec:elemento_1|ciclos[20] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.334      ;
+; -2.255 ; div_frec:elemento_1|ciclos[15] ; div_frec:elemento_1|ciclos[14] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.291      ;
+; -2.255 ; div_frec:elemento_1|ciclos[15] ; div_frec:elemento_1|ciclos[15] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.291      ;
+; -2.255 ; div_frec:elemento_1|ciclos[15] ; div_frec:elemento_1|ciclos[16] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.291      ;
+; -2.255 ; div_frec:elemento_1|ciclos[15] ; div_frec:elemento_1|ciclos[17] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.291      ;
+; -2.255 ; div_frec:elemento_1|ciclos[15] ; div_frec:elemento_1|ciclos[18] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.291      ;
+; -2.255 ; div_frec:elemento_1|ciclos[15] ; div_frec:elemento_1|ciclos[19] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.291      ;
+; -2.255 ; div_frec:elemento_1|ciclos[15] ; div_frec:elemento_1|ciclos[21] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.291      ;
+; -2.255 ; div_frec:elemento_1|ciclos[15] ; div_frec:elemento_1|ciclos[22] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.291      ;
+; -2.255 ; div_frec:elemento_1|ciclos[15] ; div_frec:elemento_1|ciclos[23] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.291      ;
+; -2.255 ; div_frec:elemento_1|ciclos[15] ; div_frec:elemento_1|ciclos[24] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.291      ;
+; -2.255 ; div_frec:elemento_1|ciclos[15] ; div_frec:elemento_1|ciclos[20] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.291      ;
+; -2.223 ; div_frec:elemento_1|ciclos[1]  ; div_frec:elemento_1|ciclos[24] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 3.261      ;
+; -2.187 ; div_frec:elemento_1|ciclos[2]  ; div_frec:elemento_1|ciclos[24] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 3.225      ;
+; -2.152 ; div_frec:elemento_1|ciclos[1]  ; div_frec:elemento_1|ciclos[23] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 3.190      ;
+; -2.116 ; div_frec:elemento_1|ciclos[3]  ; div_frec:elemento_1|ciclos[24] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 3.154      ;
+; -2.116 ; div_frec:elemento_1|ciclos[2]  ; div_frec:elemento_1|ciclos[23] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 3.154      ;
+; -2.114 ; div_frec:elemento_1|ciclos[14] ; div_frec:elemento_1|ciclos[14] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.150      ;
+; -2.114 ; div_frec:elemento_1|ciclos[14] ; div_frec:elemento_1|ciclos[15] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.150      ;
+; -2.114 ; div_frec:elemento_1|ciclos[14] ; div_frec:elemento_1|ciclos[16] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.150      ;
+; -2.114 ; div_frec:elemento_1|ciclos[14] ; div_frec:elemento_1|ciclos[17] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.150      ;
+; -2.114 ; div_frec:elemento_1|ciclos[14] ; div_frec:elemento_1|ciclos[18] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.150      ;
+; -2.114 ; div_frec:elemento_1|ciclos[14] ; div_frec:elemento_1|ciclos[19] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.150      ;
+; -2.114 ; div_frec:elemento_1|ciclos[14] ; div_frec:elemento_1|ciclos[21] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.150      ;
+; -2.114 ; div_frec:elemento_1|ciclos[14] ; div_frec:elemento_1|ciclos[22] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.150      ;
+; -2.114 ; div_frec:elemento_1|ciclos[14] ; div_frec:elemento_1|ciclos[23] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.150      ;
+; -2.114 ; div_frec:elemento_1|ciclos[14] ; div_frec:elemento_1|ciclos[24] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.150      ;
+; -2.114 ; div_frec:elemento_1|ciclos[14] ; div_frec:elemento_1|ciclos[20] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.150      ;
+; -2.084 ; div_frec:elemento_1|ciclos[9]  ; div_frec:elemento_1|ciclos[14] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 3.122      ;
+; -2.084 ; div_frec:elemento_1|ciclos[9]  ; div_frec:elemento_1|ciclos[15] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 3.122      ;
+; -2.084 ; div_frec:elemento_1|ciclos[9]  ; div_frec:elemento_1|ciclos[16] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 3.122      ;
+; -2.084 ; div_frec:elemento_1|ciclos[9]  ; div_frec:elemento_1|ciclos[17] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 3.122      ;
+; -2.084 ; div_frec:elemento_1|ciclos[9]  ; div_frec:elemento_1|ciclos[18] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 3.122      ;
+; -2.084 ; div_frec:elemento_1|ciclos[9]  ; div_frec:elemento_1|ciclos[19] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 3.122      ;
+; -2.084 ; div_frec:elemento_1|ciclos[9]  ; div_frec:elemento_1|ciclos[21] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 3.122      ;
+; -2.084 ; div_frec:elemento_1|ciclos[9]  ; div_frec:elemento_1|ciclos[22] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 3.122      ;
+; -2.084 ; div_frec:elemento_1|ciclos[9]  ; div_frec:elemento_1|ciclos[23] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 3.122      ;
+; -2.084 ; div_frec:elemento_1|ciclos[9]  ; div_frec:elemento_1|ciclos[24] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 3.122      ;
+; -2.084 ; div_frec:elemento_1|ciclos[9]  ; div_frec:elemento_1|ciclos[20] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 3.122      ;
+; -2.081 ; div_frec:elemento_1|ciclos[1]  ; div_frec:elemento_1|ciclos[22] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 3.119      ;
+; -2.081 ; div_frec:elemento_1|ciclos[17] ; div_frec:elemento_1|ciclos[14] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.117      ;
+; -2.081 ; div_frec:elemento_1|ciclos[17] ; div_frec:elemento_1|ciclos[15] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.117      ;
+; -2.081 ; div_frec:elemento_1|ciclos[17] ; div_frec:elemento_1|ciclos[16] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.117      ;
+; -2.081 ; div_frec:elemento_1|ciclos[17] ; div_frec:elemento_1|ciclos[17] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.117      ;
+; -2.081 ; div_frec:elemento_1|ciclos[17] ; div_frec:elemento_1|ciclos[18] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.117      ;
+; -2.081 ; div_frec:elemento_1|ciclos[17] ; div_frec:elemento_1|ciclos[19] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.117      ;
+; -2.081 ; div_frec:elemento_1|ciclos[17] ; div_frec:elemento_1|ciclos[21] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.117      ;
+; -2.081 ; div_frec:elemento_1|ciclos[17] ; div_frec:elemento_1|ciclos[22] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.117      ;
+; -2.081 ; div_frec:elemento_1|ciclos[17] ; div_frec:elemento_1|ciclos[23] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.117      ;
+; -2.081 ; div_frec:elemento_1|ciclos[17] ; div_frec:elemento_1|ciclos[24] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.117      ;
+; -2.081 ; div_frec:elemento_1|ciclos[17] ; div_frec:elemento_1|ciclos[20] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 3.117      ;
+; -2.055 ; div_frec:elemento_1|ciclos[11] ; div_frec:elemento_1|ciclos[14] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 3.093      ;
+; -2.055 ; div_frec:elemento_1|ciclos[11] ; div_frec:elemento_1|ciclos[15] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 3.093      ;
+; -2.055 ; div_frec:elemento_1|ciclos[11] ; div_frec:elemento_1|ciclos[16] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 3.093      ;
+; -2.055 ; div_frec:elemento_1|ciclos[11] ; div_frec:elemento_1|ciclos[17] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 3.093      ;
+; -2.055 ; div_frec:elemento_1|ciclos[11] ; div_frec:elemento_1|ciclos[18] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 3.093      ;
+; -2.055 ; div_frec:elemento_1|ciclos[11] ; div_frec:elemento_1|ciclos[19] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 3.093      ;
+; -2.055 ; div_frec:elemento_1|ciclos[11] ; div_frec:elemento_1|ciclos[21] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 3.093      ;
+; -2.055 ; div_frec:elemento_1|ciclos[11] ; div_frec:elemento_1|ciclos[22] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 3.093      ;
+; -2.055 ; div_frec:elemento_1|ciclos[11] ; div_frec:elemento_1|ciclos[23] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 3.093      ;
+; -2.055 ; div_frec:elemento_1|ciclos[11] ; div_frec:elemento_1|ciclos[24] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 3.093      ;
+; -2.055 ; div_frec:elemento_1|ciclos[11] ; div_frec:elemento_1|ciclos[20] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 3.093      ;
+; -2.052 ; div_frec:elemento_1|ciclos[12] ; div_frec:elemento_1|ciclos[14] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 3.090      ;
+; -2.052 ; div_frec:elemento_1|ciclos[12] ; div_frec:elemento_1|ciclos[15] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 3.090      ;
+; -2.052 ; div_frec:elemento_1|ciclos[12] ; div_frec:elemento_1|ciclos[16] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 3.090      ;
+; -2.052 ; div_frec:elemento_1|ciclos[12] ; div_frec:elemento_1|ciclos[17] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 3.090      ;
+; -2.052 ; div_frec:elemento_1|ciclos[12] ; div_frec:elemento_1|ciclos[18] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 3.090      ;
+; -2.052 ; div_frec:elemento_1|ciclos[12] ; div_frec:elemento_1|ciclos[19] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 3.090      ;
++--------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'div_frec:elemento_1|CLK_Prima'                                                                                                                           ;
++--------+-----------------------------+-----------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; Slack  ; From Node                   ; To Node                     ; Launch Clock                  ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------+-----------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; -0.241 ; bcd_7_seg:elemento_2|BCD[2] ; bcd_7_seg:elemento_2|BCD[3] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 1.000        ; 0.000      ; 1.277      ;
+; -0.207 ; bcd_7_seg:elemento_2|BCD[1] ; bcd_7_seg:elemento_2|BCD[4] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 1.000        ; 0.000      ; 1.243      ;
+; -0.076 ; bcd_7_seg:elemento_2|BCD[4] ; bcd_7_seg:elemento_2|BCD[1] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 1.000        ; 0.000      ; 1.112      ;
+; -0.066 ; bcd_7_seg:elemento_2|BCD[1] ; bcd_7_seg:elemento_2|BCD[3] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 1.000        ; 0.000      ; 1.102      ;
+; -0.065 ; bcd_7_seg:elemento_2|BCD[1] ; bcd_7_seg:elemento_2|BCD[2] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 1.000        ; 0.000      ; 1.101      ;
+; -0.061 ; bcd_7_seg:elemento_2|BCD[2] ; bcd_7_seg:elemento_2|BCD[1] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 1.000        ; 0.000      ; 1.097      ;
+; -0.035 ; bcd_7_seg:elemento_2|BCD[2] ; bcd_7_seg:elemento_2|BCD[4] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 1.000        ; 0.000      ; 1.071      ;
+; 0.207  ; bcd_7_seg:elemento_2|BCD[2] ; bcd_7_seg:elemento_2|SAL[2] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 1.000        ; 0.000      ; 0.829      ;
+; 0.208  ; bcd_7_seg:elemento_2|BCD[1] ; bcd_7_seg:elemento_2|SAL[1] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 1.000        ; 0.000      ; 0.828      ;
+; 0.215  ; bcd_7_seg:elemento_2|BCD[3] ; bcd_7_seg:elemento_2|SAL[3] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 1.000        ; 0.000      ; 0.821      ;
+; 0.215  ; bcd_7_seg:elemento_2|BCD[3] ; bcd_7_seg:elemento_2|BCD[4] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 1.000        ; 0.000      ; 0.821      ;
+; 0.215  ; bcd_7_seg:elemento_2|BCD[3] ; bcd_7_seg:elemento_2|BCD[1] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 1.000        ; 0.000      ; 0.821      ;
+; 0.232  ; bcd_7_seg:elemento_2|BCD[4] ; bcd_7_seg:elemento_2|SAL[4] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 1.000        ; 0.000      ; 0.804      ;
+; 0.232  ; bcd_7_seg:elemento_2|BCD[4] ; bcd_7_seg:elemento_2|BCD[2] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 1.000        ; 0.000      ; 0.804      ;
+; 0.233  ; bcd_7_seg:elemento_2|BCD[4] ; bcd_7_seg:elemento_2|BCD[3] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 1.000        ; 0.000      ; 0.803      ;
+; 0.379  ; bcd_7_seg:elemento_2|BCD[3] ; bcd_7_seg:elemento_2|BCD[3] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 1.000        ; 0.000      ; 0.657      ;
+; 0.379  ; bcd_7_seg:elemento_2|BCD[4] ; bcd_7_seg:elemento_2|BCD[4] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 1.000        ; 0.000      ; 0.657      ;
+; 0.379  ; bcd_7_seg:elemento_2|BCD[1] ; bcd_7_seg:elemento_2|BCD[1] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 1.000        ; 0.000      ; 0.657      ;
+; 0.379  ; bcd_7_seg:elemento_2|BCD[2] ; bcd_7_seg:elemento_2|BCD[2] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 1.000        ; 0.000      ; 0.657      ;
++--------+-----------------------------+-----------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'div_frec:elemento_1|CLK_Prima'                                                                                                                           ;
++-------+-----------------------------+-----------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; Slack ; From Node                   ; To Node                     ; Launch Clock                  ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------+-----------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; 0.391 ; bcd_7_seg:elemento_2|BCD[2] ; bcd_7_seg:elemento_2|BCD[2] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; bcd_7_seg:elemento_2|BCD[4] ; bcd_7_seg:elemento_2|BCD[4] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; bcd_7_seg:elemento_2|BCD[3] ; bcd_7_seg:elemento_2|BCD[3] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; bcd_7_seg:elemento_2|BCD[1] ; bcd_7_seg:elemento_2|BCD[1] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 0.000        ; 0.000      ; 0.657      ;
+; 0.537 ; bcd_7_seg:elemento_2|BCD[4] ; bcd_7_seg:elemento_2|BCD[3] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 0.000        ; 0.000      ; 0.803      ;
+; 0.538 ; bcd_7_seg:elemento_2|BCD[4] ; bcd_7_seg:elemento_2|SAL[4] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 0.000        ; 0.000      ; 0.804      ;
+; 0.538 ; bcd_7_seg:elemento_2|BCD[4] ; bcd_7_seg:elemento_2|BCD[2] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 0.000        ; 0.000      ; 0.804      ;
+; 0.555 ; bcd_7_seg:elemento_2|BCD[3] ; bcd_7_seg:elemento_2|SAL[3] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 0.000        ; 0.000      ; 0.821      ;
+; 0.555 ; bcd_7_seg:elemento_2|BCD[3] ; bcd_7_seg:elemento_2|BCD[4] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 0.000        ; 0.000      ; 0.821      ;
+; 0.555 ; bcd_7_seg:elemento_2|BCD[3] ; bcd_7_seg:elemento_2|BCD[1] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 0.000        ; 0.000      ; 0.821      ;
+; 0.562 ; bcd_7_seg:elemento_2|BCD[1] ; bcd_7_seg:elemento_2|SAL[1] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 0.000        ; 0.000      ; 0.828      ;
+; 0.563 ; bcd_7_seg:elemento_2|BCD[2] ; bcd_7_seg:elemento_2|SAL[2] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 0.000        ; 0.000      ; 0.829      ;
+; 0.805 ; bcd_7_seg:elemento_2|BCD[2] ; bcd_7_seg:elemento_2|BCD[4] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 0.000        ; 0.000      ; 1.071      ;
+; 0.831 ; bcd_7_seg:elemento_2|BCD[2] ; bcd_7_seg:elemento_2|BCD[1] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 0.000        ; 0.000      ; 1.097      ;
+; 0.835 ; bcd_7_seg:elemento_2|BCD[1] ; bcd_7_seg:elemento_2|BCD[2] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 0.000        ; 0.000      ; 1.101      ;
+; 0.836 ; bcd_7_seg:elemento_2|BCD[1] ; bcd_7_seg:elemento_2|BCD[3] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 0.000        ; 0.000      ; 1.102      ;
+; 0.846 ; bcd_7_seg:elemento_2|BCD[4] ; bcd_7_seg:elemento_2|BCD[1] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 0.000        ; 0.000      ; 1.112      ;
+; 0.977 ; bcd_7_seg:elemento_2|BCD[1] ; bcd_7_seg:elemento_2|BCD[4] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 0.000        ; 0.000      ; 1.243      ;
+; 1.011 ; bcd_7_seg:elemento_2|BCD[2] ; bcd_7_seg:elemento_2|BCD[3] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 0.000        ; 0.000      ; 1.277      ;
++-------+-----------------------------+-----------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'CLK_DE2'                                                                                                                    ;
++-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                      ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.538 ; div_frec:elemento_1|ciclos[24] ; div_frec:elemento_1|ciclos[24] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.804      ;
+; 0.799 ; div_frec:elemento_1|ciclos[1]  ; div_frec:elemento_1|ciclos[1]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.065      ;
+; 0.799 ; div_frec:elemento_1|ciclos[4]  ; div_frec:elemento_1|ciclos[4]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.065      ;
+; 0.799 ; div_frec:elemento_1|ciclos[6]  ; div_frec:elemento_1|ciclos[6]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.065      ;
+; 0.799 ; div_frec:elemento_1|ciclos[8]  ; div_frec:elemento_1|ciclos[8]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.065      ;
+; 0.810 ; div_frec:elemento_1|ciclos[10] ; div_frec:elemento_1|ciclos[10] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.076      ;
+; 0.810 ; div_frec:elemento_1|ciclos[11] ; div_frec:elemento_1|ciclos[11] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.076      ;
+; 0.810 ; div_frec:elemento_1|ciclos[14] ; div_frec:elemento_1|ciclos[14] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.076      ;
+; 0.812 ; div_frec:elemento_1|ciclos[22] ; div_frec:elemento_1|ciclos[22] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.078      ;
+; 0.814 ; div_frec:elemento_1|ciclos[12] ; div_frec:elemento_1|ciclos[12] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.080      ;
+; 0.821 ; div_frec:elemento_1|ciclos[15] ; div_frec:elemento_1|ciclos[15] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.087      ;
+; 0.822 ; div_frec:elemento_1|ciclos[17] ; div_frec:elemento_1|ciclos[17] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.088      ;
+; 0.828 ; div_frec:elemento_1|ciclos[20] ; div_frec:elemento_1|ciclos[20] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.094      ;
+; 0.831 ; div_frec:elemento_1|ciclos[2]  ; div_frec:elemento_1|ciclos[2]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.097      ;
+; 0.831 ; div_frec:elemento_1|ciclos[3]  ; div_frec:elemento_1|ciclos[3]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.097      ;
+; 0.834 ; div_frec:elemento_1|ciclos[5]  ; div_frec:elemento_1|ciclos[5]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.100      ;
+; 0.835 ; div_frec:elemento_1|ciclos[7]  ; div_frec:elemento_1|ciclos[7]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.101      ;
+; 0.838 ; div_frec:elemento_1|ciclos[9]  ; div_frec:elemento_1|ciclos[9]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.104      ;
+; 0.841 ; div_frec:elemento_1|ciclos[18] ; div_frec:elemento_1|ciclos[18] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.107      ;
+; 0.842 ; div_frec:elemento_1|ciclos[19] ; div_frec:elemento_1|ciclos[19] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.108      ;
+; 0.845 ; div_frec:elemento_1|ciclos[16] ; div_frec:elemento_1|ciclos[16] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.111      ;
+; 0.849 ; div_frec:elemento_1|ciclos[21] ; div_frec:elemento_1|ciclos[21] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.115      ;
+; 0.861 ; div_frec:elemento_1|ciclos[23] ; div_frec:elemento_1|ciclos[23] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.127      ;
+; 1.171 ; div_frec:elemento_1|ciclos[13] ; div_frec:elemento_1|CLK_Prima  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.437      ;
+; 1.182 ; div_frec:elemento_1|ciclos[1]  ; div_frec:elemento_1|ciclos[2]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.448      ;
+; 1.182 ; div_frec:elemento_1|ciclos[6]  ; div_frec:elemento_1|ciclos[7]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.448      ;
+; 1.182 ; div_frec:elemento_1|ciclos[8]  ; div_frec:elemento_1|ciclos[9]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.448      ;
+; 1.193 ; div_frec:elemento_1|ciclos[10] ; div_frec:elemento_1|ciclos[11] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.459      ;
+; 1.193 ; div_frec:elemento_1|ciclos[11] ; div_frec:elemento_1|ciclos[12] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.459      ;
+; 1.193 ; div_frec:elemento_1|ciclos[14] ; div_frec:elemento_1|ciclos[15] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.459      ;
+; 1.195 ; div_frec:elemento_1|ciclos[22] ; div_frec:elemento_1|ciclos[23] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.461      ;
+; 1.204 ; div_frec:elemento_1|ciclos[15] ; div_frec:elemento_1|ciclos[16] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.470      ;
+; 1.205 ; div_frec:elemento_1|ciclos[17] ; div_frec:elemento_1|ciclos[18] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.471      ;
+; 1.217 ; div_frec:elemento_1|ciclos[3]  ; div_frec:elemento_1|ciclos[4]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.483      ;
+; 1.217 ; div_frec:elemento_1|ciclos[2]  ; div_frec:elemento_1|ciclos[3]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.483      ;
+; 1.220 ; div_frec:elemento_1|ciclos[5]  ; div_frec:elemento_1|ciclos[6]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.486      ;
+; 1.221 ; div_frec:elemento_1|ciclos[7]  ; div_frec:elemento_1|ciclos[8]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.487      ;
+; 1.224 ; div_frec:elemento_1|ciclos[9]  ; div_frec:elemento_1|ciclos[10] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.490      ;
+; 1.227 ; div_frec:elemento_1|ciclos[18] ; div_frec:elemento_1|ciclos[19] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.493      ;
+; 1.228 ; div_frec:elemento_1|ciclos[19] ; div_frec:elemento_1|ciclos[20] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.494      ;
+; 1.231 ; div_frec:elemento_1|ciclos[16] ; div_frec:elemento_1|ciclos[17] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.497      ;
+; 1.235 ; div_frec:elemento_1|ciclos[21] ; div_frec:elemento_1|ciclos[22] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.501      ;
+; 1.247 ; div_frec:elemento_1|ciclos[23] ; div_frec:elemento_1|ciclos[24] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.513      ;
+; 1.253 ; div_frec:elemento_1|ciclos[1]  ; div_frec:elemento_1|ciclos[3]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.519      ;
+; 1.253 ; div_frec:elemento_1|ciclos[6]  ; div_frec:elemento_1|ciclos[8]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.519      ;
+; 1.253 ; div_frec:elemento_1|ciclos[8]  ; div_frec:elemento_1|ciclos[10] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.519      ;
+; 1.264 ; div_frec:elemento_1|ciclos[10] ; div_frec:elemento_1|ciclos[12] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.530      ;
+; 1.264 ; div_frec:elemento_1|ciclos[14] ; div_frec:elemento_1|ciclos[16] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.530      ;
+; 1.266 ; div_frec:elemento_1|ciclos[22] ; div_frec:elemento_1|ciclos[24] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.532      ;
+; 1.274 ; div_frec:elemento_1|ciclos[4]  ; div_frec:elemento_1|ciclos[5]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.540      ;
+; 1.275 ; div_frec:elemento_1|ciclos[15] ; div_frec:elemento_1|ciclos[17] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.541      ;
+; 1.276 ; div_frec:elemento_1|ciclos[17] ; div_frec:elemento_1|ciclos[19] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.542      ;
+; 1.288 ; div_frec:elemento_1|ciclos[2]  ; div_frec:elemento_1|ciclos[4]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.554      ;
+; 1.291 ; div_frec:elemento_1|ciclos[5]  ; div_frec:elemento_1|ciclos[7]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.557      ;
+; 1.292 ; div_frec:elemento_1|ciclos[7]  ; div_frec:elemento_1|ciclos[9]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.558      ;
+; 1.295 ; div_frec:elemento_1|ciclos[9]  ; div_frec:elemento_1|ciclos[11] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.561      ;
+; 1.298 ; div_frec:elemento_1|ciclos[18] ; div_frec:elemento_1|ciclos[20] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.564      ;
+; 1.302 ; div_frec:elemento_1|ciclos[16] ; div_frec:elemento_1|ciclos[18] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.568      ;
+; 1.303 ; div_frec:elemento_1|ciclos[20] ; div_frec:elemento_1|ciclos[21] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.569      ;
+; 1.306 ; div_frec:elemento_1|ciclos[21] ; div_frec:elemento_1|ciclos[23] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.572      ;
+; 1.324 ; div_frec:elemento_1|ciclos[1]  ; div_frec:elemento_1|ciclos[4]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.590      ;
+; 1.324 ; div_frec:elemento_1|ciclos[6]  ; div_frec:elemento_1|ciclos[9]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.590      ;
+; 1.324 ; div_frec:elemento_1|ciclos[8]  ; div_frec:elemento_1|ciclos[11] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.590      ;
+; 1.335 ; div_frec:elemento_1|ciclos[14] ; div_frec:elemento_1|ciclos[17] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.601      ;
+; 1.345 ; div_frec:elemento_1|ciclos[4]  ; div_frec:elemento_1|ciclos[6]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.611      ;
+; 1.346 ; div_frec:elemento_1|ciclos[15] ; div_frec:elemento_1|ciclos[18] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.612      ;
+; 1.347 ; div_frec:elemento_1|ciclos[17] ; div_frec:elemento_1|ciclos[20] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.613      ;
+; 1.358 ; div_frec:elemento_1|ciclos[12] ; div_frec:elemento_1|ciclos[14] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.002      ; 1.626      ;
+; 1.362 ; div_frec:elemento_1|ciclos[5]  ; div_frec:elemento_1|ciclos[8]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.628      ;
+; 1.363 ; div_frec:elemento_1|ciclos[7]  ; div_frec:elemento_1|ciclos[10] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.629      ;
+; 1.366 ; div_frec:elemento_1|ciclos[9]  ; div_frec:elemento_1|ciclos[12] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.632      ;
+; 1.373 ; div_frec:elemento_1|ciclos[16] ; div_frec:elemento_1|ciclos[19] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.639      ;
+; 1.374 ; div_frec:elemento_1|ciclos[20] ; div_frec:elemento_1|ciclos[22] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.640      ;
+; 1.376 ; div_frec:elemento_1|ciclos[3]  ; div_frec:elemento_1|ciclos[5]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.642      ;
+; 1.377 ; div_frec:elemento_1|ciclos[21] ; div_frec:elemento_1|ciclos[24] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.643      ;
+; 1.387 ; div_frec:elemento_1|ciclos[19] ; div_frec:elemento_1|ciclos[21] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.653      ;
+; 1.395 ; div_frec:elemento_1|ciclos[6]  ; div_frec:elemento_1|ciclos[10] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.661      ;
+; 1.395 ; div_frec:elemento_1|ciclos[8]  ; div_frec:elemento_1|ciclos[12] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.661      ;
+; 1.406 ; div_frec:elemento_1|ciclos[14] ; div_frec:elemento_1|ciclos[18] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.672      ;
+; 1.408 ; div_frec:elemento_1|ciclos[11] ; div_frec:elemento_1|ciclos[14] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.002      ; 1.676      ;
+; 1.416 ; div_frec:elemento_1|ciclos[4]  ; div_frec:elemento_1|ciclos[7]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.682      ;
+; 1.417 ; div_frec:elemento_1|ciclos[15] ; div_frec:elemento_1|ciclos[19] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.683      ;
+; 1.429 ; div_frec:elemento_1|ciclos[12] ; div_frec:elemento_1|ciclos[15] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.002      ; 1.697      ;
+; 1.433 ; div_frec:elemento_1|ciclos[5]  ; div_frec:elemento_1|ciclos[9]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.699      ;
+; 1.434 ; div_frec:elemento_1|ciclos[7]  ; div_frec:elemento_1|ciclos[11] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.700      ;
+; 1.444 ; div_frec:elemento_1|ciclos[16] ; div_frec:elemento_1|ciclos[20] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.710      ;
+; 1.445 ; div_frec:elemento_1|ciclos[20] ; div_frec:elemento_1|ciclos[23] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.711      ;
+; 1.447 ; div_frec:elemento_1|ciclos[3]  ; div_frec:elemento_1|ciclos[6]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.713      ;
+; 1.447 ; div_frec:elemento_1|ciclos[2]  ; div_frec:elemento_1|ciclos[5]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.713      ;
+; 1.457 ; div_frec:elemento_1|ciclos[18] ; div_frec:elemento_1|ciclos[21] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.723      ;
+; 1.458 ; div_frec:elemento_1|ciclos[19] ; div_frec:elemento_1|ciclos[22] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.724      ;
+; 1.464 ; div_frec:elemento_1|ciclos[10] ; div_frec:elemento_1|CLK_Prima  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.730      ;
+; 1.466 ; div_frec:elemento_1|ciclos[6]  ; div_frec:elemento_1|ciclos[11] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.732      ;
+; 1.477 ; div_frec:elemento_1|ciclos[14] ; div_frec:elemento_1|ciclos[19] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.743      ;
+; 1.479 ; div_frec:elemento_1|ciclos[10] ; div_frec:elemento_1|ciclos[14] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.002      ; 1.747      ;
+; 1.479 ; div_frec:elemento_1|ciclos[11] ; div_frec:elemento_1|ciclos[15] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.002      ; 1.747      ;
+; 1.483 ; div_frec:elemento_1|ciclos[1]  ; div_frec:elemento_1|ciclos[5]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.749      ;
+; 1.487 ; div_frec:elemento_1|ciclos[4]  ; div_frec:elemento_1|ciclos[8]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.753      ;
+; 1.488 ; div_frec:elemento_1|ciclos[15] ; div_frec:elemento_1|ciclos[20] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 1.754      ;
+; 1.500 ; div_frec:elemento_1|ciclos[12] ; div_frec:elemento_1|ciclos[16] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.002      ; 1.768      ;
++-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'CLK_DE2'                                                                         ;
++--------+--------------+----------------+------------------+---------+------------+--------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock   ; Clock Edge ; Target                         ;
++--------+--------------+----------------+------------------+---------+------------+--------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CLK_DE2 ; Rise       ; CLK_DE2                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; div_frec:elemento_1|CLK_Prima  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; div_frec:elemento_1|CLK_Prima  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[10] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[10] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[11] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[11] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[12] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[12] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[13] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[13] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[14] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[14] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[15] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[15] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[16] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[16] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[17] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[17] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[18] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[18] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[19] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[19] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[20] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[20] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[21] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[21] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[22] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[22] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[23] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[23] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[24] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[24] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[9]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; CLK_DE2|combout                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; CLK_DE2|combout                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; CLK_DE2~clkctrl|inclk[0]       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; CLK_DE2~clkctrl|inclk[0]       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; CLK_DE2~clkctrl|outclk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; CLK_DE2~clkctrl|outclk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; elemento_1|CLK_Prima|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; elemento_1|CLK_Prima|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; elemento_1|ciclos[10]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; elemento_1|ciclos[10]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; elemento_1|ciclos[11]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; elemento_1|ciclos[11]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; elemento_1|ciclos[12]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; elemento_1|ciclos[12]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; elemento_1|ciclos[13]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; elemento_1|ciclos[13]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; elemento_1|ciclos[14]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; elemento_1|ciclos[14]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; elemento_1|ciclos[15]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; elemento_1|ciclos[15]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; elemento_1|ciclos[16]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; elemento_1|ciclos[16]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; elemento_1|ciclos[17]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; elemento_1|ciclos[17]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; elemento_1|ciclos[18]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; elemento_1|ciclos[18]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; elemento_1|ciclos[19]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; elemento_1|ciclos[19]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; elemento_1|ciclos[1]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; elemento_1|ciclos[1]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; elemento_1|ciclos[20]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; elemento_1|ciclos[20]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; elemento_1|ciclos[21]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; elemento_1|ciclos[21]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; elemento_1|ciclos[22]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; elemento_1|ciclos[22]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; elemento_1|ciclos[23]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; elemento_1|ciclos[23]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; elemento_1|ciclos[24]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; elemento_1|ciclos[24]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; elemento_1|ciclos[2]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; elemento_1|ciclos[2]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; elemento_1|ciclos[3]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; elemento_1|ciclos[3]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; elemento_1|ciclos[4]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; elemento_1|ciclos[4]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; elemento_1|ciclos[5]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; elemento_1|ciclos[5]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; elemento_1|ciclos[6]|clk       ;
++--------+--------------+----------------+------------------+---------+------------+--------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'div_frec:elemento_1|CLK_Prima'                                                                                ;
++--------+--------------+----------------+------------------+-------------------------------+------------+---------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock                         ; Clock Edge ; Target                                ;
++--------+--------------+----------------+------------------+-------------------------------+------------+---------------------------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; div_frec:elemento_1|CLK_Prima ; Rise       ; bcd_7_seg:elemento_2|BCD[1]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; div_frec:elemento_1|CLK_Prima ; Rise       ; bcd_7_seg:elemento_2|BCD[1]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; div_frec:elemento_1|CLK_Prima ; Rise       ; bcd_7_seg:elemento_2|BCD[2]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; div_frec:elemento_1|CLK_Prima ; Rise       ; bcd_7_seg:elemento_2|BCD[2]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; div_frec:elemento_1|CLK_Prima ; Rise       ; bcd_7_seg:elemento_2|BCD[3]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; div_frec:elemento_1|CLK_Prima ; Rise       ; bcd_7_seg:elemento_2|BCD[3]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; div_frec:elemento_1|CLK_Prima ; Rise       ; bcd_7_seg:elemento_2|BCD[4]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; div_frec:elemento_1|CLK_Prima ; Rise       ; bcd_7_seg:elemento_2|BCD[4]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; div_frec:elemento_1|CLK_Prima ; Rise       ; bcd_7_seg:elemento_2|SAL[1]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; div_frec:elemento_1|CLK_Prima ; Rise       ; bcd_7_seg:elemento_2|SAL[1]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; div_frec:elemento_1|CLK_Prima ; Rise       ; bcd_7_seg:elemento_2|SAL[2]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; div_frec:elemento_1|CLK_Prima ; Rise       ; bcd_7_seg:elemento_2|SAL[2]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; div_frec:elemento_1|CLK_Prima ; Rise       ; bcd_7_seg:elemento_2|SAL[3]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; div_frec:elemento_1|CLK_Prima ; Rise       ; bcd_7_seg:elemento_2|SAL[3]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; div_frec:elemento_1|CLK_Prima ; Rise       ; bcd_7_seg:elemento_2|SAL[4]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; div_frec:elemento_1|CLK_Prima ; Rise       ; bcd_7_seg:elemento_2|SAL[4]           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; div_frec:elemento_1|CLK_Prima ; Rise       ; elemento_1|CLK_Prima|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; div_frec:elemento_1|CLK_Prima ; Rise       ; elemento_1|CLK_Prima|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; div_frec:elemento_1|CLK_Prima ; Rise       ; elemento_1|CLK_Prima~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; div_frec:elemento_1|CLK_Prima ; Rise       ; elemento_1|CLK_Prima~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; div_frec:elemento_1|CLK_Prima ; Rise       ; elemento_1|CLK_Prima~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; div_frec:elemento_1|CLK_Prima ; Rise       ; elemento_1|CLK_Prima~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; div_frec:elemento_1|CLK_Prima ; Rise       ; elemento_2|BCD[1]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; div_frec:elemento_1|CLK_Prima ; Rise       ; elemento_2|BCD[1]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; div_frec:elemento_1|CLK_Prima ; Rise       ; elemento_2|BCD[2]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; div_frec:elemento_1|CLK_Prima ; Rise       ; elemento_2|BCD[2]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; div_frec:elemento_1|CLK_Prima ; Rise       ; elemento_2|BCD[3]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; div_frec:elemento_1|CLK_Prima ; Rise       ; elemento_2|BCD[3]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; div_frec:elemento_1|CLK_Prima ; Rise       ; elemento_2|BCD[4]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; div_frec:elemento_1|CLK_Prima ; Rise       ; elemento_2|BCD[4]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; div_frec:elemento_1|CLK_Prima ; Rise       ; elemento_2|SAL[1]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; div_frec:elemento_1|CLK_Prima ; Rise       ; elemento_2|SAL[1]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; div_frec:elemento_1|CLK_Prima ; Rise       ; elemento_2|SAL[2]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; div_frec:elemento_1|CLK_Prima ; Rise       ; elemento_2|SAL[2]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; div_frec:elemento_1|CLK_Prima ; Rise       ; elemento_2|SAL[3]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; div_frec:elemento_1|CLK_Prima ; Rise       ; elemento_2|SAL[3]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; div_frec:elemento_1|CLK_Prima ; Rise       ; elemento_2|SAL[4]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; div_frec:elemento_1|CLK_Prima ; Rise       ; elemento_2|SAL[4]|clk                 ;
++--------+--------------+----------------+------------------+-------------------------------+------------+---------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                   ;
++------------+-------------------------------+-------+-------+------------+-------------------------------+
+; Data Port  ; Clock Port                    ; Rise  ; Fall  ; Clock Edge ; Clock Reference               ;
++------------+-------------------------------+-------+-------+------------+-------------------------------+
+; Z_7SEG[*]  ; div_frec:elemento_1|CLK_Prima ; 8.056 ; 8.056 ; Rise       ; div_frec:elemento_1|CLK_Prima ;
+;  Z_7SEG[1] ; div_frec:elemento_1|CLK_Prima ; 7.434 ; 7.434 ; Rise       ; div_frec:elemento_1|CLK_Prima ;
+;  Z_7SEG[2] ; div_frec:elemento_1|CLK_Prima ; 6.968 ; 6.968 ; Rise       ; div_frec:elemento_1|CLK_Prima ;
+;  Z_7SEG[3] ; div_frec:elemento_1|CLK_Prima ; 7.004 ; 7.004 ; Rise       ; div_frec:elemento_1|CLK_Prima ;
+;  Z_7SEG[4] ; div_frec:elemento_1|CLK_Prima ; 7.240 ; 7.240 ; Rise       ; div_frec:elemento_1|CLK_Prima ;
+;  Z_7SEG[5] ; div_frec:elemento_1|CLK_Prima ; 7.218 ; 7.218 ; Rise       ; div_frec:elemento_1|CLK_Prima ;
+;  Z_7SEG[6] ; div_frec:elemento_1|CLK_Prima ; 7.471 ; 7.471 ; Rise       ; div_frec:elemento_1|CLK_Prima ;
+;  Z_7SEG[7] ; div_frec:elemento_1|CLK_Prima ; 8.056 ; 8.056 ; Rise       ; div_frec:elemento_1|CLK_Prima ;
++------------+-------------------------------+-------+-------+------------+-------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                           ;
++------------+-------------------------------+-------+-------+------------+-------------------------------+
+; Data Port  ; Clock Port                    ; Rise  ; Fall  ; Clock Edge ; Clock Reference               ;
++------------+-------------------------------+-------+-------+------------+-------------------------------+
+; Z_7SEG[*]  ; div_frec:elemento_1|CLK_Prima ; 6.789 ; 6.789 ; Rise       ; div_frec:elemento_1|CLK_Prima ;
+;  Z_7SEG[1] ; div_frec:elemento_1|CLK_Prima ; 7.257 ; 7.257 ; Rise       ; div_frec:elemento_1|CLK_Prima ;
+;  Z_7SEG[2] ; div_frec:elemento_1|CLK_Prima ; 6.789 ; 6.789 ; Rise       ; div_frec:elemento_1|CLK_Prima ;
+;  Z_7SEG[3] ; div_frec:elemento_1|CLK_Prima ; 6.802 ; 6.802 ; Rise       ; div_frec:elemento_1|CLK_Prima ;
+;  Z_7SEG[4] ; div_frec:elemento_1|CLK_Prima ; 7.063 ; 7.063 ; Rise       ; div_frec:elemento_1|CLK_Prima ;
+;  Z_7SEG[5] ; div_frec:elemento_1|CLK_Prima ; 7.043 ; 7.043 ; Rise       ; div_frec:elemento_1|CLK_Prima ;
+;  Z_7SEG[6] ; div_frec:elemento_1|CLK_Prima ; 7.294 ; 7.294 ; Rise       ; div_frec:elemento_1|CLK_Prima ;
+;  Z_7SEG[7] ; div_frec:elemento_1|CLK_Prima ; 7.879 ; 7.879 ; Rise       ; div_frec:elemento_1|CLK_Prima ;
++------------+-------------------------------+-------+-------+------------+-------------------------------+
+
+
++--------------------------------------------------------+
+; Fast Model Setup Summary                               ;
++-------------------------------+--------+---------------+
+; Clock                         ; Slack  ; End Point TNS ;
++-------------------------------+--------+---------------+
+; CLK_DE2                       ; -0.583 ; -11.651       ;
+; div_frec:elemento_1|CLK_Prima ; 0.424  ; 0.000         ;
++-------------------------------+--------+---------------+
+
+
++-------------------------------------------------------+
+; Fast Model Hold Summary                               ;
++-------------------------------+-------+---------------+
+; Clock                         ; Slack ; End Point TNS ;
++-------------------------------+-------+---------------+
+; div_frec:elemento_1|CLK_Prima ; 0.215 ; 0.000         ;
+; CLK_DE2                       ; 0.249 ; 0.000         ;
++-------------------------------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++--------------------------------------------------------+
+; Fast Model Minimum Pulse Width Summary                 ;
++-------------------------------+--------+---------------+
+; Clock                         ; Slack  ; End Point TNS ;
++-------------------------------+--------+---------------+
+; CLK_DE2                       ; -1.380 ; -26.380       ;
+; div_frec:elemento_1|CLK_Prima ; -0.500 ; -8.000        ;
++-------------------------------+--------+---------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'CLK_DE2'                                                                                                                    ;
++--------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                      ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.583 ; div_frec:elemento_1|ciclos[23] ; div_frec:elemento_1|ciclos[14] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.615      ;
+; -0.583 ; div_frec:elemento_1|ciclos[23] ; div_frec:elemento_1|ciclos[15] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.615      ;
+; -0.583 ; div_frec:elemento_1|ciclos[23] ; div_frec:elemento_1|ciclos[16] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.615      ;
+; -0.583 ; div_frec:elemento_1|ciclos[23] ; div_frec:elemento_1|ciclos[17] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.615      ;
+; -0.583 ; div_frec:elemento_1|ciclos[23] ; div_frec:elemento_1|ciclos[18] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.615      ;
+; -0.583 ; div_frec:elemento_1|ciclos[23] ; div_frec:elemento_1|ciclos[19] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.615      ;
+; -0.583 ; div_frec:elemento_1|ciclos[23] ; div_frec:elemento_1|ciclos[21] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.615      ;
+; -0.583 ; div_frec:elemento_1|ciclos[23] ; div_frec:elemento_1|ciclos[22] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.615      ;
+; -0.583 ; div_frec:elemento_1|ciclos[23] ; div_frec:elemento_1|ciclos[23] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.615      ;
+; -0.583 ; div_frec:elemento_1|ciclos[23] ; div_frec:elemento_1|ciclos[24] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.615      ;
+; -0.583 ; div_frec:elemento_1|ciclos[23] ; div_frec:elemento_1|ciclos[20] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.615      ;
+; -0.570 ; div_frec:elemento_1|ciclos[20] ; div_frec:elemento_1|ciclos[14] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.602      ;
+; -0.570 ; div_frec:elemento_1|ciclos[20] ; div_frec:elemento_1|ciclos[15] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.602      ;
+; -0.570 ; div_frec:elemento_1|ciclos[20] ; div_frec:elemento_1|ciclos[16] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.602      ;
+; -0.570 ; div_frec:elemento_1|ciclos[20] ; div_frec:elemento_1|ciclos[17] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.602      ;
+; -0.570 ; div_frec:elemento_1|ciclos[20] ; div_frec:elemento_1|ciclos[18] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.602      ;
+; -0.570 ; div_frec:elemento_1|ciclos[20] ; div_frec:elemento_1|ciclos[19] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.602      ;
+; -0.570 ; div_frec:elemento_1|ciclos[20] ; div_frec:elemento_1|ciclos[21] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.602      ;
+; -0.570 ; div_frec:elemento_1|ciclos[20] ; div_frec:elemento_1|ciclos[22] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.602      ;
+; -0.570 ; div_frec:elemento_1|ciclos[20] ; div_frec:elemento_1|ciclos[23] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.602      ;
+; -0.570 ; div_frec:elemento_1|ciclos[20] ; div_frec:elemento_1|ciclos[24] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.602      ;
+; -0.570 ; div_frec:elemento_1|ciclos[20] ; div_frec:elemento_1|ciclos[20] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.602      ;
+; -0.555 ; div_frec:elemento_1|ciclos[1]  ; div_frec:elemento_1|ciclos[24] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 1.589      ;
+; -0.550 ; div_frec:elemento_1|ciclos[24] ; div_frec:elemento_1|ciclos[14] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.582      ;
+; -0.550 ; div_frec:elemento_1|ciclos[24] ; div_frec:elemento_1|ciclos[15] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.582      ;
+; -0.550 ; div_frec:elemento_1|ciclos[24] ; div_frec:elemento_1|ciclos[16] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.582      ;
+; -0.550 ; div_frec:elemento_1|ciclos[24] ; div_frec:elemento_1|ciclos[17] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.582      ;
+; -0.550 ; div_frec:elemento_1|ciclos[24] ; div_frec:elemento_1|ciclos[18] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.582      ;
+; -0.550 ; div_frec:elemento_1|ciclos[24] ; div_frec:elemento_1|ciclos[19] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.582      ;
+; -0.550 ; div_frec:elemento_1|ciclos[24] ; div_frec:elemento_1|ciclos[21] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.582      ;
+; -0.550 ; div_frec:elemento_1|ciclos[24] ; div_frec:elemento_1|ciclos[22] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.582      ;
+; -0.550 ; div_frec:elemento_1|ciclos[24] ; div_frec:elemento_1|ciclos[23] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.582      ;
+; -0.550 ; div_frec:elemento_1|ciclos[24] ; div_frec:elemento_1|ciclos[24] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.582      ;
+; -0.550 ; div_frec:elemento_1|ciclos[24] ; div_frec:elemento_1|ciclos[20] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.582      ;
+; -0.532 ; div_frec:elemento_1|ciclos[2]  ; div_frec:elemento_1|ciclos[24] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 1.566      ;
+; -0.520 ; div_frec:elemento_1|ciclos[1]  ; div_frec:elemento_1|ciclos[23] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 1.554      ;
+; -0.498 ; div_frec:elemento_1|ciclos[15] ; div_frec:elemento_1|ciclos[14] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.530      ;
+; -0.498 ; div_frec:elemento_1|ciclos[15] ; div_frec:elemento_1|ciclos[15] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.530      ;
+; -0.498 ; div_frec:elemento_1|ciclos[15] ; div_frec:elemento_1|ciclos[16] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.530      ;
+; -0.498 ; div_frec:elemento_1|ciclos[15] ; div_frec:elemento_1|ciclos[17] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.530      ;
+; -0.498 ; div_frec:elemento_1|ciclos[15] ; div_frec:elemento_1|ciclos[18] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.530      ;
+; -0.498 ; div_frec:elemento_1|ciclos[15] ; div_frec:elemento_1|ciclos[19] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.530      ;
+; -0.498 ; div_frec:elemento_1|ciclos[15] ; div_frec:elemento_1|ciclos[21] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.530      ;
+; -0.498 ; div_frec:elemento_1|ciclos[15] ; div_frec:elemento_1|ciclos[22] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.530      ;
+; -0.498 ; div_frec:elemento_1|ciclos[15] ; div_frec:elemento_1|ciclos[23] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.530      ;
+; -0.498 ; div_frec:elemento_1|ciclos[15] ; div_frec:elemento_1|ciclos[24] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.530      ;
+; -0.498 ; div_frec:elemento_1|ciclos[15] ; div_frec:elemento_1|ciclos[20] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.530      ;
+; -0.498 ; div_frec:elemento_1|ciclos[3]  ; div_frec:elemento_1|ciclos[24] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 1.532      ;
+; -0.497 ; div_frec:elemento_1|ciclos[2]  ; div_frec:elemento_1|ciclos[23] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 1.531      ;
+; -0.485 ; div_frec:elemento_1|ciclos[1]  ; div_frec:elemento_1|ciclos[22] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 1.519      ;
+; -0.463 ; div_frec:elemento_1|ciclos[3]  ; div_frec:elemento_1|ciclos[23] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 1.497      ;
+; -0.462 ; div_frec:elemento_1|ciclos[2]  ; div_frec:elemento_1|ciclos[22] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 1.496      ;
+; -0.450 ; div_frec:elemento_1|ciclos[1]  ; div_frec:elemento_1|ciclos[21] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 1.484      ;
+; -0.449 ; div_frec:elemento_1|ciclos[17] ; div_frec:elemento_1|ciclos[14] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.481      ;
+; -0.449 ; div_frec:elemento_1|ciclos[17] ; div_frec:elemento_1|ciclos[15] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.481      ;
+; -0.449 ; div_frec:elemento_1|ciclos[17] ; div_frec:elemento_1|ciclos[16] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.481      ;
+; -0.449 ; div_frec:elemento_1|ciclos[17] ; div_frec:elemento_1|ciclos[17] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.481      ;
+; -0.449 ; div_frec:elemento_1|ciclos[17] ; div_frec:elemento_1|ciclos[18] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.481      ;
+; -0.449 ; div_frec:elemento_1|ciclos[17] ; div_frec:elemento_1|ciclos[19] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.481      ;
+; -0.449 ; div_frec:elemento_1|ciclos[17] ; div_frec:elemento_1|ciclos[21] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.481      ;
+; -0.449 ; div_frec:elemento_1|ciclos[17] ; div_frec:elemento_1|ciclos[22] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.481      ;
+; -0.449 ; div_frec:elemento_1|ciclos[17] ; div_frec:elemento_1|ciclos[23] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.481      ;
+; -0.449 ; div_frec:elemento_1|ciclos[17] ; div_frec:elemento_1|ciclos[24] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.481      ;
+; -0.449 ; div_frec:elemento_1|ciclos[17] ; div_frec:elemento_1|ciclos[20] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.481      ;
+; -0.446 ; div_frec:elemento_1|ciclos[4]  ; div_frec:elemento_1|ciclos[24] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 1.480      ;
+; -0.441 ; div_frec:elemento_1|ciclos[14] ; div_frec:elemento_1|ciclos[14] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.473      ;
+; -0.441 ; div_frec:elemento_1|ciclos[14] ; div_frec:elemento_1|ciclos[15] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.473      ;
+; -0.441 ; div_frec:elemento_1|ciclos[14] ; div_frec:elemento_1|ciclos[16] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.473      ;
+; -0.441 ; div_frec:elemento_1|ciclos[14] ; div_frec:elemento_1|ciclos[17] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.473      ;
+; -0.441 ; div_frec:elemento_1|ciclos[14] ; div_frec:elemento_1|ciclos[18] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.473      ;
+; -0.441 ; div_frec:elemento_1|ciclos[14] ; div_frec:elemento_1|ciclos[19] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.473      ;
+; -0.441 ; div_frec:elemento_1|ciclos[14] ; div_frec:elemento_1|ciclos[21] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.473      ;
+; -0.441 ; div_frec:elemento_1|ciclos[14] ; div_frec:elemento_1|ciclos[22] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.473      ;
+; -0.441 ; div_frec:elemento_1|ciclos[14] ; div_frec:elemento_1|ciclos[23] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.473      ;
+; -0.441 ; div_frec:elemento_1|ciclos[14] ; div_frec:elemento_1|ciclos[24] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.473      ;
+; -0.441 ; div_frec:elemento_1|ciclos[14] ; div_frec:elemento_1|ciclos[20] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.473      ;
+; -0.433 ; div_frec:elemento_1|ciclos[22] ; div_frec:elemento_1|ciclos[14] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.465      ;
+; -0.433 ; div_frec:elemento_1|ciclos[22] ; div_frec:elemento_1|ciclos[15] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.465      ;
+; -0.433 ; div_frec:elemento_1|ciclos[22] ; div_frec:elemento_1|ciclos[16] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.465      ;
+; -0.433 ; div_frec:elemento_1|ciclos[22] ; div_frec:elemento_1|ciclos[17] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.465      ;
+; -0.433 ; div_frec:elemento_1|ciclos[22] ; div_frec:elemento_1|ciclos[18] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.465      ;
+; -0.433 ; div_frec:elemento_1|ciclos[22] ; div_frec:elemento_1|ciclos[19] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.465      ;
+; -0.433 ; div_frec:elemento_1|ciclos[22] ; div_frec:elemento_1|ciclos[21] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.465      ;
+; -0.433 ; div_frec:elemento_1|ciclos[22] ; div_frec:elemento_1|ciclos[22] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.465      ;
+; -0.433 ; div_frec:elemento_1|ciclos[22] ; div_frec:elemento_1|ciclos[23] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.465      ;
+; -0.433 ; div_frec:elemento_1|ciclos[22] ; div_frec:elemento_1|ciclos[24] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.465      ;
+; -0.433 ; div_frec:elemento_1|ciclos[22] ; div_frec:elemento_1|ciclos[20] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.000      ; 1.465      ;
+; -0.428 ; div_frec:elemento_1|ciclos[3]  ; div_frec:elemento_1|ciclos[22] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 1.462      ;
+; -0.427 ; div_frec:elemento_1|ciclos[2]  ; div_frec:elemento_1|ciclos[21] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 1.461      ;
+; -0.411 ; div_frec:elemento_1|ciclos[4]  ; div_frec:elemento_1|ciclos[23] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 1.445      ;
+; -0.408 ; div_frec:elemento_1|ciclos[9]  ; div_frec:elemento_1|ciclos[14] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 1.442      ;
+; -0.408 ; div_frec:elemento_1|ciclos[9]  ; div_frec:elemento_1|ciclos[15] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 1.442      ;
+; -0.408 ; div_frec:elemento_1|ciclos[9]  ; div_frec:elemento_1|ciclos[16] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 1.442      ;
+; -0.408 ; div_frec:elemento_1|ciclos[9]  ; div_frec:elemento_1|ciclos[17] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 1.442      ;
+; -0.408 ; div_frec:elemento_1|ciclos[9]  ; div_frec:elemento_1|ciclos[18] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 1.442      ;
+; -0.408 ; div_frec:elemento_1|ciclos[9]  ; div_frec:elemento_1|ciclos[19] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 1.442      ;
+; -0.408 ; div_frec:elemento_1|ciclos[9]  ; div_frec:elemento_1|ciclos[21] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 1.442      ;
+; -0.408 ; div_frec:elemento_1|ciclos[9]  ; div_frec:elemento_1|ciclos[22] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 1.442      ;
+; -0.408 ; div_frec:elemento_1|ciclos[9]  ; div_frec:elemento_1|ciclos[23] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 1.442      ;
+; -0.408 ; div_frec:elemento_1|ciclos[9]  ; div_frec:elemento_1|ciclos[24] ; CLK_DE2      ; CLK_DE2     ; 1.000        ; 0.002      ; 1.442      ;
++--------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'div_frec:elemento_1|CLK_Prima'                                                                                                                          ;
++-------+-----------------------------+-----------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; Slack ; From Node                   ; To Node                     ; Launch Clock                  ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------+-----------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; 0.424 ; bcd_7_seg:elemento_2|BCD[1] ; bcd_7_seg:elemento_2|BCD[4] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 1.000        ; 0.000      ; 0.608      ;
+; 0.425 ; bcd_7_seg:elemento_2|BCD[2] ; bcd_7_seg:elemento_2|BCD[3] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 1.000        ; 0.000      ; 0.607      ;
+; 0.495 ; bcd_7_seg:elemento_2|BCD[2] ; bcd_7_seg:elemento_2|BCD[4] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 1.000        ; 0.000      ; 0.537      ;
+; 0.496 ; bcd_7_seg:elemento_2|BCD[1] ; bcd_7_seg:elemento_2|BCD[3] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 1.000        ; 0.000      ; 0.536      ;
+; 0.497 ; bcd_7_seg:elemento_2|BCD[1] ; bcd_7_seg:elemento_2|BCD[2] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 1.000        ; 0.000      ; 0.535      ;
+; 0.500 ; bcd_7_seg:elemento_2|BCD[4] ; bcd_7_seg:elemento_2|BCD[1] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 1.000        ; 0.000      ; 0.532      ;
+; 0.502 ; bcd_7_seg:elemento_2|BCD[2] ; bcd_7_seg:elemento_2|BCD[1] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 1.000        ; 0.000      ; 0.530      ;
+; 0.617 ; bcd_7_seg:elemento_2|BCD[2] ; bcd_7_seg:elemento_2|SAL[2] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 1.000        ; 0.000      ; 0.415      ;
+; 0.618 ; bcd_7_seg:elemento_2|BCD[1] ; bcd_7_seg:elemento_2|SAL[1] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 1.000        ; 0.000      ; 0.414      ;
+; 0.619 ; bcd_7_seg:elemento_2|BCD[3] ; bcd_7_seg:elemento_2|SAL[3] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 1.000        ; 0.000      ; 0.413      ;
+; 0.620 ; bcd_7_seg:elemento_2|BCD[3] ; bcd_7_seg:elemento_2|BCD[4] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 1.000        ; 0.000      ; 0.412      ;
+; 0.620 ; bcd_7_seg:elemento_2|BCD[3] ; bcd_7_seg:elemento_2|BCD[1] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 1.000        ; 0.000      ; 0.412      ;
+; 0.628 ; bcd_7_seg:elemento_2|BCD[4] ; bcd_7_seg:elemento_2|SAL[4] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 1.000        ; 0.000      ; 0.404      ;
+; 0.629 ; bcd_7_seg:elemento_2|BCD[4] ; bcd_7_seg:elemento_2|BCD[2] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 1.000        ; 0.000      ; 0.403      ;
+; 0.630 ; bcd_7_seg:elemento_2|BCD[4] ; bcd_7_seg:elemento_2|BCD[3] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 1.000        ; 0.000      ; 0.402      ;
+; 0.665 ; bcd_7_seg:elemento_2|BCD[4] ; bcd_7_seg:elemento_2|BCD[4] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; bcd_7_seg:elemento_2|BCD[3] ; bcd_7_seg:elemento_2|BCD[3] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; bcd_7_seg:elemento_2|BCD[2] ; bcd_7_seg:elemento_2|BCD[2] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; bcd_7_seg:elemento_2|BCD[1] ; bcd_7_seg:elemento_2|BCD[1] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 1.000        ; 0.000      ; 0.367      ;
++-------+-----------------------------+-----------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'div_frec:elemento_1|CLK_Prima'                                                                                                                           ;
++-------+-----------------------------+-----------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; Slack ; From Node                   ; To Node                     ; Launch Clock                  ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------+-----------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; 0.215 ; bcd_7_seg:elemento_2|BCD[2] ; bcd_7_seg:elemento_2|BCD[2] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; bcd_7_seg:elemento_2|BCD[4] ; bcd_7_seg:elemento_2|BCD[4] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; bcd_7_seg:elemento_2|BCD[3] ; bcd_7_seg:elemento_2|BCD[3] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; bcd_7_seg:elemento_2|BCD[1] ; bcd_7_seg:elemento_2|BCD[1] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 0.000        ; 0.000      ; 0.367      ;
+; 0.250 ; bcd_7_seg:elemento_2|BCD[4] ; bcd_7_seg:elemento_2|BCD[3] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 0.000        ; 0.000      ; 0.402      ;
+; 0.251 ; bcd_7_seg:elemento_2|BCD[4] ; bcd_7_seg:elemento_2|BCD[2] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 0.000        ; 0.000      ; 0.403      ;
+; 0.252 ; bcd_7_seg:elemento_2|BCD[4] ; bcd_7_seg:elemento_2|SAL[4] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 0.000        ; 0.000      ; 0.404      ;
+; 0.260 ; bcd_7_seg:elemento_2|BCD[3] ; bcd_7_seg:elemento_2|BCD[4] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 0.000        ; 0.000      ; 0.412      ;
+; 0.260 ; bcd_7_seg:elemento_2|BCD[3] ; bcd_7_seg:elemento_2|BCD[1] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 0.000        ; 0.000      ; 0.412      ;
+; 0.261 ; bcd_7_seg:elemento_2|BCD[3] ; bcd_7_seg:elemento_2|SAL[3] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 0.000        ; 0.000      ; 0.413      ;
+; 0.262 ; bcd_7_seg:elemento_2|BCD[1] ; bcd_7_seg:elemento_2|SAL[1] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 0.000        ; 0.000      ; 0.414      ;
+; 0.263 ; bcd_7_seg:elemento_2|BCD[2] ; bcd_7_seg:elemento_2|SAL[2] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 0.000        ; 0.000      ; 0.415      ;
+; 0.378 ; bcd_7_seg:elemento_2|BCD[2] ; bcd_7_seg:elemento_2|BCD[1] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 0.000        ; 0.000      ; 0.530      ;
+; 0.380 ; bcd_7_seg:elemento_2|BCD[4] ; bcd_7_seg:elemento_2|BCD[1] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 0.000        ; 0.000      ; 0.532      ;
+; 0.383 ; bcd_7_seg:elemento_2|BCD[1] ; bcd_7_seg:elemento_2|BCD[2] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 0.000        ; 0.000      ; 0.535      ;
+; 0.384 ; bcd_7_seg:elemento_2|BCD[1] ; bcd_7_seg:elemento_2|BCD[3] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 0.000        ; 0.000      ; 0.536      ;
+; 0.385 ; bcd_7_seg:elemento_2|BCD[2] ; bcd_7_seg:elemento_2|BCD[4] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 0.000        ; 0.000      ; 0.537      ;
+; 0.455 ; bcd_7_seg:elemento_2|BCD[2] ; bcd_7_seg:elemento_2|BCD[3] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 0.000        ; 0.000      ; 0.607      ;
+; 0.456 ; bcd_7_seg:elemento_2|BCD[1] ; bcd_7_seg:elemento_2|BCD[4] ; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 0.000        ; 0.000      ; 0.608      ;
++-------+-----------------------------+-----------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'CLK_DE2'                                                                                                                    ;
++-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                      ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.249 ; div_frec:elemento_1|ciclos[24] ; div_frec:elemento_1|ciclos[24] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.401      ;
+; 0.358 ; div_frec:elemento_1|ciclos[6]  ; div_frec:elemento_1|ciclos[6]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358 ; div_frec:elemento_1|ciclos[8]  ; div_frec:elemento_1|ciclos[8]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.510      ;
+; 0.359 ; div_frec:elemento_1|ciclos[1]  ; div_frec:elemento_1|ciclos[1]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.511      ;
+; 0.359 ; div_frec:elemento_1|ciclos[4]  ; div_frec:elemento_1|ciclos[4]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.511      ;
+; 0.365 ; div_frec:elemento_1|ciclos[10] ; div_frec:elemento_1|ciclos[10] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.517      ;
+; 0.365 ; div_frec:elemento_1|ciclos[11] ; div_frec:elemento_1|ciclos[11] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.517      ;
+; 0.365 ; div_frec:elemento_1|ciclos[12] ; div_frec:elemento_1|ciclos[12] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.517      ;
+; 0.365 ; div_frec:elemento_1|ciclos[14] ; div_frec:elemento_1|ciclos[14] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.517      ;
+; 0.366 ; div_frec:elemento_1|ciclos[22] ; div_frec:elemento_1|ciclos[22] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.518      ;
+; 0.369 ; div_frec:elemento_1|ciclos[2]  ; div_frec:elemento_1|ciclos[2]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.521      ;
+; 0.370 ; div_frec:elemento_1|ciclos[3]  ; div_frec:elemento_1|ciclos[3]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.522      ;
+; 0.371 ; div_frec:elemento_1|ciclos[5]  ; div_frec:elemento_1|ciclos[5]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.523      ;
+; 0.371 ; div_frec:elemento_1|ciclos[15] ; div_frec:elemento_1|ciclos[15] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.523      ;
+; 0.372 ; div_frec:elemento_1|ciclos[7]  ; div_frec:elemento_1|ciclos[7]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372 ; div_frec:elemento_1|ciclos[17] ; div_frec:elemento_1|ciclos[17] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.524      ;
+; 0.373 ; div_frec:elemento_1|ciclos[9]  ; div_frec:elemento_1|ciclos[9]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.525      ;
+; 0.375 ; div_frec:elemento_1|ciclos[16] ; div_frec:elemento_1|ciclos[16] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.527      ;
+; 0.375 ; div_frec:elemento_1|ciclos[20] ; div_frec:elemento_1|ciclos[20] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.527      ;
+; 0.376 ; div_frec:elemento_1|ciclos[18] ; div_frec:elemento_1|ciclos[18] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.528      ;
+; 0.376 ; div_frec:elemento_1|ciclos[19] ; div_frec:elemento_1|ciclos[19] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.528      ;
+; 0.380 ; div_frec:elemento_1|ciclos[21] ; div_frec:elemento_1|ciclos[21] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.532      ;
+; 0.387 ; div_frec:elemento_1|ciclos[23] ; div_frec:elemento_1|ciclos[23] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.539      ;
+; 0.496 ; div_frec:elemento_1|ciclos[6]  ; div_frec:elemento_1|ciclos[7]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.648      ;
+; 0.496 ; div_frec:elemento_1|ciclos[8]  ; div_frec:elemento_1|ciclos[9]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.648      ;
+; 0.497 ; div_frec:elemento_1|ciclos[1]  ; div_frec:elemento_1|ciclos[2]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.649      ;
+; 0.503 ; div_frec:elemento_1|ciclos[10] ; div_frec:elemento_1|ciclos[11] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.655      ;
+; 0.503 ; div_frec:elemento_1|ciclos[11] ; div_frec:elemento_1|ciclos[12] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.655      ;
+; 0.503 ; div_frec:elemento_1|ciclos[14] ; div_frec:elemento_1|ciclos[15] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.655      ;
+; 0.504 ; div_frec:elemento_1|ciclos[22] ; div_frec:elemento_1|ciclos[23] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.656      ;
+; 0.509 ; div_frec:elemento_1|ciclos[2]  ; div_frec:elemento_1|ciclos[3]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.661      ;
+; 0.509 ; div_frec:elemento_1|ciclos[15] ; div_frec:elemento_1|ciclos[16] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.661      ;
+; 0.510 ; div_frec:elemento_1|ciclos[3]  ; div_frec:elemento_1|ciclos[4]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.662      ;
+; 0.510 ; div_frec:elemento_1|ciclos[17] ; div_frec:elemento_1|ciclos[18] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.662      ;
+; 0.511 ; div_frec:elemento_1|ciclos[5]  ; div_frec:elemento_1|ciclos[6]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.663      ;
+; 0.512 ; div_frec:elemento_1|ciclos[7]  ; div_frec:elemento_1|ciclos[8]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.664      ;
+; 0.513 ; div_frec:elemento_1|ciclos[9]  ; div_frec:elemento_1|ciclos[10] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.665      ;
+; 0.515 ; div_frec:elemento_1|ciclos[16] ; div_frec:elemento_1|ciclos[17] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.667      ;
+; 0.516 ; div_frec:elemento_1|ciclos[19] ; div_frec:elemento_1|ciclos[20] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.668      ;
+; 0.516 ; div_frec:elemento_1|ciclos[18] ; div_frec:elemento_1|ciclos[19] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.668      ;
+; 0.520 ; div_frec:elemento_1|ciclos[21] ; div_frec:elemento_1|ciclos[22] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.672      ;
+; 0.525 ; div_frec:elemento_1|ciclos[13] ; div_frec:elemento_1|CLK_Prima  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.677      ;
+; 0.527 ; div_frec:elemento_1|ciclos[23] ; div_frec:elemento_1|ciclos[24] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.679      ;
+; 0.531 ; div_frec:elemento_1|ciclos[6]  ; div_frec:elemento_1|ciclos[8]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.683      ;
+; 0.531 ; div_frec:elemento_1|ciclos[8]  ; div_frec:elemento_1|ciclos[10] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.683      ;
+; 0.532 ; div_frec:elemento_1|ciclos[1]  ; div_frec:elemento_1|ciclos[3]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.684      ;
+; 0.538 ; div_frec:elemento_1|ciclos[10] ; div_frec:elemento_1|ciclos[12] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.690      ;
+; 0.538 ; div_frec:elemento_1|ciclos[14] ; div_frec:elemento_1|ciclos[16] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.690      ;
+; 0.539 ; div_frec:elemento_1|ciclos[22] ; div_frec:elemento_1|ciclos[24] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.691      ;
+; 0.544 ; div_frec:elemento_1|ciclos[2]  ; div_frec:elemento_1|ciclos[4]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.696      ;
+; 0.544 ; div_frec:elemento_1|ciclos[15] ; div_frec:elemento_1|ciclos[17] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.696      ;
+; 0.545 ; div_frec:elemento_1|ciclos[17] ; div_frec:elemento_1|ciclos[19] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.697      ;
+; 0.546 ; div_frec:elemento_1|ciclos[5]  ; div_frec:elemento_1|ciclos[7]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.698      ;
+; 0.547 ; div_frec:elemento_1|ciclos[7]  ; div_frec:elemento_1|ciclos[9]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.699      ;
+; 0.548 ; div_frec:elemento_1|ciclos[9]  ; div_frec:elemento_1|ciclos[11] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.700      ;
+; 0.550 ; div_frec:elemento_1|ciclos[16] ; div_frec:elemento_1|ciclos[18] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.702      ;
+; 0.551 ; div_frec:elemento_1|ciclos[18] ; div_frec:elemento_1|ciclos[20] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.703      ;
+; 0.552 ; div_frec:elemento_1|ciclos[4]  ; div_frec:elemento_1|ciclos[5]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.704      ;
+; 0.555 ; div_frec:elemento_1|ciclos[21] ; div_frec:elemento_1|ciclos[23] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.707      ;
+; 0.566 ; div_frec:elemento_1|ciclos[6]  ; div_frec:elemento_1|ciclos[9]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.718      ;
+; 0.566 ; div_frec:elemento_1|ciclos[8]  ; div_frec:elemento_1|ciclos[11] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.718      ;
+; 0.567 ; div_frec:elemento_1|ciclos[1]  ; div_frec:elemento_1|ciclos[4]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.719      ;
+; 0.568 ; div_frec:elemento_1|ciclos[20] ; div_frec:elemento_1|ciclos[21] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.720      ;
+; 0.573 ; div_frec:elemento_1|ciclos[14] ; div_frec:elemento_1|ciclos[17] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.725      ;
+; 0.579 ; div_frec:elemento_1|ciclos[15] ; div_frec:elemento_1|ciclos[18] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.731      ;
+; 0.580 ; div_frec:elemento_1|ciclos[17] ; div_frec:elemento_1|ciclos[20] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.732      ;
+; 0.581 ; div_frec:elemento_1|ciclos[5]  ; div_frec:elemento_1|ciclos[8]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.733      ;
+; 0.582 ; div_frec:elemento_1|ciclos[7]  ; div_frec:elemento_1|ciclos[10] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.734      ;
+; 0.583 ; div_frec:elemento_1|ciclos[12] ; div_frec:elemento_1|ciclos[14] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.002      ; 0.737      ;
+; 0.583 ; div_frec:elemento_1|ciclos[9]  ; div_frec:elemento_1|ciclos[12] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.735      ;
+; 0.585 ; div_frec:elemento_1|ciclos[16] ; div_frec:elemento_1|ciclos[19] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.737      ;
+; 0.587 ; div_frec:elemento_1|ciclos[4]  ; div_frec:elemento_1|ciclos[6]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.739      ;
+; 0.590 ; div_frec:elemento_1|ciclos[21] ; div_frec:elemento_1|ciclos[24] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.742      ;
+; 0.601 ; div_frec:elemento_1|ciclos[6]  ; div_frec:elemento_1|ciclos[10] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.753      ;
+; 0.601 ; div_frec:elemento_1|ciclos[8]  ; div_frec:elemento_1|ciclos[12] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.753      ;
+; 0.603 ; div_frec:elemento_1|ciclos[20] ; div_frec:elemento_1|ciclos[22] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.755      ;
+; 0.604 ; div_frec:elemento_1|ciclos[3]  ; div_frec:elemento_1|ciclos[5]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.756      ;
+; 0.608 ; div_frec:elemento_1|ciclos[14] ; div_frec:elemento_1|ciclos[18] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.760      ;
+; 0.610 ; div_frec:elemento_1|ciclos[19] ; div_frec:elemento_1|ciclos[21] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.762      ;
+; 0.614 ; div_frec:elemento_1|ciclos[15] ; div_frec:elemento_1|ciclos[19] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.766      ;
+; 0.616 ; div_frec:elemento_1|ciclos[5]  ; div_frec:elemento_1|ciclos[9]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.768      ;
+; 0.617 ; div_frec:elemento_1|ciclos[7]  ; div_frec:elemento_1|ciclos[11] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.769      ;
+; 0.618 ; div_frec:elemento_1|ciclos[12] ; div_frec:elemento_1|ciclos[15] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.002      ; 0.772      ;
+; 0.620 ; div_frec:elemento_1|ciclos[16] ; div_frec:elemento_1|ciclos[20] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.772      ;
+; 0.622 ; div_frec:elemento_1|ciclos[4]  ; div_frec:elemento_1|ciclos[7]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.774      ;
+; 0.623 ; div_frec:elemento_1|ciclos[11] ; div_frec:elemento_1|ciclos[14] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.002      ; 0.777      ;
+; 0.629 ; div_frec:elemento_1|ciclos[10] ; div_frec:elemento_1|CLK_Prima  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.781      ;
+; 0.636 ; div_frec:elemento_1|ciclos[6]  ; div_frec:elemento_1|ciclos[11] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.788      ;
+; 0.638 ; div_frec:elemento_1|ciclos[20] ; div_frec:elemento_1|ciclos[23] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.790      ;
+; 0.638 ; div_frec:elemento_1|ciclos[2]  ; div_frec:elemento_1|ciclos[5]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.790      ;
+; 0.639 ; div_frec:elemento_1|ciclos[3]  ; div_frec:elemento_1|ciclos[6]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.791      ;
+; 0.643 ; div_frec:elemento_1|ciclos[14] ; div_frec:elemento_1|ciclos[19] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.795      ;
+; 0.645 ; div_frec:elemento_1|ciclos[19] ; div_frec:elemento_1|ciclos[22] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.797      ;
+; 0.645 ; div_frec:elemento_1|ciclos[18] ; div_frec:elemento_1|ciclos[21] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.797      ;
+; 0.649 ; div_frec:elemento_1|ciclos[15] ; div_frec:elemento_1|ciclos[20] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.801      ;
+; 0.651 ; div_frec:elemento_1|ciclos[5]  ; div_frec:elemento_1|ciclos[10] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.803      ;
+; 0.652 ; div_frec:elemento_1|ciclos[7]  ; div_frec:elemento_1|ciclos[12] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.804      ;
+; 0.653 ; div_frec:elemento_1|ciclos[12] ; div_frec:elemento_1|ciclos[16] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.002      ; 0.807      ;
+; 0.657 ; div_frec:elemento_1|ciclos[4]  ; div_frec:elemento_1|ciclos[8]  ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.000      ; 0.809      ;
+; 0.658 ; div_frec:elemento_1|ciclos[11] ; div_frec:elemento_1|ciclos[15] ; CLK_DE2      ; CLK_DE2     ; 0.000        ; 0.002      ; 0.812      ;
++-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'CLK_DE2'                                                                         ;
++--------+--------------+----------------+------------------+---------+------------+--------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock   ; Clock Edge ; Target                         ;
++--------+--------------+----------------+------------------+---------+------------+--------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CLK_DE2 ; Rise       ; CLK_DE2                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; div_frec:elemento_1|CLK_Prima  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; div_frec:elemento_1|CLK_Prima  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[10] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[10] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[11] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[11] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[12] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[12] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[13] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[13] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[14] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[14] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[15] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[15] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[16] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[16] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[17] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[17] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[18] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[18] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[19] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[19] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[20] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[20] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[21] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[21] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[22] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[22] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[23] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[23] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[24] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[24] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; div_frec:elemento_1|ciclos[9]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; CLK_DE2|combout                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; CLK_DE2|combout                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; CLK_DE2~clkctrl|inclk[0]       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; CLK_DE2~clkctrl|inclk[0]       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; CLK_DE2~clkctrl|outclk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; CLK_DE2~clkctrl|outclk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; elemento_1|CLK_Prima|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; elemento_1|CLK_Prima|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; elemento_1|ciclos[10]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; elemento_1|ciclos[10]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; elemento_1|ciclos[11]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; elemento_1|ciclos[11]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; elemento_1|ciclos[12]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; elemento_1|ciclos[12]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; elemento_1|ciclos[13]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; elemento_1|ciclos[13]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; elemento_1|ciclos[14]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; elemento_1|ciclos[14]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; elemento_1|ciclos[15]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; elemento_1|ciclos[15]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; elemento_1|ciclos[16]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; elemento_1|ciclos[16]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; elemento_1|ciclos[17]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; elemento_1|ciclos[17]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; elemento_1|ciclos[18]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; elemento_1|ciclos[18]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; elemento_1|ciclos[19]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; elemento_1|ciclos[19]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; elemento_1|ciclos[1]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; elemento_1|ciclos[1]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; elemento_1|ciclos[20]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; elemento_1|ciclos[20]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; elemento_1|ciclos[21]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; elemento_1|ciclos[21]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; elemento_1|ciclos[22]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; elemento_1|ciclos[22]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; elemento_1|ciclos[23]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; elemento_1|ciclos[23]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; elemento_1|ciclos[24]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; elemento_1|ciclos[24]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; elemento_1|ciclos[2]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; elemento_1|ciclos[2]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; elemento_1|ciclos[3]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; elemento_1|ciclos[3]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; elemento_1|ciclos[4]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; elemento_1|ciclos[4]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; elemento_1|ciclos[5]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_DE2 ; Rise       ; elemento_1|ciclos[5]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_DE2 ; Rise       ; elemento_1|ciclos[6]|clk       ;
++--------+--------------+----------------+------------------+---------+------------+--------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'div_frec:elemento_1|CLK_Prima'                                                                                ;
++--------+--------------+----------------+------------------+-------------------------------+------------+---------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock                         ; Clock Edge ; Target                                ;
++--------+--------------+----------------+------------------+-------------------------------+------------+---------------------------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; div_frec:elemento_1|CLK_Prima ; Rise       ; bcd_7_seg:elemento_2|BCD[1]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; div_frec:elemento_1|CLK_Prima ; Rise       ; bcd_7_seg:elemento_2|BCD[1]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; div_frec:elemento_1|CLK_Prima ; Rise       ; bcd_7_seg:elemento_2|BCD[2]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; div_frec:elemento_1|CLK_Prima ; Rise       ; bcd_7_seg:elemento_2|BCD[2]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; div_frec:elemento_1|CLK_Prima ; Rise       ; bcd_7_seg:elemento_2|BCD[3]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; div_frec:elemento_1|CLK_Prima ; Rise       ; bcd_7_seg:elemento_2|BCD[3]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; div_frec:elemento_1|CLK_Prima ; Rise       ; bcd_7_seg:elemento_2|BCD[4]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; div_frec:elemento_1|CLK_Prima ; Rise       ; bcd_7_seg:elemento_2|BCD[4]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; div_frec:elemento_1|CLK_Prima ; Rise       ; bcd_7_seg:elemento_2|SAL[1]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; div_frec:elemento_1|CLK_Prima ; Rise       ; bcd_7_seg:elemento_2|SAL[1]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; div_frec:elemento_1|CLK_Prima ; Rise       ; bcd_7_seg:elemento_2|SAL[2]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; div_frec:elemento_1|CLK_Prima ; Rise       ; bcd_7_seg:elemento_2|SAL[2]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; div_frec:elemento_1|CLK_Prima ; Rise       ; bcd_7_seg:elemento_2|SAL[3]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; div_frec:elemento_1|CLK_Prima ; Rise       ; bcd_7_seg:elemento_2|SAL[3]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; div_frec:elemento_1|CLK_Prima ; Rise       ; bcd_7_seg:elemento_2|SAL[4]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; div_frec:elemento_1|CLK_Prima ; Rise       ; bcd_7_seg:elemento_2|SAL[4]           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; div_frec:elemento_1|CLK_Prima ; Rise       ; elemento_1|CLK_Prima|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; div_frec:elemento_1|CLK_Prima ; Rise       ; elemento_1|CLK_Prima|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; div_frec:elemento_1|CLK_Prima ; Rise       ; elemento_1|CLK_Prima~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; div_frec:elemento_1|CLK_Prima ; Rise       ; elemento_1|CLK_Prima~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; div_frec:elemento_1|CLK_Prima ; Rise       ; elemento_1|CLK_Prima~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; div_frec:elemento_1|CLK_Prima ; Rise       ; elemento_1|CLK_Prima~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; div_frec:elemento_1|CLK_Prima ; Rise       ; elemento_2|BCD[1]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; div_frec:elemento_1|CLK_Prima ; Rise       ; elemento_2|BCD[1]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; div_frec:elemento_1|CLK_Prima ; Rise       ; elemento_2|BCD[2]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; div_frec:elemento_1|CLK_Prima ; Rise       ; elemento_2|BCD[2]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; div_frec:elemento_1|CLK_Prima ; Rise       ; elemento_2|BCD[3]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; div_frec:elemento_1|CLK_Prima ; Rise       ; elemento_2|BCD[3]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; div_frec:elemento_1|CLK_Prima ; Rise       ; elemento_2|BCD[4]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; div_frec:elemento_1|CLK_Prima ; Rise       ; elemento_2|BCD[4]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; div_frec:elemento_1|CLK_Prima ; Rise       ; elemento_2|SAL[1]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; div_frec:elemento_1|CLK_Prima ; Rise       ; elemento_2|SAL[1]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; div_frec:elemento_1|CLK_Prima ; Rise       ; elemento_2|SAL[2]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; div_frec:elemento_1|CLK_Prima ; Rise       ; elemento_2|SAL[2]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; div_frec:elemento_1|CLK_Prima ; Rise       ; elemento_2|SAL[3]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; div_frec:elemento_1|CLK_Prima ; Rise       ; elemento_2|SAL[3]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; div_frec:elemento_1|CLK_Prima ; Rise       ; elemento_2|SAL[4]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; div_frec:elemento_1|CLK_Prima ; Rise       ; elemento_2|SAL[4]|clk                 ;
++--------+--------------+----------------+------------------+-------------------------------+------------+---------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                   ;
++------------+-------------------------------+-------+-------+------------+-------------------------------+
+; Data Port  ; Clock Port                    ; Rise  ; Fall  ; Clock Edge ; Clock Reference               ;
++------------+-------------------------------+-------+-------+------------+-------------------------------+
+; Z_7SEG[*]  ; div_frec:elemento_1|CLK_Prima ; 4.385 ; 4.385 ; Rise       ; div_frec:elemento_1|CLK_Prima ;
+;  Z_7SEG[1] ; div_frec:elemento_1|CLK_Prima ; 4.087 ; 4.087 ; Rise       ; div_frec:elemento_1|CLK_Prima ;
+;  Z_7SEG[2] ; div_frec:elemento_1|CLK_Prima ; 3.871 ; 3.871 ; Rise       ; div_frec:elemento_1|CLK_Prima ;
+;  Z_7SEG[3] ; div_frec:elemento_1|CLK_Prima ; 3.903 ; 3.903 ; Rise       ; div_frec:elemento_1|CLK_Prima ;
+;  Z_7SEG[4] ; div_frec:elemento_1|CLK_Prima ; 4.010 ; 4.010 ; Rise       ; div_frec:elemento_1|CLK_Prima ;
+;  Z_7SEG[5] ; div_frec:elemento_1|CLK_Prima ; 3.999 ; 3.999 ; Rise       ; div_frec:elemento_1|CLK_Prima ;
+;  Z_7SEG[6] ; div_frec:elemento_1|CLK_Prima ; 4.117 ; 4.117 ; Rise       ; div_frec:elemento_1|CLK_Prima ;
+;  Z_7SEG[7] ; div_frec:elemento_1|CLK_Prima ; 4.385 ; 4.385 ; Rise       ; div_frec:elemento_1|CLK_Prima ;
++------------+-------------------------------+-------+-------+------------+-------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                           ;
++------------+-------------------------------+-------+-------+------------+-------------------------------+
+; Data Port  ; Clock Port                    ; Rise  ; Fall  ; Clock Edge ; Clock Reference               ;
++------------+-------------------------------+-------+-------+------------+-------------------------------+
+; Z_7SEG[*]  ; div_frec:elemento_1|CLK_Prima ; 3.794 ; 3.794 ; Rise       ; div_frec:elemento_1|CLK_Prima ;
+;  Z_7SEG[1] ; div_frec:elemento_1|CLK_Prima ; 4.015 ; 4.015 ; Rise       ; div_frec:elemento_1|CLK_Prima ;
+;  Z_7SEG[2] ; div_frec:elemento_1|CLK_Prima ; 3.794 ; 3.794 ; Rise       ; div_frec:elemento_1|CLK_Prima ;
+;  Z_7SEG[3] ; div_frec:elemento_1|CLK_Prima ; 3.831 ; 3.831 ; Rise       ; div_frec:elemento_1|CLK_Prima ;
+;  Z_7SEG[4] ; div_frec:elemento_1|CLK_Prima ; 3.938 ; 3.938 ; Rise       ; div_frec:elemento_1|CLK_Prima ;
+;  Z_7SEG[5] ; div_frec:elemento_1|CLK_Prima ; 3.922 ; 3.922 ; Rise       ; div_frec:elemento_1|CLK_Prima ;
+;  Z_7SEG[6] ; div_frec:elemento_1|CLK_Prima ; 4.045 ; 4.045 ; Rise       ; div_frec:elemento_1|CLK_Prima ;
+;  Z_7SEG[7] ; div_frec:elemento_1|CLK_Prima ; 4.313 ; 4.313 ; Rise       ; div_frec:elemento_1|CLK_Prima ;
++------------+-------------------------------+-------+-------+------------+-------------------------------+
+
+
++---------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                         ;
++--------------------------------+---------+-------+----------+---------+---------------------+
+; Clock                          ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++--------------------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack               ; -2.395  ; 0.215 ; N/A      ; N/A     ; -1.380              ;
+;  CLK_DE2                       ; -2.395  ; 0.249 ; N/A      ; N/A     ; -1.380              ;
+;  div_frec:elemento_1|CLK_Prima ; -0.241  ; 0.215 ; N/A      ; N/A     ; -0.500              ;
+; Design-wide TNS                ; -53.827 ; 0.0   ; 0.0      ; 0.0     ; -34.38              ;
+;  CLK_DE2                       ; -53.238 ; 0.000 ; N/A      ; N/A     ; -26.380             ;
+;  div_frec:elemento_1|CLK_Prima ; -0.589  ; 0.000 ; N/A      ; N/A     ; -8.000              ;
++--------------------------------+---------+-------+----------+---------+---------------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                   ;
++------------+-------------------------------+-------+-------+------------+-------------------------------+
+; Data Port  ; Clock Port                    ; Rise  ; Fall  ; Clock Edge ; Clock Reference               ;
++------------+-------------------------------+-------+-------+------------+-------------------------------+
+; Z_7SEG[*]  ; div_frec:elemento_1|CLK_Prima ; 8.056 ; 8.056 ; Rise       ; div_frec:elemento_1|CLK_Prima ;
+;  Z_7SEG[1] ; div_frec:elemento_1|CLK_Prima ; 7.434 ; 7.434 ; Rise       ; div_frec:elemento_1|CLK_Prima ;
+;  Z_7SEG[2] ; div_frec:elemento_1|CLK_Prima ; 6.968 ; 6.968 ; Rise       ; div_frec:elemento_1|CLK_Prima ;
+;  Z_7SEG[3] ; div_frec:elemento_1|CLK_Prima ; 7.004 ; 7.004 ; Rise       ; div_frec:elemento_1|CLK_Prima ;
+;  Z_7SEG[4] ; div_frec:elemento_1|CLK_Prima ; 7.240 ; 7.240 ; Rise       ; div_frec:elemento_1|CLK_Prima ;
+;  Z_7SEG[5] ; div_frec:elemento_1|CLK_Prima ; 7.218 ; 7.218 ; Rise       ; div_frec:elemento_1|CLK_Prima ;
+;  Z_7SEG[6] ; div_frec:elemento_1|CLK_Prima ; 7.471 ; 7.471 ; Rise       ; div_frec:elemento_1|CLK_Prima ;
+;  Z_7SEG[7] ; div_frec:elemento_1|CLK_Prima ; 8.056 ; 8.056 ; Rise       ; div_frec:elemento_1|CLK_Prima ;
++------------+-------------------------------+-------+-------+------------+-------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                           ;
++------------+-------------------------------+-------+-------+------------+-------------------------------+
+; Data Port  ; Clock Port                    ; Rise  ; Fall  ; Clock Edge ; Clock Reference               ;
++------------+-------------------------------+-------+-------+------------+-------------------------------+
+; Z_7SEG[*]  ; div_frec:elemento_1|CLK_Prima ; 3.794 ; 3.794 ; Rise       ; div_frec:elemento_1|CLK_Prima ;
+;  Z_7SEG[1] ; div_frec:elemento_1|CLK_Prima ; 4.015 ; 4.015 ; Rise       ; div_frec:elemento_1|CLK_Prima ;
+;  Z_7SEG[2] ; div_frec:elemento_1|CLK_Prima ; 3.794 ; 3.794 ; Rise       ; div_frec:elemento_1|CLK_Prima ;
+;  Z_7SEG[3] ; div_frec:elemento_1|CLK_Prima ; 3.831 ; 3.831 ; Rise       ; div_frec:elemento_1|CLK_Prima ;
+;  Z_7SEG[4] ; div_frec:elemento_1|CLK_Prima ; 3.938 ; 3.938 ; Rise       ; div_frec:elemento_1|CLK_Prima ;
+;  Z_7SEG[5] ; div_frec:elemento_1|CLK_Prima ; 3.922 ; 3.922 ; Rise       ; div_frec:elemento_1|CLK_Prima ;
+;  Z_7SEG[6] ; div_frec:elemento_1|CLK_Prima ; 4.045 ; 4.045 ; Rise       ; div_frec:elemento_1|CLK_Prima ;
+;  Z_7SEG[7] ; div_frec:elemento_1|CLK_Prima ; 4.313 ; 4.313 ; Rise       ; div_frec:elemento_1|CLK_Prima ;
++------------+-------------------------------+-------+-------+------------+-------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                           ;
++-------------------------------+-------------------------------+----------+----------+----------+----------+
+; From Clock                    ; To Clock                      ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-------------------------------+-------------------------------+----------+----------+----------+----------+
+; CLK_DE2                       ; CLK_DE2                       ; 825      ; 0        ; 0        ; 0        ;
+; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 19       ; 0        ; 0        ; 0        ;
++-------------------------------+-------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                            ;
++-------------------------------+-------------------------------+----------+----------+----------+----------+
+; From Clock                    ; To Clock                      ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-------------------------------+-------------------------------+----------+----------+----------+----------+
+; CLK_DE2                       ; CLK_DE2                       ; 825      ; 0        ; 0        ; 0        ;
+; div_frec:elemento_1|CLK_Prima ; div_frec:elemento_1|CLK_Prima ; 19       ; 0        ; 0        ; 0        ;
++-------------------------------+-------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 0     ; 0    ;
+; Unconstrained Input Port Paths  ; 0     ; 0    ;
+; Unconstrained Output Ports      ; 7     ; 7    ;
+; Unconstrained Output Port Paths ; 28    ; 28   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+    Info: Processing started: Wed Sep 16 13:10:53 2015
+Info: Command: quartus_sta Contador_ITE -c Contador_ITE
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Contador_ITE.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name CLK_DE2 CLK_DE2
+    Info (332105): create_clock -period 1.000 -name div_frec:elemento_1|CLK_Prima div_frec:elemento_1|CLK_Prima
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -2.395
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.395       -53.238 CLK_DE2 
+    Info (332119):    -0.241        -0.589 div_frec:elemento_1|CLK_Prima 
+Info (332146): Worst-case hold slack is 0.391
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.391         0.000 div_frec:elemento_1|CLK_Prima 
+    Info (332119):     0.538         0.000 CLK_DE2 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -26.380 CLK_DE2 
+    Info (332119):    -0.500        -8.000 div_frec:elemento_1|CLK_Prima 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.583
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.583       -11.651 CLK_DE2 
+    Info (332119):     0.424         0.000 div_frec:elemento_1|CLK_Prima 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 div_frec:elemento_1|CLK_Prima 
+    Info (332119):     0.249         0.000 CLK_DE2 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -26.380 CLK_DE2 
+    Info (332119):    -0.500        -8.000 div_frec:elemento_1|CLK_Prima 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 394 megabytes
+    Info: Processing ended: Wed Sep 16 13:10:55 2015
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+

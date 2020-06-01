@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\Diseño de Hardware\Simon\simulation\qsim
+vVGA
+Z1 ILAKYa2b5W3H]DSlTF2EAa1
+Z2 V`40^9IMNf4U>6eLjP3fJP2
+Z3 dC:\altera\Diseño de Hardware\Simon\simulation\qsim
+Z4 w1447980949
+Z5 8VGA.vo
+Z6 FVGA.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+Z9 n@v@g@a
+!i10b 1
+Z10 !s100 Ob:d<:=l<g9abRV:6`0?f2
+!s85 0
+Z11 !s108 1447980959.101000
+Z12 !s107 VGA.vo|
+Z13 !s90 -work|work|VGA.vo|
+!s101 -O0
+vVGA_vlg_check_tst
+!i10b 1
+!s100 _gG:k22jf:==8cZSKR>NH3
+IgEJRkP?fY^XcXW19?P@iP2
+VWM[[mo<hb=iFEZUbee=Y63
+R3
+Z14 w1447980946
+Z15 8VGA.vt
+Z16 FVGA.vt
+L0 65
+R7
+r1
+!s85 0
+31
+Z17 !s108 1447980960.866000
+Z18 !s107 VGA.vt|
+Z19 !s90 -work|work|VGA.vt|
+!s101 -O0
+R8
+n@v@g@a_vlg_check_tst
+vVGA_vlg_sample_tst
+!i10b 1
+!s100 k?URfoE[6@b>HlHlgKK:C2
+Ijm:5P>RfbRlNULRkBIKaQ0
+VIkjI6<?OgWVMS:=ERM=4j1
+R3
+R14
+R15
+R16
+L0 29
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R8
+n@v@g@a_vlg_sample_tst
+vVGA_vlg_vec_tst
+!i10b 1
+!s100 ma_mfV:P3RNIlb5j1VEBK1
+Im0[Vdbhjbab2ZhMX>M0Ye3
+VcYbNZHX=5K<6gU;nNQUmf0
+R3
+R14
+R15
+R16
+L0 196
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R8
+n@v@g@a_vlg_vec_tst

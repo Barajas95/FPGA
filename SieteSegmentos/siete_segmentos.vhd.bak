@@ -1,0 +1,42 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+ENTITY mux_8_1 IS
+PORT(A: in std_logic_vector(8 downto 1);
+     SEL: in std_logic_vector(3 downto 1);
+     Z: out std_logic);    
+ END mux_8_1;
+
+architecture RTL of mux_8_1 is
+
+begin
+
+Process(SEL)
+begin
+
+case (SEL) is
+
+when "000"		=>	Z <= A(1);
+
+when "001"		=>	Z <= A(2);
+
+when "010"		=>	Z <= A(3);
+
+when "011"		=>	Z <= A(4);
+
+when "100"		=>	Z <= A(5);
+
+when "101"		=>	Z <= A(6);
+
+when "110"		=>	Z <= A(7);
+
+when "111"		=>	Z <= A(8);
+
+when others 	=> null;
+
+end case;
+
+end process;       
+END RTL;

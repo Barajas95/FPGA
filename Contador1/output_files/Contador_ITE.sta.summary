@@ -1,0 +1,53 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'CLK_DE2'
+Slack : -2.395
+TNS   : -53.238
+
+Type  : Slow Model Setup 'div_frec:elemento_1|CLK_Prima'
+Slack : -0.241
+TNS   : -0.589
+
+Type  : Slow Model Hold 'div_frec:elemento_1|CLK_Prima'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow Model Hold 'CLK_DE2'
+Slack : 0.538
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'CLK_DE2'
+Slack : -1.380
+TNS   : -26.380
+
+Type  : Slow Model Minimum Pulse Width 'div_frec:elemento_1|CLK_Prima'
+Slack : -0.500
+TNS   : -8.000
+
+Type  : Fast Model Setup 'CLK_DE2'
+Slack : -0.583
+TNS   : -11.651
+
+Type  : Fast Model Setup 'div_frec:elemento_1|CLK_Prima'
+Slack : 0.424
+TNS   : 0.000
+
+Type  : Fast Model Hold 'div_frec:elemento_1|CLK_Prima'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'CLK_DE2'
+Slack : 0.249
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'CLK_DE2'
+Slack : -1.380
+TNS   : -26.380
+
+Type  : Fast Model Minimum Pulse Width 'div_frec:elemento_1|CLK_Prima'
+Slack : -0.500
+TNS   : -8.000
+
+------------------------------------------------------------

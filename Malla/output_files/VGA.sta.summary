@@ -1,0 +1,69 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'DIVISOR_FRECUENCIA:C1|CLKOUT'
+Slack : -30.214
+TNS   : -653.060
+
+Type  : Slow Model Setup 'CLOCK_50'
+Slack : 0.252
+TNS   : 0.000
+
+Type  : Slow Model Hold 'CLOCK_50'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow Model Hold 'DIVISOR_FRECUENCIA:C1|CLKOUT'
+Slack : 1.335
+TNS   : 0.000
+
+Type  : Slow Model Recovery 'DIVISOR_FRECUENCIA:C1|CLKOUT'
+Slack : -2.739
+TNS   : -80.007
+
+Type  : Slow Model Removal 'DIVISOR_FRECUENCIA:C1|CLKOUT'
+Slack : 2.668
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'CLOCK_50'
+Slack : -1.380
+TNS   : -4.380
+
+Type  : Slow Model Minimum Pulse Width 'DIVISOR_FRECUENCIA:C1|CLKOUT'
+Slack : -0.500
+TNS   : -50.000
+
+Type  : Fast Model Setup 'DIVISOR_FRECUENCIA:C1|CLKOUT'
+Slack : -12.797
+TNS   : -267.812
+
+Type  : Fast Model Setup 'CLOCK_50'
+Slack : 0.641
+TNS   : 0.000
+
+Type  : Fast Model Hold 'CLOCK_50'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'DIVISOR_FRECUENCIA:C1|CLKOUT'
+Slack : 0.609
+TNS   : 0.000
+
+Type  : Fast Model Recovery 'DIVISOR_FRECUENCIA:C1|CLKOUT'
+Slack : -0.821
+TNS   : -23.552
+
+Type  : Fast Model Removal 'DIVISOR_FRECUENCIA:C1|CLKOUT'
+Slack : 1.291
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'CLOCK_50'
+Slack : -1.380
+TNS   : -4.380
+
+Type  : Fast Model Minimum Pulse Width 'DIVISOR_FRECUENCIA:C1|CLKOUT'
+Slack : -0.500
+TNS   : -50.000
+
+------------------------------------------------------------

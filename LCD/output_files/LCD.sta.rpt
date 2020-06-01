@@ -1,0 +1,1474 @@
+TimeQuest Timing Analyzer report for LCD
+Wed Oct 07 09:26:51 2015
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Clocks
+  4. Slow Model Fmax Summary
+  5. Slow Model Setup Summary
+  6. Slow Model Hold Summary
+  7. Slow Model Recovery Summary
+  8. Slow Model Removal Summary
+  9. Slow Model Minimum Pulse Width Summary
+ 10. Slow Model Setup: 'CLK'
+ 11. Slow Model Setup: 'EDO.S10'
+ 12. Slow Model Hold: 'CLK'
+ 13. Slow Model Hold: 'EDO.S10'
+ 14. Slow Model Minimum Pulse Width: 'CLK'
+ 15. Slow Model Minimum Pulse Width: 'EDO.S10'
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Fast Model Setup Summary
+ 19. Fast Model Hold Summary
+ 20. Fast Model Recovery Summary
+ 21. Fast Model Removal Summary
+ 22. Fast Model Minimum Pulse Width Summary
+ 23. Fast Model Setup: 'CLK'
+ 24. Fast Model Setup: 'EDO.S10'
+ 25. Fast Model Hold: 'CLK'
+ 26. Fast Model Hold: 'EDO.S10'
+ 27. Fast Model Minimum Pulse Width: 'CLK'
+ 28. Fast Model Minimum Pulse Width: 'EDO.S10'
+ 29. Clock to Output Times
+ 30. Minimum Clock to Output Times
+ 31. Multicorner Timing Analysis Summary
+ 32. Clock to Output Times
+ 33. Minimum Clock to Output Times
+ 34. Setup Transfers
+ 35. Hold Transfers
+ 36. Report TCCS
+ 37. Report RSKM
+ 38. Unconstrained Paths
+ 39. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                       ;
++--------------------+----------------------------------------------------+
+; Quartus II Version ; Version 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
+; Revision Name      ; LCD                                                ;
+; Device Family      ; Cyclone II                                         ;
+; Device Name        ; EP2C70F896C6                                       ;
+; Timing Models      ; Final                                              ;
+; Delay Model        ; Combined                                           ;
+; Rise/Fall Delays   ; Unavailable                                        ;
++--------------------+----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                              ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets     ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------+
+; CLK        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLK }     ;
+; EDO.S10    ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { EDO.S10 } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------+
+
+
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 252.59 MHz ; 252.59 MHz      ; CLK        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++----------------------------------+
+; Slow Model Setup Summary         ;
++---------+--------+---------------+
+; Clock   ; Slack  ; End Point TNS ;
++---------+--------+---------------+
+; CLK     ; -2.959 ; -174.139      ;
+; EDO.S10 ; -2.638 ; -17.009       ;
++---------+--------+---------------+
+
+
++----------------------------------+
+; Slow Model Hold Summary          ;
++---------+--------+---------------+
+; Clock   ; Slack  ; End Point TNS ;
++---------+--------+---------------+
+; CLK     ; -2.598 ; -2.598        ;
+; EDO.S10 ; 0.986  ; 0.000         ;
++---------+--------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++---------+--------+---------------------+
+; Clock   ; Slack  ; End Point TNS       ;
++---------+--------+---------------------+
+; CLK     ; -1.380 ; -71.380             ;
+; EDO.S10 ; 0.500  ; 0.000               ;
++---------+--------+---------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'CLK'                                                                                ;
++--------+------------+------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node  ; To Node    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------+------------+--------------+-------------+--------------+------------+------------+
+; -2.959 ; INDICE[1]  ; INDICE[31] ; CLK          ; CLK         ; 1.000        ; -0.015     ; 3.980      ;
+; -2.922 ; INDICE[0]  ; INDICE[31] ; CLK          ; CLK         ; 1.000        ; -0.013     ; 3.945      ;
+; -2.901 ; CONT[0]    ; CONT[11]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 3.937      ;
+; -2.888 ; INDICE[1]  ; INDICE[30] ; CLK          ; CLK         ; 1.000        ; -0.015     ; 3.909      ;
+; -2.851 ; INDICE[0]  ; INDICE[30] ; CLK          ; CLK         ; 1.000        ; -0.013     ; 3.874      ;
+; -2.817 ; INDICE[1]  ; INDICE[29] ; CLK          ; CLK         ; 1.000        ; -0.015     ; 3.838      ;
+; -2.809 ; CONT[0]    ; CONT[10]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 3.845      ;
+; -2.780 ; INDICE[0]  ; INDICE[29] ; CLK          ; CLK         ; 1.000        ; -0.013     ; 3.803      ;
+; -2.746 ; INDICE[1]  ; INDICE[28] ; CLK          ; CLK         ; 1.000        ; -0.015     ; 3.767      ;
+; -2.735 ; CONT[2]    ; CONT[11]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 3.771      ;
+; -2.709 ; INDICE[0]  ; INDICE[28] ; CLK          ; CLK         ; 1.000        ; -0.013     ; 3.732      ;
+; -2.697 ; CONT[3]    ; CONT[11]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 3.733      ;
+; -2.691 ; CONT[0]    ; CONT[23]   ; CLK          ; CLK         ; 1.000        ; 0.002      ; 3.729      ;
+; -2.681 ; INDICE[2]  ; INDICE[31] ; CLK          ; CLK         ; 1.000        ; -0.015     ; 3.702      ;
+; -2.675 ; INDICE[1]  ; INDICE[27] ; CLK          ; CLK         ; 1.000        ; -0.015     ; 3.696      ;
+; -2.665 ; CONT[15]   ; INDICE[16] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 3.672      ;
+; -2.665 ; CONT[15]   ; INDICE[17] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 3.672      ;
+; -2.665 ; CONT[15]   ; INDICE[18] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 3.672      ;
+; -2.665 ; CONT[15]   ; INDICE[19] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 3.672      ;
+; -2.665 ; CONT[15]   ; INDICE[20] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 3.672      ;
+; -2.665 ; CONT[15]   ; INDICE[21] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 3.672      ;
+; -2.665 ; CONT[15]   ; INDICE[22] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 3.672      ;
+; -2.665 ; CONT[15]   ; INDICE[23] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 3.672      ;
+; -2.665 ; CONT[15]   ; INDICE[24] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 3.672      ;
+; -2.665 ; CONT[15]   ; INDICE[25] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 3.672      ;
+; -2.665 ; CONT[15]   ; INDICE[26] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 3.672      ;
+; -2.665 ; CONT[15]   ; INDICE[27] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 3.672      ;
+; -2.665 ; CONT[15]   ; INDICE[28] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 3.672      ;
+; -2.665 ; CONT[15]   ; INDICE[29] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 3.672      ;
+; -2.665 ; CONT[15]   ; INDICE[30] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 3.672      ;
+; -2.665 ; CONT[15]   ; INDICE[31] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 3.672      ;
+; -2.653 ; INDICE[3]  ; INDICE[31] ; CLK          ; CLK         ; 1.000        ; -0.015     ; 3.674      ;
+; -2.647 ; CONT[15]   ; EDO.S6     ; CLK          ; CLK         ; 1.000        ; -0.018     ; 3.665      ;
+; -2.647 ; CONT[15]   ; EDO.S8     ; CLK          ; CLK         ; 1.000        ; -0.018     ; 3.665      ;
+; -2.647 ; CONT[15]   ; EDO.S9     ; CLK          ; CLK         ; 1.000        ; -0.018     ; 3.665      ;
+; -2.643 ; CONT[2]    ; CONT[10]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 3.679      ;
+; -2.638 ; INDICE[0]  ; INDICE[27] ; CLK          ; CLK         ; 1.000        ; -0.013     ; 3.661      ;
+; -2.636 ; CONT[15]   ; INDICE[2]  ; CLK          ; CLK         ; 1.000        ; -0.014     ; 3.658      ;
+; -2.636 ; CONT[15]   ; INDICE[3]  ; CLK          ; CLK         ; 1.000        ; -0.014     ; 3.658      ;
+; -2.636 ; CONT[15]   ; INDICE[4]  ; CLK          ; CLK         ; 1.000        ; -0.014     ; 3.658      ;
+; -2.636 ; CONT[15]   ; INDICE[5]  ; CLK          ; CLK         ; 1.000        ; -0.014     ; 3.658      ;
+; -2.636 ; CONT[15]   ; INDICE[6]  ; CLK          ; CLK         ; 1.000        ; -0.014     ; 3.658      ;
+; -2.636 ; CONT[15]   ; INDICE[7]  ; CLK          ; CLK         ; 1.000        ; -0.014     ; 3.658      ;
+; -2.636 ; CONT[15]   ; INDICE[8]  ; CLK          ; CLK         ; 1.000        ; -0.014     ; 3.658      ;
+; -2.636 ; CONT[15]   ; INDICE[9]  ; CLK          ; CLK         ; 1.000        ; -0.014     ; 3.658      ;
+; -2.636 ; CONT[15]   ; INDICE[10] ; CLK          ; CLK         ; 1.000        ; -0.014     ; 3.658      ;
+; -2.636 ; CONT[15]   ; INDICE[11] ; CLK          ; CLK         ; 1.000        ; -0.014     ; 3.658      ;
+; -2.636 ; CONT[15]   ; INDICE[12] ; CLK          ; CLK         ; 1.000        ; -0.014     ; 3.658      ;
+; -2.636 ; CONT[15]   ; INDICE[13] ; CLK          ; CLK         ; 1.000        ; -0.014     ; 3.658      ;
+; -2.636 ; CONT[15]   ; INDICE[14] ; CLK          ; CLK         ; 1.000        ; -0.014     ; 3.658      ;
+; -2.636 ; CONT[15]   ; INDICE[15] ; CLK          ; CLK         ; 1.000        ; -0.014     ; 3.658      ;
+; -2.636 ; CONT[15]   ; INDICE[1]  ; CLK          ; CLK         ; 1.000        ; -0.014     ; 3.658      ;
+; -2.625 ; CONT[13]   ; INDICE[16] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 3.632      ;
+; -2.625 ; CONT[13]   ; INDICE[17] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 3.632      ;
+; -2.625 ; CONT[13]   ; INDICE[18] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 3.632      ;
+; -2.625 ; CONT[13]   ; INDICE[19] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 3.632      ;
+; -2.625 ; CONT[13]   ; INDICE[20] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 3.632      ;
+; -2.625 ; CONT[13]   ; INDICE[21] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 3.632      ;
+; -2.625 ; CONT[13]   ; INDICE[22] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 3.632      ;
+; -2.625 ; CONT[13]   ; INDICE[23] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 3.632      ;
+; -2.625 ; CONT[13]   ; INDICE[24] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 3.632      ;
+; -2.625 ; CONT[13]   ; INDICE[25] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 3.632      ;
+; -2.625 ; CONT[13]   ; INDICE[26] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 3.632      ;
+; -2.625 ; CONT[13]   ; INDICE[27] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 3.632      ;
+; -2.625 ; CONT[13]   ; INDICE[28] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 3.632      ;
+; -2.625 ; CONT[13]   ; INDICE[29] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 3.632      ;
+; -2.625 ; CONT[13]   ; INDICE[30] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 3.632      ;
+; -2.625 ; CONT[13]   ; INDICE[31] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 3.632      ;
+; -2.620 ; CONT[0]    ; CONT[22]   ; CLK          ; CLK         ; 1.000        ; 0.002      ; 3.658      ;
+; -2.610 ; INDICE[2]  ; INDICE[30] ; CLK          ; CLK         ; 1.000        ; -0.015     ; 3.631      ;
+; -2.607 ; CONT[13]   ; EDO.S6     ; CLK          ; CLK         ; 1.000        ; -0.018     ; 3.625      ;
+; -2.607 ; CONT[13]   ; EDO.S8     ; CLK          ; CLK         ; 1.000        ; -0.018     ; 3.625      ;
+; -2.607 ; CONT[13]   ; EDO.S9     ; CLK          ; CLK         ; 1.000        ; -0.018     ; 3.625      ;
+; -2.606 ; INDICE[17] ; EDO.S10    ; CLK          ; CLK         ; 1.000        ; -0.004     ; 3.638      ;
+; -2.605 ; CONT[3]    ; CONT[10]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 3.641      ;
+; -2.604 ; INDICE[1]  ; INDICE[26] ; CLK          ; CLK         ; 1.000        ; -0.015     ; 3.625      ;
+; -2.596 ; CONT[13]   ; INDICE[2]  ; CLK          ; CLK         ; 1.000        ; -0.014     ; 3.618      ;
+; -2.596 ; CONT[13]   ; INDICE[3]  ; CLK          ; CLK         ; 1.000        ; -0.014     ; 3.618      ;
+; -2.596 ; CONT[13]   ; INDICE[4]  ; CLK          ; CLK         ; 1.000        ; -0.014     ; 3.618      ;
+; -2.596 ; CONT[13]   ; INDICE[5]  ; CLK          ; CLK         ; 1.000        ; -0.014     ; 3.618      ;
+; -2.596 ; CONT[13]   ; INDICE[6]  ; CLK          ; CLK         ; 1.000        ; -0.014     ; 3.618      ;
+; -2.596 ; CONT[13]   ; INDICE[7]  ; CLK          ; CLK         ; 1.000        ; -0.014     ; 3.618      ;
+; -2.596 ; CONT[13]   ; INDICE[8]  ; CLK          ; CLK         ; 1.000        ; -0.014     ; 3.618      ;
+; -2.596 ; CONT[13]   ; INDICE[9]  ; CLK          ; CLK         ; 1.000        ; -0.014     ; 3.618      ;
+; -2.596 ; CONT[13]   ; INDICE[10] ; CLK          ; CLK         ; 1.000        ; -0.014     ; 3.618      ;
+; -2.596 ; CONT[13]   ; INDICE[11] ; CLK          ; CLK         ; 1.000        ; -0.014     ; 3.618      ;
+; -2.596 ; CONT[13]   ; INDICE[12] ; CLK          ; CLK         ; 1.000        ; -0.014     ; 3.618      ;
+; -2.596 ; CONT[13]   ; INDICE[13] ; CLK          ; CLK         ; 1.000        ; -0.014     ; 3.618      ;
+; -2.596 ; CONT[13]   ; INDICE[14] ; CLK          ; CLK         ; 1.000        ; -0.014     ; 3.618      ;
+; -2.596 ; CONT[13]   ; INDICE[15] ; CLK          ; CLK         ; 1.000        ; -0.014     ; 3.618      ;
+; -2.596 ; CONT[13]   ; INDICE[1]  ; CLK          ; CLK         ; 1.000        ; -0.014     ; 3.618      ;
+; -2.582 ; INDICE[3]  ; INDICE[30] ; CLK          ; CLK         ; 1.000        ; -0.015     ; 3.603      ;
+; -2.569 ; CONT[15]   ; EDO.S0     ; CLK          ; CLK         ; 1.000        ; -0.004     ; 3.601      ;
+; -2.569 ; CONT[15]   ; EDO.S1     ; CLK          ; CLK         ; 1.000        ; -0.004     ; 3.601      ;
+; -2.569 ; CONT[15]   ; EDO.S2     ; CLK          ; CLK         ; 1.000        ; -0.004     ; 3.601      ;
+; -2.569 ; CONT[15]   ; EDO.S3     ; CLK          ; CLK         ; 1.000        ; -0.004     ; 3.601      ;
+; -2.569 ; CONT[15]   ; EDO.S4     ; CLK          ; CLK         ; 1.000        ; -0.004     ; 3.601      ;
+; -2.569 ; CONT[15]   ; EDO.S5     ; CLK          ; CLK         ; 1.000        ; -0.004     ; 3.601      ;
+; -2.569 ; CONT[15]   ; EDO.S7     ; CLK          ; CLK         ; 1.000        ; -0.004     ; 3.601      ;
+; -2.568 ; INDICE[17] ; EDO.S8     ; CLK          ; CLK         ; 1.000        ; 0.011      ; 3.615      ;
++--------+------------+------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'EDO.S10'                                                                           ;
++--------+-----------+------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node ; To Node    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------+------------+--------------+-------------+--------------+------------+------------+
+; -2.638 ; INDICE[2] ; D[4]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.634      ; 2.549      ;
+; -2.621 ; INDICE[1] ; D[4]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.634      ; 2.532      ;
+; -2.376 ; INDICE[0] ; D[4]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.636      ; 2.289      ;
+; -2.370 ; EDO.S4    ; D[4]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.624      ; 2.271      ;
+; -2.329 ; INDICE[3] ; D[4]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.634      ; 2.240      ;
+; -2.322 ; EDO.S0    ; D[4]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.624      ; 2.223      ;
+; -2.240 ; EDO.S1    ; D[4]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.624      ; 2.141      ;
+; -2.036 ; EDO.S5    ; D[4]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.624      ; 1.937      ;
+; -2.015 ; INDICE[2] ; D[3]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.347      ; 2.539      ;
+; -2.007 ; INDICE[2] ; D[1]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.337      ; 2.495      ;
+; -1.996 ; INDICE[1] ; D[3]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.347      ; 2.520      ;
+; -1.982 ; INDICE[1] ; D[1]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.337      ; 2.470      ;
+; -1.976 ; INDICE[2] ; D[2]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.438      ; 2.428      ;
+; -1.957 ; EDO.S9    ; D[1]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.341      ; 2.449      ;
+; -1.956 ; INDICE[1] ; D[2]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.438      ; 2.408      ;
+; -1.946 ; EDO.S9    ; D[4]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.638      ; 1.861      ;
+; -1.929 ; EDO.S4    ; D[1]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.327      ; 2.407      ;
+; -1.918 ; INDICE[2] ; D[6]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.347      ; 2.404      ;
+; -1.871 ; EDO.S4    ; D[3]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.337      ; 2.385      ;
+; -1.870 ; INDICE[2] ; D[7]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.346      ; 2.392      ;
+; -1.864 ; INDICE[2] ; D[5]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.337      ; 2.375      ;
+; -1.851 ; EDO.S5    ; D[3]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.337      ; 2.365      ;
+; -1.843 ; INDICE[1] ; D[5]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.337      ; 2.354      ;
+; -1.830 ; EDO.S4    ; D[2]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.428      ; 2.272      ;
+; -1.810 ; EDO.S5    ; D[2]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.428      ; 2.252      ;
+; -1.802 ; EDO.S8    ; D[4]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.638      ; 1.717      ;
+; -1.761 ; EDO.S9    ; D[6]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.351      ; 2.251      ;
+; -1.753 ; INDICE[0] ; D[3]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.349      ; 2.279      ;
+; -1.749 ; EDO.S3    ; D[3]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.337      ; 2.263      ;
+; -1.736 ; EDO.S5    ; D[1]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.327      ; 2.214      ;
+; -1.734 ; INDICE[0] ; D[1]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.339      ; 2.224      ;
+; -1.715 ; EDO.S1    ; D[6]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.337      ; 2.191      ;
+; -1.712 ; INDICE[0] ; D[2]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.440      ; 2.166      ;
+; -1.708 ; EDO.S3    ; D[2]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.428      ; 2.150      ;
+; -1.707 ; INDICE[3] ; D[3]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.347      ; 2.231      ;
+; -1.694 ; INDICE[3] ; D[1]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.337      ; 2.182      ;
+; -1.689 ; EDO.S8    ; D[1]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.341      ; 2.181      ;
+; -1.670 ; EDO.S7    ; E$latch    ; CLK          ; EDO.S10     ; 1.000        ; 0.326      ; 2.124      ;
+; -1.666 ; INDICE[3] ; D[2]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.438      ; 2.118      ;
+; -1.648 ; EDO.S9    ; D[5]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.341      ; 2.163      ;
+; -1.624 ; EDO.S7    ; D[1]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.327      ; 2.102      ;
+; -1.600 ; INDICE[0] ; D[5]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.339      ; 2.113      ;
+; -1.594 ; INDICE[1] ; D[6]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.347      ; 2.080      ;
+; -1.590 ; EDO.S2    ; D[3]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.337      ; 2.104      ;
+; -1.570 ; INDICE[1] ; D[7]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.346      ; 2.092      ;
+; -1.555 ; INDICE[3] ; D[5]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.337      ; 2.066      ;
+; -1.549 ; EDO.S2    ; D[2]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.428      ; 1.991      ;
+; -1.542 ; EDO.S1    ; D[5]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.327      ; 2.043      ;
+; -1.525 ; EDO.S1    ; E$latch    ; CLK          ; EDO.S10     ; 1.000        ; 0.326      ; 1.979      ;
+; -1.495 ; EDO.S0    ; D[5]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.327      ; 1.996      ;
+; -1.493 ; EDO.S8    ; D[6]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.351      ; 1.983      ;
+; -1.478 ; INDICE[0] ; D[6]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.349      ; 1.966      ;
+; -1.456 ; INDICE[3] ; D[7]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.346      ; 1.978      ;
+; -1.426 ; EDO.S9    ; D[3]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.351      ; 1.954      ;
+; -1.411 ; EDO.S9    ; D[7]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.350      ; 1.937      ;
+; -1.381 ; EDO.S9    ; D[2]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.442      ; 1.837      ;
+; -1.380 ; EDO.S5    ; E$latch    ; CLK          ; EDO.S10     ; 1.000        ; 0.326      ; 1.834      ;
+; -1.380 ; EDO.S8    ; D[5]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.341      ; 1.895      ;
+; -1.370 ; EDO.S8    ; E$latch    ; CLK          ; EDO.S10     ; 1.000        ; 0.340      ; 1.838      ;
+; -1.363 ; EDO.S0    ; D[6]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.337      ; 1.839      ;
+; -1.357 ; EDO.S8    ; D[7]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.350      ; 1.883      ;
+; -1.310 ; EDO.S3    ; E$latch    ; CLK          ; EDO.S10     ; 1.000        ; 0.326      ; 1.764      ;
+; -1.051 ; EDO.S9    ; RS$latch   ; CLK          ; EDO.S10     ; 1.000        ; 0.347      ; 1.719      ;
+; -1.048 ; EDO.S6    ; D[1]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.341      ; 1.540      ;
+; -1.018 ; EDO.S8    ; D[3]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.351      ; 1.546      ;
+; -0.972 ; EDO.S8    ; D[2]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.442      ; 1.428      ;
+; -0.783 ; EDO.S8    ; RS$latch   ; CLK          ; EDO.S10     ; 1.000        ; 0.347      ; 1.451      ;
++--------+-----------+------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'CLK'                                                                                 ;
++--------+------------+------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node  ; To Node    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------+------------+--------------+-------------+--------------+------------+------------+
+; -2.598 ; EDO.S10    ; EDO.S10    ; EDO.S10      ; CLK         ; 0.000        ; 2.739      ; 0.657      ;
+; -2.098 ; EDO.S10    ; EDO.S10    ; EDO.S10      ; CLK         ; -0.500       ; 2.739      ; 0.657      ;
+; 0.391  ; INDICE[0]  ; INDICE[0]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; CUENTA[0]  ; CUENTA[0]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; CUENTA[1]  ; CUENTA[1]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; CUENTA[2]  ; CUENTA[2]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.531  ; INDICE[31] ; INDICE[31] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.797      ;
+; 0.539  ; CONT[23]   ; CONT[23]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.805      ;
+; 0.553  ; EDO.S1     ; EDO.S2     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.819      ;
+; 0.554  ; EDO.S1     ; EDO.S0     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.820      ;
+; 0.557  ; EDO.S8     ; EDO.S9     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.823      ;
+; 0.688  ; EDO.S3     ; EDO.S4     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.954      ;
+; 0.707  ; CUENTA[1]  ; CUENTA[2]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.973      ;
+; 0.720  ; EDO.S4     ; EDO.S5     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.986      ;
+; 0.795  ; INDICE[16] ; INDICE[16] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.061      ;
+; 0.796  ; CONT[12]   ; CONT[12]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.062      ;
+; 0.801  ; INDICE[9]  ; INDICE[9]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.067      ;
+; 0.802  ; INDICE[11] ; INDICE[11] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.068      ;
+; 0.805  ; INDICE[17] ; INDICE[17] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.071      ;
+; 0.806  ; INDICE[13] ; INDICE[13] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806  ; INDICE[14] ; INDICE[14] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806  ; INDICE[15] ; INDICE[15] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806  ; INDICE[18] ; INDICE[18] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806  ; INDICE[20] ; INDICE[20] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806  ; INDICE[23] ; INDICE[23] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806  ; INDICE[25] ; INDICE[25] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806  ; INDICE[27] ; INDICE[27] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806  ; INDICE[29] ; INDICE[29] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806  ; INDICE[30] ; INDICE[30] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.072      ;
+; 0.809  ; CUENTA[2]  ; EDO.S2     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.075      ;
+; 0.810  ; INDICE[4]  ; INDICE[4]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.076      ;
+; 0.810  ; INDICE[7]  ; INDICE[7]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.076      ;
+; 0.810  ; CUENTA[2]  ; EDO.S0     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.076      ;
+; 0.811  ; CONT[13]   ; CONT[13]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.077      ;
+; 0.813  ; CONT[14]   ; CONT[14]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.079      ;
+; 0.813  ; CONT[21]   ; CONT[21]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.079      ;
+; 0.814  ; CONT[16]   ; CONT[16]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.080      ;
+; 0.814  ; CONT[19]   ; CONT[19]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.080      ;
+; 0.814  ; INDICE[2]  ; INDICE[2]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.080      ;
+; 0.826  ; EDO.S9     ; EDO.S8     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.092      ;
+; 0.828  ; CONT[1]    ; CONT[1]    ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.094      ;
+; 0.838  ; CONT[20]   ; CONT[20]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.104      ;
+; 0.838  ; CONT[22]   ; CONT[22]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.104      ;
+; 0.838  ; INDICE[8]  ; INDICE[8]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.104      ;
+; 0.838  ; INDICE[10] ; INDICE[10] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.104      ;
+; 0.838  ; INDICE[12] ; INDICE[12] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.104      ;
+; 0.838  ; INDICE[19] ; INDICE[19] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.104      ;
+; 0.838  ; INDICE[24] ; INDICE[24] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.104      ;
+; 0.838  ; INDICE[26] ; INDICE[26] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.104      ;
+; 0.838  ; INDICE[28] ; INDICE[28] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.104      ;
+; 0.839  ; INDICE[21] ; INDICE[21] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.105      ;
+; 0.839  ; INDICE[22] ; INDICE[22] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.105      ;
+; 0.842  ; INDICE[6]  ; INDICE[6]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.108      ;
+; 0.843  ; INDICE[5]  ; INDICE[5]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.109      ;
+; 0.844  ; EDO.S2     ; EDO.S3     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.110      ;
+; 0.845  ; CONT[15]   ; CONT[15]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.111      ;
+; 0.846  ; CONT[17]   ; CONT[17]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.112      ;
+; 0.847  ; CONT[18]   ; CONT[18]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.113      ;
+; 0.854  ; INDICE[3]  ; INDICE[3]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.120      ;
+; 0.944  ; CUENTA[0]  ; EDO.S2     ; CLK          ; CLK         ; 0.000        ; -0.002     ; 1.208      ;
+; 0.945  ; EDO.S0     ; EDO.S1     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.211      ;
+; 0.957  ; INDICE[0]  ; INDICE[1]  ; CLK          ; CLK         ; 0.000        ; 0.002      ; 1.225      ;
+; 0.971  ; CUENTA[0]  ; EDO.S0     ; CLK          ; CLK         ; 0.000        ; -0.002     ; 1.235      ;
+; 0.983  ; EDO.S6     ; EDO.S7     ; CLK          ; CLK         ; 0.000        ; 0.014      ; 1.263      ;
+; 1.010  ; EDO.S5     ; EDO.S6     ; CLK          ; CLK         ; 0.000        ; -0.014     ; 1.262      ;
+; 1.018  ; INDICE[1]  ; INDICE[1]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.284      ;
+; 1.088  ; EDO.S7     ; EDO.S8     ; CLK          ; CLK         ; 0.000        ; -0.014     ; 1.340      ;
+; 1.178  ; INDICE[16] ; INDICE[17] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.444      ;
+; 1.179  ; CONT[12]   ; CONT[13]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.445      ;
+; 1.184  ; CUENTA[1]  ; EDO.S2     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.450      ;
+; 1.184  ; INDICE[9]  ; INDICE[10] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.450      ;
+; 1.185  ; INDICE[11] ; INDICE[12] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.451      ;
+; 1.188  ; INDICE[17] ; INDICE[18] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.454      ;
+; 1.189  ; INDICE[30] ; INDICE[31] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189  ; INDICE[13] ; INDICE[14] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189  ; INDICE[14] ; INDICE[15] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189  ; INDICE[29] ; INDICE[30] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189  ; INDICE[18] ; INDICE[19] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189  ; INDICE[25] ; INDICE[26] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189  ; INDICE[27] ; INDICE[28] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189  ; INDICE[20] ; INDICE[21] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.455      ;
+; 1.190  ; CONT[21]   ; CONT[5]    ; CLK          ; CLK         ; 0.000        ; -0.002     ; 1.454      ;
+; 1.193  ; INDICE[4]  ; INDICE[5]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.459      ;
+; 1.194  ; CONT[13]   ; CONT[14]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.460      ;
+; 1.196  ; CONT[21]   ; CONT[22]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.462      ;
+; 1.196  ; CONT[14]   ; CONT[15]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.462      ;
+; 1.197  ; CONT[16]   ; CONT[17]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.463      ;
+; 1.197  ; INDICE[2]  ; INDICE[3]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.463      ;
+; 1.211  ; CUENTA[1]  ; EDO.S0     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.477      ;
+; 1.224  ; CONT[22]   ; CONT[23]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.490      ;
+; 1.224  ; INDICE[8]  ; INDICE[9]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.490      ;
+; 1.224  ; INDICE[10] ; INDICE[11] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.490      ;
+; 1.224  ; INDICE[12] ; INDICE[13] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.490      ;
+; 1.224  ; INDICE[19] ; INDICE[20] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.490      ;
+; 1.224  ; INDICE[24] ; INDICE[25] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.490      ;
+; 1.224  ; INDICE[26] ; INDICE[27] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.490      ;
+; 1.224  ; INDICE[28] ; INDICE[29] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.490      ;
+; 1.224  ; CONT[20]   ; CONT[21]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.490      ;
+; 1.225  ; INDICE[22] ; INDICE[23] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.491      ;
+; 1.225  ; INDICE[21] ; INDICE[22] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.491      ;
++--------+------------+------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'EDO.S10'                                                                           ;
++-------+-----------+------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node ; To Node    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------+------------+--------------+-------------+--------------+------------+------------+
+; 0.986 ; EDO.S8    ; D[2]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.442      ; 1.428      ;
+; 1.079 ; EDO.S8    ; D[4]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.638      ; 1.717      ;
+; 1.104 ; EDO.S8    ; RS$latch   ; CLK          ; EDO.S10     ; 0.000        ; 0.347      ; 1.451      ;
+; 1.195 ; EDO.S8    ; D[3]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.351      ; 1.546      ;
+; 1.199 ; EDO.S6    ; D[1]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.341      ; 1.540      ;
+; 1.223 ; EDO.S9    ; D[4]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.638      ; 1.861      ;
+; 1.313 ; EDO.S5    ; D[4]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.624      ; 1.937      ;
+; 1.372 ; EDO.S9    ; RS$latch   ; CLK          ; EDO.S10     ; 0.000        ; 0.347      ; 1.719      ;
+; 1.395 ; EDO.S9    ; D[2]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.442      ; 1.837      ;
+; 1.438 ; EDO.S3    ; E$latch    ; CLK          ; EDO.S10     ; 0.000        ; 0.326      ; 1.764      ;
+; 1.498 ; EDO.S8    ; E$latch    ; CLK          ; EDO.S10     ; 0.000        ; 0.340      ; 1.838      ;
+; 1.502 ; EDO.S0    ; D[6]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.337      ; 1.839      ;
+; 1.508 ; EDO.S5    ; E$latch    ; CLK          ; EDO.S10     ; 0.000        ; 0.326      ; 1.834      ;
+; 1.517 ; EDO.S1    ; D[4]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.624      ; 2.141      ;
+; 1.533 ; EDO.S8    ; D[7]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.350      ; 1.883      ;
+; 1.554 ; EDO.S8    ; D[5]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.341      ; 1.895      ;
+; 1.563 ; EDO.S2    ; D[2]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.428      ; 1.991      ;
+; 1.587 ; EDO.S9    ; D[7]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.350      ; 1.937      ;
+; 1.599 ; EDO.S0    ; D[4]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.624      ; 2.223      ;
+; 1.603 ; EDO.S9    ; D[3]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.351      ; 1.954      ;
+; 1.606 ; INDICE[3] ; D[4]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.634      ; 2.240      ;
+; 1.617 ; INDICE[0] ; D[6]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.349      ; 1.966      ;
+; 1.632 ; EDO.S8    ; D[6]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.351      ; 1.983      ;
+; 1.632 ; INDICE[3] ; D[7]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.346      ; 1.978      ;
+; 1.647 ; EDO.S4    ; D[4]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.624      ; 2.271      ;
+; 1.653 ; EDO.S1    ; E$latch    ; CLK          ; EDO.S10     ; 0.000        ; 0.326      ; 1.979      ;
+; 1.653 ; INDICE[0] ; D[4]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.636      ; 2.289      ;
+; 1.669 ; EDO.S0    ; D[5]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.327      ; 1.996      ;
+; 1.680 ; INDICE[3] ; D[2]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.438      ; 2.118      ;
+; 1.716 ; EDO.S1    ; D[5]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.327      ; 2.043      ;
+; 1.722 ; EDO.S3    ; D[2]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.428      ; 2.150      ;
+; 1.726 ; INDICE[0] ; D[2]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.440      ; 2.166      ;
+; 1.729 ; INDICE[3] ; D[5]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.337      ; 2.066      ;
+; 1.733 ; INDICE[1] ; D[6]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.347      ; 2.080      ;
+; 1.746 ; INDICE[1] ; D[7]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.346      ; 2.092      ;
+; 1.767 ; EDO.S2    ; D[3]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.337      ; 2.104      ;
+; 1.774 ; INDICE[0] ; D[5]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.339      ; 2.113      ;
+; 1.775 ; EDO.S7    ; D[1]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.327      ; 2.102      ;
+; 1.798 ; EDO.S7    ; E$latch    ; CLK          ; EDO.S10     ; 0.000        ; 0.326      ; 2.124      ;
+; 1.822 ; EDO.S9    ; D[5]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.341      ; 2.163      ;
+; 1.824 ; EDO.S5    ; D[2]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.428      ; 2.252      ;
+; 1.840 ; EDO.S8    ; D[1]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.341      ; 2.181      ;
+; 1.844 ; EDO.S4    ; D[2]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.428      ; 2.272      ;
+; 1.845 ; INDICE[3] ; D[1]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.337      ; 2.182      ;
+; 1.854 ; EDO.S1    ; D[6]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.337      ; 2.191      ;
+; 1.884 ; INDICE[3] ; D[3]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.347      ; 2.231      ;
+; 1.885 ; INDICE[0] ; D[1]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.339      ; 2.224      ;
+; 1.887 ; EDO.S5    ; D[1]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.327      ; 2.214      ;
+; 1.898 ; INDICE[1] ; D[4]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.634      ; 2.532      ;
+; 1.900 ; EDO.S9    ; D[6]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.351      ; 2.251      ;
+; 1.915 ; INDICE[2] ; D[4]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.634      ; 2.549      ;
+; 1.926 ; EDO.S3    ; D[3]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.337      ; 2.263      ;
+; 1.930 ; INDICE[0] ; D[3]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.349      ; 2.279      ;
+; 1.970 ; INDICE[1] ; D[2]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.438      ; 2.408      ;
+; 1.990 ; INDICE[2] ; D[2]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.438      ; 2.428      ;
+; 2.017 ; INDICE[1] ; D[5]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.337      ; 2.354      ;
+; 2.028 ; EDO.S5    ; D[3]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.337      ; 2.365      ;
+; 2.038 ; INDICE[2] ; D[5]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.337      ; 2.375      ;
+; 2.046 ; INDICE[2] ; D[7]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.346      ; 2.392      ;
+; 2.048 ; EDO.S4    ; D[3]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.337      ; 2.385      ;
+; 2.057 ; INDICE[2] ; D[6]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.347      ; 2.404      ;
+; 2.080 ; EDO.S4    ; D[1]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.327      ; 2.407      ;
+; 2.108 ; EDO.S9    ; D[1]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.341      ; 2.449      ;
+; 2.133 ; INDICE[1] ; D[1]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.337      ; 2.470      ;
+; 2.158 ; INDICE[2] ; D[1]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.337      ; 2.495      ;
+; 2.173 ; INDICE[1] ; D[3]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.347      ; 2.520      ;
+; 2.192 ; INDICE[2] ; D[3]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.347      ; 2.539      ;
++-------+-----------+------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'CLK'                                                       ;
++--------+--------------+----------------+------------------+-------+------------+------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target     ;
++--------+--------------+----------------+------------------+-------+------------+------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CLK   ; Rise       ; CLK        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONT[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CONT[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONT[10]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CONT[10]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONT[11]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CONT[11]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONT[12]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CONT[12]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONT[13]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CONT[13]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONT[14]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CONT[14]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONT[15]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CONT[15]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONT[16]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CONT[16]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONT[17]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CONT[17]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONT[18]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CONT[18]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONT[19]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CONT[19]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONT[1]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CONT[1]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONT[20]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CONT[20]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONT[21]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CONT[21]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONT[22]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CONT[22]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONT[23]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CONT[23]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONT[2]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CONT[2]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONT[3]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CONT[3]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONT[4]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CONT[4]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONT[5]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CONT[5]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONT[6]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CONT[6]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONT[7]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CONT[7]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONT[8]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CONT[8]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONT[9]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CONT[9]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CUENTA[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CUENTA[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CUENTA[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CUENTA[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CUENTA[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CUENTA[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; EDO.S0     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; EDO.S0     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; EDO.S1     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; EDO.S1     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; EDO.S10    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; EDO.S10    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; EDO.S2     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; EDO.S2     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; EDO.S3     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; EDO.S3     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; EDO.S4     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; EDO.S4     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; EDO.S5     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; EDO.S5     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; EDO.S6     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; EDO.S6     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; EDO.S7     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; EDO.S7     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; EDO.S8     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; EDO.S8     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; EDO.S9     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; EDO.S9     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; INDICE[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; INDICE[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; INDICE[10] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; INDICE[10] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; INDICE[11] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; INDICE[11] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; INDICE[12] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; INDICE[12] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; INDICE[13] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; INDICE[13] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; INDICE[14] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; INDICE[14] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; INDICE[15] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; INDICE[15] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; INDICE[16] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; INDICE[16] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; INDICE[17] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; INDICE[17] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; INDICE[18] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; INDICE[18] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; INDICE[19] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; INDICE[19] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; INDICE[1]  ;
++--------+--------------+----------------+------------------+-------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'EDO.S10'                                                                  ;
++-------+--------------+----------------+------------------+---------+------------+--------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock   ; Clock Edge ; Target                   ;
++-------+--------------+----------------+------------------+---------+------------+--------------------------+
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; EDO.S10 ; Rise       ; D[1]$latch               ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; EDO.S10 ; Rise       ; D[1]$latch               ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; EDO.S10 ; Rise       ; D[1]$latch|datad         ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; EDO.S10 ; Rise       ; D[1]$latch|datad         ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; EDO.S10 ; Rise       ; D[2]$latch               ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; EDO.S10 ; Rise       ; D[2]$latch               ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; EDO.S10 ; Rise       ; D[2]$latch|datac         ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; EDO.S10 ; Rise       ; D[2]$latch|datac         ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; EDO.S10 ; Rise       ; D[3]$latch               ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; EDO.S10 ; Rise       ; D[3]$latch               ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; EDO.S10 ; Rise       ; D[3]$latch|datad         ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; EDO.S10 ; Rise       ; D[3]$latch|datad         ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; EDO.S10 ; Rise       ; D[4]$latch               ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; EDO.S10 ; Rise       ; D[4]$latch               ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; EDO.S10 ; Rise       ; D[4]$latch|dataa         ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; EDO.S10 ; Rise       ; D[4]$latch|dataa         ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; EDO.S10 ; Rise       ; D[5]$latch               ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; EDO.S10 ; Rise       ; D[5]$latch               ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; EDO.S10 ; Rise       ; D[5]$latch|datad         ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; EDO.S10 ; Rise       ; D[5]$latch|datad         ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; EDO.S10 ; Rise       ; D[6]$latch               ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; EDO.S10 ; Rise       ; D[6]$latch               ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; EDO.S10 ; Rise       ; D[6]$latch|datad         ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; EDO.S10 ; Rise       ; D[6]$latch|datad         ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; EDO.S10 ; Rise       ; D[7]$latch               ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; EDO.S10 ; Rise       ; D[7]$latch               ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; EDO.S10 ; Rise       ; D[7]$latch|datad         ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; EDO.S10 ; Rise       ; D[7]$latch|datad         ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; EDO.S10 ; Rise       ; E$latch                  ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; EDO.S10 ; Rise       ; E$latch                  ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; EDO.S10 ; Rise       ; E$latch|datad            ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; EDO.S10 ; Rise       ; E$latch|datad            ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; EDO.S10 ; Rise       ; EDO.S10|regout           ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; EDO.S10 ; Rise       ; EDO.S10|regout           ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; EDO.S10 ; Rise       ; EDO.S10~clkctrl|inclk[0] ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; EDO.S10 ; Rise       ; EDO.S10~clkctrl|inclk[0] ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; EDO.S10 ; Rise       ; EDO.S10~clkctrl|outclk   ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; EDO.S10 ; Rise       ; EDO.S10~clkctrl|outclk   ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; EDO.S10 ; Rise       ; RS$latch                 ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; EDO.S10 ; Rise       ; RS$latch                 ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; EDO.S10 ; Rise       ; RS$latch|datad           ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; EDO.S10 ; Rise       ; RS$latch|datad           ;
++-------+--------------+----------------+------------------+---------+------------+--------------------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; D[*]      ; EDO.S10    ; 7.548 ; 7.548 ; Rise       ; EDO.S10         ;
+;  D[1]     ; EDO.S10    ; 6.713 ; 6.713 ; Rise       ; EDO.S10         ;
+;  D[2]     ; EDO.S10    ; 6.950 ; 6.950 ; Rise       ; EDO.S10         ;
+;  D[3]     ; EDO.S10    ; 7.043 ; 7.043 ; Rise       ; EDO.S10         ;
+;  D[4]     ; EDO.S10    ; 7.548 ; 7.548 ; Rise       ; EDO.S10         ;
+;  D[5]     ; EDO.S10    ; 7.026 ; 7.026 ; Rise       ; EDO.S10         ;
+;  D[6]     ; EDO.S10    ; 6.887 ; 6.887 ; Rise       ; EDO.S10         ;
+;  D[7]     ; EDO.S10    ; 7.077 ; 7.077 ; Rise       ; EDO.S10         ;
+; E         ; EDO.S10    ; 6.514 ; 6.514 ; Rise       ; EDO.S10         ;
+; RS        ; EDO.S10    ; 6.521 ; 6.521 ; Rise       ; EDO.S10         ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; D[*]      ; EDO.S10    ; 6.713 ; 6.713 ; Rise       ; EDO.S10         ;
+;  D[1]     ; EDO.S10    ; 6.713 ; 6.713 ; Rise       ; EDO.S10         ;
+;  D[2]     ; EDO.S10    ; 6.950 ; 6.950 ; Rise       ; EDO.S10         ;
+;  D[3]     ; EDO.S10    ; 7.043 ; 7.043 ; Rise       ; EDO.S10         ;
+;  D[4]     ; EDO.S10    ; 7.548 ; 7.548 ; Rise       ; EDO.S10         ;
+;  D[5]     ; EDO.S10    ; 7.026 ; 7.026 ; Rise       ; EDO.S10         ;
+;  D[6]     ; EDO.S10    ; 6.887 ; 6.887 ; Rise       ; EDO.S10         ;
+;  D[7]     ; EDO.S10    ; 7.077 ; 7.077 ; Rise       ; EDO.S10         ;
+; E         ; EDO.S10    ; 6.514 ; 6.514 ; Rise       ; EDO.S10         ;
+; RS        ; EDO.S10    ; 6.521 ; 6.521 ; Rise       ; EDO.S10         ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------+
+; Fast Model Setup Summary         ;
++---------+--------+---------------+
+; Clock   ; Slack  ; End Point TNS ;
++---------+--------+---------------+
+; CLK     ; -0.910 ; -45.839       ;
+; EDO.S10 ; -0.677 ; -3.204        ;
++---------+--------+---------------+
+
+
++----------------------------------+
+; Fast Model Hold Summary          ;
++---------+--------+---------------+
+; Clock   ; Slack  ; End Point TNS ;
++---------+--------+---------------+
+; CLK     ; -1.591 ; -1.591        ;
+; EDO.S10 ; 0.550  ; 0.000         ;
++---------+--------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++---------+--------+---------------------+
+; Clock   ; Slack  ; End Point TNS       ;
++---------+--------+---------------------+
+; CLK     ; -1.380 ; -71.380             ;
+; EDO.S10 ; 0.500  ; 0.000               ;
++---------+--------+---------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'CLK'                                                                               ;
++--------+-----------+------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node ; To Node    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------+------------+--------------+-------------+--------------+------------+------------+
+; -0.910 ; INDICE[1] ; INDICE[31] ; CLK          ; CLK         ; 1.000        ; -0.014     ; 1.928      ;
+; -0.893 ; INDICE[0] ; INDICE[31] ; CLK          ; CLK         ; 1.000        ; -0.011     ; 1.914      ;
+; -0.875 ; INDICE[1] ; INDICE[30] ; CLK          ; CLK         ; 1.000        ; -0.014     ; 1.893      ;
+; -0.858 ; INDICE[0] ; INDICE[30] ; CLK          ; CLK         ; 1.000        ; -0.011     ; 1.879      ;
+; -0.840 ; INDICE[1] ; INDICE[29] ; CLK          ; CLK         ; 1.000        ; -0.014     ; 1.858      ;
+; -0.823 ; INDICE[0] ; INDICE[29] ; CLK          ; CLK         ; 1.000        ; -0.011     ; 1.844      ;
+; -0.805 ; INDICE[1] ; INDICE[28] ; CLK          ; CLK         ; 1.000        ; -0.014     ; 1.823      ;
+; -0.788 ; INDICE[0] ; INDICE[28] ; CLK          ; CLK         ; 1.000        ; -0.011     ; 1.809      ;
+; -0.787 ; CONT[0]   ; CONT[11]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.819      ;
+; -0.787 ; INDICE[2] ; INDICE[31] ; CLK          ; CLK         ; 1.000        ; -0.014     ; 1.805      ;
+; -0.771 ; CONT[15]  ; INDICE[16] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 1.774      ;
+; -0.771 ; CONT[15]  ; INDICE[17] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 1.774      ;
+; -0.771 ; CONT[15]  ; INDICE[18] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 1.774      ;
+; -0.771 ; CONT[15]  ; INDICE[19] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 1.774      ;
+; -0.771 ; CONT[15]  ; INDICE[20] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 1.774      ;
+; -0.771 ; CONT[15]  ; INDICE[21] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 1.774      ;
+; -0.771 ; CONT[15]  ; INDICE[22] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 1.774      ;
+; -0.771 ; CONT[15]  ; INDICE[23] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 1.774      ;
+; -0.771 ; CONT[15]  ; INDICE[24] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 1.774      ;
+; -0.771 ; CONT[15]  ; INDICE[25] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 1.774      ;
+; -0.771 ; CONT[15]  ; INDICE[26] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 1.774      ;
+; -0.771 ; CONT[15]  ; INDICE[27] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 1.774      ;
+; -0.771 ; CONT[15]  ; INDICE[28] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 1.774      ;
+; -0.771 ; CONT[15]  ; INDICE[29] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 1.774      ;
+; -0.771 ; CONT[15]  ; INDICE[30] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 1.774      ;
+; -0.771 ; CONT[15]  ; INDICE[31] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 1.774      ;
+; -0.770 ; INDICE[1] ; INDICE[27] ; CLK          ; CLK         ; 1.000        ; -0.014     ; 1.788      ;
+; -0.768 ; INDICE[3] ; INDICE[31] ; CLK          ; CLK         ; 1.000        ; -0.014     ; 1.786      ;
+; -0.762 ; CONT[0]   ; CONT[23]   ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.797      ;
+; -0.759 ; CONT[13]  ; INDICE[16] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 1.762      ;
+; -0.759 ; CONT[13]  ; INDICE[17] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 1.762      ;
+; -0.759 ; CONT[13]  ; INDICE[18] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 1.762      ;
+; -0.759 ; CONT[13]  ; INDICE[19] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 1.762      ;
+; -0.759 ; CONT[13]  ; INDICE[20] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 1.762      ;
+; -0.759 ; CONT[13]  ; INDICE[21] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 1.762      ;
+; -0.759 ; CONT[13]  ; INDICE[22] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 1.762      ;
+; -0.759 ; CONT[13]  ; INDICE[23] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 1.762      ;
+; -0.759 ; CONT[13]  ; INDICE[24] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 1.762      ;
+; -0.759 ; CONT[13]  ; INDICE[25] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 1.762      ;
+; -0.759 ; CONT[13]  ; INDICE[26] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 1.762      ;
+; -0.759 ; CONT[13]  ; INDICE[27] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 1.762      ;
+; -0.759 ; CONT[13]  ; INDICE[28] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 1.762      ;
+; -0.759 ; CONT[13]  ; INDICE[29] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 1.762      ;
+; -0.759 ; CONT[13]  ; INDICE[30] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 1.762      ;
+; -0.759 ; CONT[13]  ; INDICE[31] ; CLK          ; CLK         ; 1.000        ; -0.029     ; 1.762      ;
+; -0.755 ; CONT[15]  ; EDO.S6     ; CLK          ; CLK         ; 1.000        ; -0.020     ; 1.767      ;
+; -0.755 ; CONT[15]  ; EDO.S8     ; CLK          ; CLK         ; 1.000        ; -0.020     ; 1.767      ;
+; -0.755 ; CONT[15]  ; EDO.S9     ; CLK          ; CLK         ; 1.000        ; -0.020     ; 1.767      ;
+; -0.753 ; INDICE[0] ; INDICE[27] ; CLK          ; CLK         ; 1.000        ; -0.011     ; 1.774      ;
+; -0.752 ; INDICE[2] ; INDICE[30] ; CLK          ; CLK         ; 1.000        ; -0.014     ; 1.770      ;
+; -0.745 ; CONT[15]  ; INDICE[2]  ; CLK          ; CLK         ; 1.000        ; -0.015     ; 1.762      ;
+; -0.745 ; CONT[15]  ; INDICE[3]  ; CLK          ; CLK         ; 1.000        ; -0.015     ; 1.762      ;
+; -0.745 ; CONT[15]  ; INDICE[4]  ; CLK          ; CLK         ; 1.000        ; -0.015     ; 1.762      ;
+; -0.745 ; CONT[15]  ; INDICE[5]  ; CLK          ; CLK         ; 1.000        ; -0.015     ; 1.762      ;
+; -0.745 ; CONT[15]  ; INDICE[6]  ; CLK          ; CLK         ; 1.000        ; -0.015     ; 1.762      ;
+; -0.745 ; CONT[15]  ; INDICE[7]  ; CLK          ; CLK         ; 1.000        ; -0.015     ; 1.762      ;
+; -0.745 ; CONT[15]  ; INDICE[8]  ; CLK          ; CLK         ; 1.000        ; -0.015     ; 1.762      ;
+; -0.745 ; CONT[15]  ; INDICE[9]  ; CLK          ; CLK         ; 1.000        ; -0.015     ; 1.762      ;
+; -0.745 ; CONT[15]  ; INDICE[10] ; CLK          ; CLK         ; 1.000        ; -0.015     ; 1.762      ;
+; -0.745 ; CONT[15]  ; INDICE[11] ; CLK          ; CLK         ; 1.000        ; -0.015     ; 1.762      ;
+; -0.745 ; CONT[15]  ; INDICE[12] ; CLK          ; CLK         ; 1.000        ; -0.015     ; 1.762      ;
+; -0.745 ; CONT[15]  ; INDICE[13] ; CLK          ; CLK         ; 1.000        ; -0.015     ; 1.762      ;
+; -0.745 ; CONT[15]  ; INDICE[14] ; CLK          ; CLK         ; 1.000        ; -0.015     ; 1.762      ;
+; -0.745 ; CONT[15]  ; INDICE[15] ; CLK          ; CLK         ; 1.000        ; -0.015     ; 1.762      ;
+; -0.745 ; CONT[15]  ; INDICE[1]  ; CLK          ; CLK         ; 1.000        ; -0.015     ; 1.762      ;
+; -0.743 ; CONT[0]   ; CONT[10]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.775      ;
+; -0.743 ; CONT[13]  ; EDO.S6     ; CLK          ; CLK         ; 1.000        ; -0.020     ; 1.755      ;
+; -0.743 ; CONT[13]  ; EDO.S8     ; CLK          ; CLK         ; 1.000        ; -0.020     ; 1.755      ;
+; -0.743 ; CONT[13]  ; EDO.S9     ; CLK          ; CLK         ; 1.000        ; -0.020     ; 1.755      ;
+; -0.735 ; INDICE[1] ; INDICE[26] ; CLK          ; CLK         ; 1.000        ; -0.014     ; 1.753      ;
+; -0.733 ; INDICE[3] ; INDICE[30] ; CLK          ; CLK         ; 1.000        ; -0.014     ; 1.751      ;
+; -0.733 ; CONT[13]  ; INDICE[2]  ; CLK          ; CLK         ; 1.000        ; -0.015     ; 1.750      ;
+; -0.733 ; CONT[13]  ; INDICE[3]  ; CLK          ; CLK         ; 1.000        ; -0.015     ; 1.750      ;
+; -0.733 ; CONT[13]  ; INDICE[4]  ; CLK          ; CLK         ; 1.000        ; -0.015     ; 1.750      ;
+; -0.733 ; CONT[13]  ; INDICE[5]  ; CLK          ; CLK         ; 1.000        ; -0.015     ; 1.750      ;
+; -0.733 ; CONT[13]  ; INDICE[6]  ; CLK          ; CLK         ; 1.000        ; -0.015     ; 1.750      ;
+; -0.733 ; CONT[13]  ; INDICE[7]  ; CLK          ; CLK         ; 1.000        ; -0.015     ; 1.750      ;
+; -0.733 ; CONT[13]  ; INDICE[8]  ; CLK          ; CLK         ; 1.000        ; -0.015     ; 1.750      ;
+; -0.733 ; CONT[13]  ; INDICE[9]  ; CLK          ; CLK         ; 1.000        ; -0.015     ; 1.750      ;
+; -0.733 ; CONT[13]  ; INDICE[10] ; CLK          ; CLK         ; 1.000        ; -0.015     ; 1.750      ;
+; -0.733 ; CONT[13]  ; INDICE[11] ; CLK          ; CLK         ; 1.000        ; -0.015     ; 1.750      ;
+; -0.733 ; CONT[13]  ; INDICE[12] ; CLK          ; CLK         ; 1.000        ; -0.015     ; 1.750      ;
+; -0.733 ; CONT[13]  ; INDICE[13] ; CLK          ; CLK         ; 1.000        ; -0.015     ; 1.750      ;
+; -0.733 ; CONT[13]  ; INDICE[14] ; CLK          ; CLK         ; 1.000        ; -0.015     ; 1.750      ;
+; -0.733 ; CONT[13]  ; INDICE[15] ; CLK          ; CLK         ; 1.000        ; -0.015     ; 1.750      ;
+; -0.733 ; CONT[13]  ; INDICE[1]  ; CLK          ; CLK         ; 1.000        ; -0.015     ; 1.750      ;
+; -0.727 ; CONT[0]   ; CONT[22]   ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.762      ;
+; -0.718 ; INDICE[0] ; INDICE[26] ; CLK          ; CLK         ; 1.000        ; -0.011     ; 1.739      ;
+; -0.717 ; INDICE[4] ; INDICE[31] ; CLK          ; CLK         ; 1.000        ; -0.014     ; 1.735      ;
+; -0.717 ; INDICE[2] ; INDICE[29] ; CLK          ; CLK         ; 1.000        ; -0.014     ; 1.735      ;
+; -0.711 ; CONT[15]  ; EDO.S0     ; CLK          ; CLK         ; 1.000        ; -0.006     ; 1.737      ;
+; -0.711 ; CONT[15]  ; EDO.S1     ; CLK          ; CLK         ; 1.000        ; -0.006     ; 1.737      ;
+; -0.711 ; CONT[15]  ; EDO.S2     ; CLK          ; CLK         ; 1.000        ; -0.006     ; 1.737      ;
+; -0.711 ; CONT[15]  ; EDO.S3     ; CLK          ; CLK         ; 1.000        ; -0.006     ; 1.737      ;
+; -0.711 ; CONT[15]  ; EDO.S4     ; CLK          ; CLK         ; 1.000        ; -0.006     ; 1.737      ;
+; -0.711 ; CONT[15]  ; EDO.S5     ; CLK          ; CLK         ; 1.000        ; -0.006     ; 1.737      ;
+; -0.711 ; CONT[15]  ; EDO.S7     ; CLK          ; CLK         ; 1.000        ; -0.006     ; 1.737      ;
+; -0.702 ; CONT[2]   ; CONT[11]   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.734      ;
+; -0.700 ; INDICE[1] ; INDICE[25] ; CLK          ; CLK         ; 1.000        ; -0.014     ; 1.718      ;
+; -0.699 ; CONT[13]  ; EDO.S0     ; CLK          ; CLK         ; 1.000        ; -0.006     ; 1.725      ;
++--------+-----------+------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'EDO.S10'                                                                           ;
++--------+-----------+------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node ; To Node    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------+------------+--------------+-------------+--------------+------------+------------+
+; -0.677 ; INDICE[2] ; D[4]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.208      ; 1.152      ;
+; -0.660 ; INDICE[1] ; D[4]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.208      ; 1.135      ;
+; -0.551 ; INDICE[0] ; D[4]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.211      ; 1.029      ;
+; -0.548 ; INDICE[3] ; D[4]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.208      ; 1.023      ;
+; -0.545 ; EDO.S0    ; D[4]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.199      ; 1.011      ;
+; -0.544 ; EDO.S4    ; D[4]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.199      ; 1.010      ;
+; -0.486 ; EDO.S1    ; D[4]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.199      ; 0.952      ;
+; -0.415 ; INDICE[2] ; D[1]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.070      ; 1.124      ;
+; -0.410 ; EDO.S5    ; D[4]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.199      ; 0.876      ;
+; -0.397 ; INDICE[2] ; D[3]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.079      ; 1.130      ;
+; -0.393 ; INDICE[2] ; D[2]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.108      ; 1.098      ;
+; -0.389 ; INDICE[1] ; D[1]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.070      ; 1.098      ;
+; -0.383 ; EDO.S9    ; D[4]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.213      ; 0.863      ;
+; -0.381 ; INDICE[1] ; D[3]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.079      ; 1.114      ;
+; -0.379 ; EDO.S5    ; D[3]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.070      ; 1.103      ;
+; -0.377 ; EDO.S4    ; D[3]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.070      ; 1.101      ;
+; -0.374 ; INDICE[1] ; D[2]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.108      ; 1.079      ;
+; -0.370 ; EDO.S9    ; D[1]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.075      ; 1.084      ;
+; -0.369 ; EDO.S5    ; D[2]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.099      ; 1.065      ;
+; -0.368 ; EDO.S4    ; D[1]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.061      ; 1.068      ;
+; -0.367 ; EDO.S4    ; D[2]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.099      ; 1.063      ;
+; -0.364 ; INDICE[2] ; D[6]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.079      ; 1.081      ;
+; -0.364 ; INDICE[2] ; D[7]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.078      ; 1.096      ;
+; -0.345 ; INDICE[2] ; D[5]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.070      ; 1.068      ;
+; -0.325 ; INDICE[1] ; D[5]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.070      ; 1.048      ;
+; -0.306 ; EDO.S3    ; D[3]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.070      ; 1.030      ;
+; -0.304 ; EDO.S8    ; D[4]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.213      ; 0.784      ;
+; -0.298 ; EDO.S5    ; D[1]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.061      ; 0.998      ;
+; -0.296 ; EDO.S3    ; D[2]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.099      ; 0.992      ;
+; -0.285 ; INDICE[0] ; D[1]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.073      ; 0.997      ;
+; -0.278 ; INDICE[3] ; D[1]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.070      ; 0.987      ;
+; -0.276 ; EDO.S1    ; D[6]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.070      ; 0.984      ;
+; -0.274 ; INDICE[0] ; D[3]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.082      ; 1.010      ;
+; -0.273 ; EDO.S9    ; D[6]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.084      ; 0.995      ;
+; -0.271 ; INDICE[3] ; D[3]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.079      ; 1.004      ;
+; -0.265 ; INDICE[0] ; D[2]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.111      ; 0.973      ;
+; -0.263 ; INDICE[3] ; D[2]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.108      ; 0.968      ;
+; -0.257 ; EDO.S8    ; D[1]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.075      ; 0.971      ;
+; -0.249 ; EDO.S7    ; E$latch    ; CLK          ; EDO.S10     ; 1.000        ; 0.069      ; 0.950      ;
+; -0.240 ; EDO.S7    ; D[1]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.061      ; 0.940      ;
+; -0.240 ; EDO.S9    ; D[5]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.075      ; 0.968      ;
+; -0.234 ; EDO.S2    ; D[3]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.070      ; 0.958      ;
+; -0.226 ; INDICE[1] ; D[6]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.079      ; 0.943      ;
+; -0.224 ; EDO.S2    ; D[2]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.099      ; 0.920      ;
+; -0.218 ; INDICE[1] ; D[7]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.078      ; 0.950      ;
+; -0.217 ; INDICE[0] ; D[5]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.073      ; 0.943      ;
+; -0.212 ; INDICE[3] ; D[5]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.070      ; 0.935      ;
+; -0.206 ; EDO.S1    ; D[5]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.061      ; 0.920      ;
+; -0.187 ; EDO.S0    ; D[5]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.061      ; 0.901      ;
+; -0.181 ; EDO.S1    ; E$latch    ; CLK          ; EDO.S10     ; 1.000        ; 0.069      ; 0.882      ;
+; -0.167 ; INDICE[0] ; D[6]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.082      ; 0.887      ;
+; -0.160 ; EDO.S8    ; D[6]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.084      ; 0.882      ;
+; -0.154 ; INDICE[3] ; D[7]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.078      ; 0.886      ;
+; -0.139 ; EDO.S9    ; D[3]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.084      ; 0.877      ;
+; -0.134 ; EDO.S9    ; D[7]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.083      ; 0.871      ;
+; -0.130 ; EDO.S8    ; E$latch    ; CLK          ; EDO.S10     ; 1.000        ; 0.083      ; 0.845      ;
+; -0.127 ; EDO.S8    ; D[5]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.075      ; 0.855      ;
+; -0.125 ; EDO.S9    ; D[2]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.113      ; 0.835      ;
+; -0.122 ; EDO.S5    ; E$latch    ; CLK          ; EDO.S10     ; 1.000        ; 0.069      ; 0.823      ;
+; -0.118 ; EDO.S0    ; D[6]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.070      ; 0.826      ;
+; -0.114 ; EDO.S8    ; D[7]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.083      ; 0.851      ;
+; -0.102 ; EDO.S3    ; E$latch    ; CLK          ; EDO.S10     ; 1.000        ; 0.069      ; 0.803      ;
+; -0.001 ; EDO.S6    ; D[1]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.075      ; 0.715      ;
+; 0.026  ; EDO.S9    ; RS$latch   ; CLK          ; EDO.S10     ; 1.000        ; 0.080      ; 0.778      ;
+; 0.031  ; EDO.S8    ; D[3]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.084      ; 0.707      ;
+; 0.047  ; EDO.S8    ; D[2]$latch ; CLK          ; EDO.S10     ; 1.000        ; 0.113      ; 0.663      ;
+; 0.139  ; EDO.S8    ; RS$latch   ; CLK          ; EDO.S10     ; 1.000        ; 0.080      ; 0.665      ;
++--------+-----------+------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'CLK'                                                                                 ;
++--------+------------+------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node  ; To Node    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------+------------+--------------+-------------+--------------+------------+------------+
+; -1.591 ; EDO.S10    ; EDO.S10    ; EDO.S10      ; CLK         ; 0.000        ; 1.665      ; 0.367      ;
+; -1.091 ; EDO.S10    ; EDO.S10    ; EDO.S10      ; CLK         ; -0.500       ; 1.665      ; 0.367      ;
+; 0.215  ; INDICE[0]  ; INDICE[0]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; CUENTA[0]  ; CUENTA[0]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; CUENTA[1]  ; CUENTA[1]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; CUENTA[2]  ; CUENTA[2]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.243  ; INDICE[31] ; INDICE[31] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.395      ;
+; 0.250  ; CONT[23]   ; CONT[23]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.402      ;
+; 0.257  ; EDO.S1     ; EDO.S2     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.409      ;
+; 0.259  ; EDO.S8     ; EDO.S9     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.411      ;
+; 0.278  ; EDO.S1     ; EDO.S0     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.430      ;
+; 0.323  ; CUENTA[1]  ; CUENTA[2]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.475      ;
+; 0.328  ; EDO.S4     ; EDO.S5     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.480      ;
+; 0.344  ; EDO.S3     ; EDO.S4     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.496      ;
+; 0.355  ; INDICE[16] ; INDICE[16] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.507      ;
+; 0.357  ; CONT[12]   ; CONT[12]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.509      ;
+; 0.358  ; INDICE[9]  ; INDICE[9]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358  ; INDICE[11] ; INDICE[11] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.510      ;
+; 0.359  ; INDICE[17] ; INDICE[17] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.511      ;
+; 0.360  ; INDICE[18] ; INDICE[18] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360  ; INDICE[25] ; INDICE[25] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360  ; INDICE[27] ; INDICE[27] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.512      ;
+; 0.361  ; INDICE[13] ; INDICE[13] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361  ; INDICE[14] ; INDICE[14] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361  ; INDICE[15] ; INDICE[15] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361  ; INDICE[20] ; INDICE[20] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361  ; INDICE[23] ; INDICE[23] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361  ; INDICE[29] ; INDICE[29] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361  ; INDICE[30] ; INDICE[30] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.513      ;
+; 0.364  ; CONT[13]   ; CONT[13]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.516      ;
+; 0.365  ; INDICE[2]  ; INDICE[2]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.517      ;
+; 0.365  ; INDICE[4]  ; INDICE[4]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.517      ;
+; 0.366  ; INDICE[7]  ; INDICE[7]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.518      ;
+; 0.367  ; CONT[14]   ; CONT[14]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.519      ;
+; 0.367  ; CONT[21]   ; CONT[21]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.519      ;
+; 0.367  ; CONT[1]    ; CONT[1]    ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.519      ;
+; 0.368  ; CONT[16]   ; CONT[16]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.520      ;
+; 0.368  ; CONT[19]   ; CONT[19]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.520      ;
+; 0.371  ; INDICE[8]  ; INDICE[8]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.523      ;
+; 0.371  ; INDICE[10] ; INDICE[10] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.523      ;
+; 0.371  ; INDICE[19] ; INDICE[19] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.523      ;
+; 0.371  ; INDICE[24] ; INDICE[24] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.523      ;
+; 0.371  ; INDICE[26] ; INDICE[26] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.523      ;
+; 0.372  ; INDICE[12] ; INDICE[12] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372  ; INDICE[21] ; INDICE[21] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372  ; INDICE[22] ; INDICE[22] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372  ; INDICE[28] ; INDICE[28] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.524      ;
+; 0.373  ; CONT[20]   ; CONT[20]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.525      ;
+; 0.373  ; EDO.S9     ; EDO.S8     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.525      ;
+; 0.374  ; CONT[22]   ; CONT[22]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.526      ;
+; 0.374  ; CUENTA[2]  ; EDO.S0     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.526      ;
+; 0.376  ; INDICE[5]  ; INDICE[5]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.528      ;
+; 0.376  ; INDICE[6]  ; INDICE[6]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.528      ;
+; 0.377  ; CONT[15]   ; CONT[15]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.529      ;
+; 0.378  ; CONT[17]   ; CONT[17]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.530      ;
+; 0.378  ; CONT[18]   ; CONT[18]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.530      ;
+; 0.379  ; INDICE[3]  ; INDICE[3]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.531      ;
+; 0.396  ; CUENTA[2]  ; EDO.S2     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.548      ;
+; 0.406  ; EDO.S2     ; EDO.S3     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.558      ;
+; 0.436  ; INDICE[0]  ; INDICE[1]  ; CLK          ; CLK         ; 0.000        ; 0.003      ; 0.591      ;
+; 0.440  ; EDO.S6     ; EDO.S7     ; CLK          ; CLK         ; 0.000        ; 0.014      ; 0.606      ;
+; 0.448  ; EDO.S0     ; EDO.S1     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.600      ;
+; 0.450  ; CUENTA[0]  ; EDO.S2     ; CLK          ; CLK         ; 0.000        ; -0.003     ; 0.599      ;
+; 0.450  ; CUENTA[0]  ; EDO.S0     ; CLK          ; CLK         ; 0.000        ; -0.003     ; 0.599      ;
+; 0.451  ; INDICE[1]  ; INDICE[1]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.603      ;
+; 0.464  ; EDO.S5     ; EDO.S6     ; CLK          ; CLK         ; 0.000        ; -0.014     ; 0.602      ;
+; 0.493  ; INDICE[16] ; INDICE[17] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.645      ;
+; 0.495  ; CONT[12]   ; CONT[13]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.647      ;
+; 0.496  ; INDICE[9]  ; INDICE[10] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.648      ;
+; 0.496  ; INDICE[11] ; INDICE[12] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.648      ;
+; 0.497  ; INDICE[17] ; INDICE[18] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.649      ;
+; 0.498  ; INDICE[18] ; INDICE[19] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.650      ;
+; 0.498  ; INDICE[25] ; INDICE[26] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.650      ;
+; 0.498  ; INDICE[27] ; INDICE[28] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.650      ;
+; 0.499  ; INDICE[30] ; INDICE[31] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.651      ;
+; 0.499  ; INDICE[13] ; INDICE[14] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.651      ;
+; 0.499  ; INDICE[14] ; INDICE[15] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.651      ;
+; 0.499  ; INDICE[29] ; INDICE[30] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.651      ;
+; 0.499  ; INDICE[20] ; INDICE[21] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.651      ;
+; 0.502  ; CONT[13]   ; CONT[14]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.654      ;
+; 0.503  ; INDICE[4]  ; INDICE[5]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.655      ;
+; 0.503  ; INDICE[2]  ; INDICE[3]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.655      ;
+; 0.505  ; CONT[21]   ; CONT[22]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.505  ; CONT[14]   ; CONT[15]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.506  ; CONT[16]   ; CONT[17]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.658      ;
+; 0.511  ; INDICE[8]  ; INDICE[9]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.663      ;
+; 0.511  ; INDICE[10] ; INDICE[11] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.663      ;
+; 0.511  ; INDICE[24] ; INDICE[25] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.663      ;
+; 0.511  ; INDICE[26] ; INDICE[27] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.663      ;
+; 0.511  ; INDICE[19] ; INDICE[20] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.663      ;
+; 0.512  ; INDICE[12] ; INDICE[13] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.664      ;
+; 0.512  ; INDICE[22] ; INDICE[23] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.664      ;
+; 0.512  ; INDICE[28] ; INDICE[29] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.664      ;
+; 0.512  ; INDICE[21] ; INDICE[22] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.664      ;
+; 0.513  ; CONT[20]   ; CONT[21]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.665      ;
+; 0.514  ; CONT[22]   ; CONT[23]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.666      ;
+; 0.516  ; INDICE[6]  ; INDICE[7]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.668      ;
+; 0.516  ; EDO.S7     ; EDO.S8     ; CLK          ; CLK         ; 0.000        ; -0.014     ; 0.654      ;
+; 0.516  ; INDICE[5]  ; INDICE[6]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.668      ;
+; 0.517  ; CONT[15]   ; CONT[16]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.669      ;
++--------+------------+------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'EDO.S10'                                                                           ;
++-------+-----------+------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node ; To Node    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------+------------+--------------+-------------+--------------+------------+------------+
+; 0.550 ; EDO.S8    ; D[2]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.113      ; 0.663      ;
+; 0.571 ; EDO.S8    ; D[4]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.213      ; 0.784      ;
+; 0.585 ; EDO.S8    ; RS$latch   ; CLK          ; EDO.S10     ; 0.000        ; 0.080      ; 0.665      ;
+; 0.623 ; EDO.S8    ; D[3]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.084      ; 0.707      ;
+; 0.640 ; EDO.S6    ; D[1]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.075      ; 0.715      ;
+; 0.650 ; EDO.S9    ; D[4]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.213      ; 0.863      ;
+; 0.677 ; EDO.S5    ; D[4]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.199      ; 0.876      ;
+; 0.698 ; EDO.S9    ; RS$latch   ; CLK          ; EDO.S10     ; 0.000        ; 0.080      ; 0.778      ;
+; 0.722 ; EDO.S9    ; D[2]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.113      ; 0.835      ;
+; 0.734 ; EDO.S3    ; E$latch    ; CLK          ; EDO.S10     ; 0.000        ; 0.069      ; 0.803      ;
+; 0.753 ; EDO.S1    ; D[4]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.199      ; 0.952      ;
+; 0.754 ; EDO.S5    ; E$latch    ; CLK          ; EDO.S10     ; 0.000        ; 0.069      ; 0.823      ;
+; 0.756 ; EDO.S0    ; D[6]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.070      ; 0.826      ;
+; 0.762 ; EDO.S8    ; E$latch    ; CLK          ; EDO.S10     ; 0.000        ; 0.083      ; 0.845      ;
+; 0.768 ; EDO.S8    ; D[7]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.083      ; 0.851      ;
+; 0.780 ; EDO.S8    ; D[5]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.075      ; 0.855      ;
+; 0.788 ; EDO.S9    ; D[7]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.083      ; 0.871      ;
+; 0.793 ; EDO.S9    ; D[3]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.084      ; 0.877      ;
+; 0.798 ; EDO.S8    ; D[6]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.084      ; 0.882      ;
+; 0.805 ; INDICE[0] ; D[6]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.082      ; 0.887      ;
+; 0.808 ; INDICE[3] ; D[7]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.078      ; 0.886      ;
+; 0.811 ; EDO.S4    ; D[4]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.199      ; 1.010      ;
+; 0.812 ; EDO.S0    ; D[4]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.199      ; 1.011      ;
+; 0.813 ; EDO.S1    ; E$latch    ; CLK          ; EDO.S10     ; 0.000        ; 0.069      ; 0.882      ;
+; 0.815 ; INDICE[3] ; D[4]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.208      ; 1.023      ;
+; 0.818 ; INDICE[0] ; D[4]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.211      ; 1.029      ;
+; 0.821 ; EDO.S2    ; D[2]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.099      ; 0.920      ;
+; 0.840 ; EDO.S0    ; D[5]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.061      ; 0.901      ;
+; 0.859 ; EDO.S1    ; D[5]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.061      ; 0.920      ;
+; 0.860 ; INDICE[3] ; D[2]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.108      ; 0.968      ;
+; 0.862 ; INDICE[0] ; D[2]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.111      ; 0.973      ;
+; 0.864 ; INDICE[1] ; D[6]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.079      ; 0.943      ;
+; 0.865 ; INDICE[3] ; D[5]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.070      ; 0.935      ;
+; 0.870 ; INDICE[0] ; D[5]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.073      ; 0.943      ;
+; 0.872 ; INDICE[1] ; D[7]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.078      ; 0.950      ;
+; 0.879 ; EDO.S7    ; D[1]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.061      ; 0.940      ;
+; 0.881 ; EDO.S7    ; E$latch    ; CLK          ; EDO.S10     ; 0.000        ; 0.069      ; 0.950      ;
+; 0.888 ; EDO.S2    ; D[3]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.070      ; 0.958      ;
+; 0.893 ; EDO.S9    ; D[5]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.075      ; 0.968      ;
+; 0.893 ; EDO.S3    ; D[2]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.099      ; 0.992      ;
+; 0.896 ; EDO.S8    ; D[1]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.075      ; 0.971      ;
+; 0.911 ; EDO.S9    ; D[6]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.084      ; 0.995      ;
+; 0.914 ; EDO.S1    ; D[6]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.070      ; 0.984      ;
+; 0.917 ; INDICE[3] ; D[1]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.070      ; 0.987      ;
+; 0.924 ; INDICE[0] ; D[1]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.073      ; 0.997      ;
+; 0.925 ; INDICE[3] ; D[3]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.079      ; 1.004      ;
+; 0.927 ; INDICE[1] ; D[4]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.208      ; 1.135      ;
+; 0.928 ; INDICE[0] ; D[3]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.082      ; 1.010      ;
+; 0.937 ; EDO.S5    ; D[1]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.061      ; 0.998      ;
+; 0.944 ; INDICE[2] ; D[4]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.208      ; 1.152      ;
+; 0.960 ; EDO.S3    ; D[3]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.070      ; 1.030      ;
+; 0.964 ; EDO.S4    ; D[2]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.099      ; 1.063      ;
+; 0.966 ; EDO.S5    ; D[2]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.099      ; 1.065      ;
+; 0.971 ; INDICE[1] ; D[2]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.108      ; 1.079      ;
+; 0.978 ; INDICE[1] ; D[5]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.070      ; 1.048      ;
+; 0.990 ; INDICE[2] ; D[2]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.108      ; 1.098      ;
+; 0.998 ; INDICE[2] ; D[5]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.070      ; 1.068      ;
+; 1.002 ; INDICE[2] ; D[6]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.079      ; 1.081      ;
+; 1.007 ; EDO.S4    ; D[1]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.061      ; 1.068      ;
+; 1.009 ; EDO.S9    ; D[1]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.075      ; 1.084      ;
+; 1.018 ; INDICE[2] ; D[7]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.078      ; 1.096      ;
+; 1.028 ; INDICE[1] ; D[1]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.070      ; 1.098      ;
+; 1.031 ; EDO.S4    ; D[3]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.070      ; 1.101      ;
+; 1.033 ; EDO.S5    ; D[3]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.070      ; 1.103      ;
+; 1.035 ; INDICE[1] ; D[3]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.079      ; 1.114      ;
+; 1.051 ; INDICE[2] ; D[3]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.079      ; 1.130      ;
+; 1.054 ; INDICE[2] ; D[1]$latch ; CLK          ; EDO.S10     ; 0.000        ; 0.070      ; 1.124      ;
++-------+-----------+------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'CLK'                                                       ;
++--------+--------------+----------------+------------------+-------+------------+------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target     ;
++--------+--------------+----------------+------------------+-------+------------+------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CLK   ; Rise       ; CLK        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONT[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CONT[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONT[10]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CONT[10]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONT[11]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CONT[11]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONT[12]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CONT[12]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONT[13]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CONT[13]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONT[14]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CONT[14]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONT[15]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CONT[15]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONT[16]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CONT[16]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONT[17]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CONT[17]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONT[18]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CONT[18]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONT[19]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CONT[19]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONT[1]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CONT[1]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONT[20]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CONT[20]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONT[21]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CONT[21]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONT[22]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CONT[22]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONT[23]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CONT[23]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONT[2]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CONT[2]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONT[3]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CONT[3]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONT[4]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CONT[4]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONT[5]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CONT[5]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONT[6]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CONT[6]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONT[7]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CONT[7]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONT[8]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CONT[8]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONT[9]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CONT[9]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CUENTA[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CUENTA[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CUENTA[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CUENTA[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CUENTA[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; CUENTA[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; EDO.S0     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; EDO.S0     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; EDO.S1     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; EDO.S1     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; EDO.S10    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; EDO.S10    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; EDO.S2     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; EDO.S2     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; EDO.S3     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; EDO.S3     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; EDO.S4     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; EDO.S4     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; EDO.S5     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; EDO.S5     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; EDO.S6     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; EDO.S6     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; EDO.S7     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; EDO.S7     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; EDO.S8     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; EDO.S8     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; EDO.S9     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; EDO.S9     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; INDICE[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; INDICE[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; INDICE[10] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; INDICE[10] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; INDICE[11] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; INDICE[11] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; INDICE[12] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; INDICE[12] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; INDICE[13] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; INDICE[13] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; INDICE[14] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; INDICE[14] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; INDICE[15] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; INDICE[15] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; INDICE[16] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; INDICE[16] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; INDICE[17] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; INDICE[17] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; INDICE[18] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; INDICE[18] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; INDICE[19] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; INDICE[19] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; INDICE[1]  ;
++--------+--------------+----------------+------------------+-------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'EDO.S10'                                                                  ;
++-------+--------------+----------------+------------------+---------+------------+--------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock   ; Clock Edge ; Target                   ;
++-------+--------------+----------------+------------------+---------+------------+--------------------------+
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; EDO.S10 ; Rise       ; D[1]$latch               ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; EDO.S10 ; Rise       ; D[1]$latch               ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; EDO.S10 ; Rise       ; D[1]$latch|datad         ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; EDO.S10 ; Rise       ; D[1]$latch|datad         ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; EDO.S10 ; Rise       ; D[2]$latch               ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; EDO.S10 ; Rise       ; D[2]$latch               ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; EDO.S10 ; Rise       ; D[2]$latch|datac         ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; EDO.S10 ; Rise       ; D[2]$latch|datac         ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; EDO.S10 ; Rise       ; D[3]$latch               ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; EDO.S10 ; Rise       ; D[3]$latch               ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; EDO.S10 ; Rise       ; D[3]$latch|datad         ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; EDO.S10 ; Rise       ; D[3]$latch|datad         ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; EDO.S10 ; Rise       ; D[4]$latch               ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; EDO.S10 ; Rise       ; D[4]$latch               ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; EDO.S10 ; Rise       ; D[4]$latch|dataa         ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; EDO.S10 ; Rise       ; D[4]$latch|dataa         ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; EDO.S10 ; Rise       ; D[5]$latch               ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; EDO.S10 ; Rise       ; D[5]$latch               ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; EDO.S10 ; Rise       ; D[5]$latch|datad         ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; EDO.S10 ; Rise       ; D[5]$latch|datad         ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; EDO.S10 ; Rise       ; D[6]$latch               ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; EDO.S10 ; Rise       ; D[6]$latch               ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; EDO.S10 ; Rise       ; D[6]$latch|datad         ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; EDO.S10 ; Rise       ; D[6]$latch|datad         ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; EDO.S10 ; Rise       ; D[7]$latch               ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; EDO.S10 ; Rise       ; D[7]$latch               ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; EDO.S10 ; Rise       ; D[7]$latch|datad         ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; EDO.S10 ; Rise       ; D[7]$latch|datad         ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; EDO.S10 ; Rise       ; E$latch                  ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; EDO.S10 ; Rise       ; E$latch                  ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; EDO.S10 ; Rise       ; E$latch|datad            ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; EDO.S10 ; Rise       ; E$latch|datad            ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; EDO.S10 ; Rise       ; EDO.S10|regout           ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; EDO.S10 ; Rise       ; EDO.S10|regout           ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; EDO.S10 ; Rise       ; EDO.S10~clkctrl|inclk[0] ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; EDO.S10 ; Rise       ; EDO.S10~clkctrl|inclk[0] ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; EDO.S10 ; Rise       ; EDO.S10~clkctrl|outclk   ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; EDO.S10 ; Rise       ; EDO.S10~clkctrl|outclk   ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; EDO.S10 ; Rise       ; RS$latch                 ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; EDO.S10 ; Rise       ; RS$latch                 ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; EDO.S10 ; Rise       ; RS$latch|datad           ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; EDO.S10 ; Rise       ; RS$latch|datad           ;
++-------+--------------+----------------+------------------+---------+------------+--------------------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; D[*]      ; EDO.S10    ; 4.034 ; 4.034 ; Rise       ; EDO.S10         ;
+;  D[1]     ; EDO.S10    ; 3.640 ; 3.640 ; Rise       ; EDO.S10         ;
+;  D[2]     ; EDO.S10    ; 3.741 ; 3.741 ; Rise       ; EDO.S10         ;
+;  D[3]     ; EDO.S10    ; 3.807 ; 3.807 ; Rise       ; EDO.S10         ;
+;  D[4]     ; EDO.S10    ; 4.034 ; 4.034 ; Rise       ; EDO.S10         ;
+;  D[5]     ; EDO.S10    ; 3.795 ; 3.795 ; Rise       ; EDO.S10         ;
+;  D[6]     ; EDO.S10    ; 3.739 ; 3.739 ; Rise       ; EDO.S10         ;
+;  D[7]     ; EDO.S10    ; 3.834 ; 3.834 ; Rise       ; EDO.S10         ;
+; E         ; EDO.S10    ; 3.553 ; 3.553 ; Rise       ; EDO.S10         ;
+; RS        ; EDO.S10    ; 3.543 ; 3.543 ; Rise       ; EDO.S10         ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; D[*]      ; EDO.S10    ; 3.640 ; 3.640 ; Rise       ; EDO.S10         ;
+;  D[1]     ; EDO.S10    ; 3.640 ; 3.640 ; Rise       ; EDO.S10         ;
+;  D[2]     ; EDO.S10    ; 3.741 ; 3.741 ; Rise       ; EDO.S10         ;
+;  D[3]     ; EDO.S10    ; 3.807 ; 3.807 ; Rise       ; EDO.S10         ;
+;  D[4]     ; EDO.S10    ; 4.034 ; 4.034 ; Rise       ; EDO.S10         ;
+;  D[5]     ; EDO.S10    ; 3.795 ; 3.795 ; Rise       ; EDO.S10         ;
+;  D[6]     ; EDO.S10    ; 3.739 ; 3.739 ; Rise       ; EDO.S10         ;
+;  D[7]     ; EDO.S10    ; 3.834 ; 3.834 ; Rise       ; EDO.S10         ;
+; E         ; EDO.S10    ; 3.553 ; 3.553 ; Rise       ; EDO.S10         ;
+; RS        ; EDO.S10    ; 3.543 ; 3.543 ; Rise       ; EDO.S10         ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                             ;
++------------------+----------+--------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+--------+----------+---------+---------------------+
+; Worst-case Slack ; -2.959   ; -2.598 ; N/A      ; N/A     ; -1.380              ;
+;  CLK             ; -2.959   ; -2.598 ; N/A      ; N/A     ; -1.380              ;
+;  EDO.S10         ; -2.638   ; 0.550  ; N/A      ; N/A     ; 0.500               ;
+; Design-wide TNS  ; -191.148 ; -2.598 ; 0.0      ; 0.0     ; -71.38              ;
+;  CLK             ; -174.139 ; -2.598 ; N/A      ; N/A     ; -71.380             ;
+;  EDO.S10         ; -17.009  ; 0.000  ; N/A      ; N/A     ; 0.000               ;
++------------------+----------+--------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; D[*]      ; EDO.S10    ; 7.548 ; 7.548 ; Rise       ; EDO.S10         ;
+;  D[1]     ; EDO.S10    ; 6.713 ; 6.713 ; Rise       ; EDO.S10         ;
+;  D[2]     ; EDO.S10    ; 6.950 ; 6.950 ; Rise       ; EDO.S10         ;
+;  D[3]     ; EDO.S10    ; 7.043 ; 7.043 ; Rise       ; EDO.S10         ;
+;  D[4]     ; EDO.S10    ; 7.548 ; 7.548 ; Rise       ; EDO.S10         ;
+;  D[5]     ; EDO.S10    ; 7.026 ; 7.026 ; Rise       ; EDO.S10         ;
+;  D[6]     ; EDO.S10    ; 6.887 ; 6.887 ; Rise       ; EDO.S10         ;
+;  D[7]     ; EDO.S10    ; 7.077 ; 7.077 ; Rise       ; EDO.S10         ;
+; E         ; EDO.S10    ; 6.514 ; 6.514 ; Rise       ; EDO.S10         ;
+; RS        ; EDO.S10    ; 6.521 ; 6.521 ; Rise       ; EDO.S10         ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; D[*]      ; EDO.S10    ; 3.640 ; 3.640 ; Rise       ; EDO.S10         ;
+;  D[1]     ; EDO.S10    ; 3.640 ; 3.640 ; Rise       ; EDO.S10         ;
+;  D[2]     ; EDO.S10    ; 3.741 ; 3.741 ; Rise       ; EDO.S10         ;
+;  D[3]     ; EDO.S10    ; 3.807 ; 3.807 ; Rise       ; EDO.S10         ;
+;  D[4]     ; EDO.S10    ; 4.034 ; 4.034 ; Rise       ; EDO.S10         ;
+;  D[5]     ; EDO.S10    ; 3.795 ; 3.795 ; Rise       ; EDO.S10         ;
+;  D[6]     ; EDO.S10    ; 3.739 ; 3.739 ; Rise       ; EDO.S10         ;
+;  D[7]     ; EDO.S10    ; 3.834 ; 3.834 ; Rise       ; EDO.S10         ;
+; E         ; EDO.S10    ; 3.553 ; 3.553 ; Rise       ; EDO.S10         ;
+; RS        ; EDO.S10    ; 3.543 ; 3.543 ; Rise       ; EDO.S10         ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLK        ; CLK      ; 2268     ; 0        ; 0        ; 0        ;
+; EDO.S10    ; CLK      ; 1        ; 1        ; 0        ; 0        ;
+; CLK        ; EDO.S10  ; 67       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLK        ; CLK      ; 2268     ; 0        ; 0        ; 0        ;
+; EDO.S10    ; CLK      ; 1        ; 1        ; 0        ; 0        ;
+; CLK        ; EDO.S10  ; 67       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 0     ; 0    ;
+; Unconstrained Input Port Paths  ; 0     ; 0    ;
+; Unconstrained Output Ports      ; 9     ; 9    ;
+; Unconstrained Output Port Paths ; 9     ; 9    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+    Info: Processing started: Wed Oct 07 09:26:49 2015
+Info: Command: quartus_sta LCD -c LCD
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Warning (335093): TimeQuest Timing Analyzer is analyzing 9 combinational loops as latches.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'LCD.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name CLK CLK
+    Info (332105): create_clock -period 1.000 -name EDO.S10 EDO.S10
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -2.959
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.959      -174.139 CLK 
+    Info (332119):    -2.638       -17.009 EDO.S10 
+Info (332146): Worst-case hold slack is -2.598
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.598        -2.598 CLK 
+    Info (332119):     0.986         0.000 EDO.S10 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -71.380 CLK 
+    Info (332119):     0.500         0.000 EDO.S10 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.910
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.910       -45.839 CLK 
+    Info (332119):    -0.677        -3.204 EDO.S10 
+Info (332146): Worst-case hold slack is -1.591
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.591        -1.591 CLK 
+    Info (332119):     0.550         0.000 EDO.S10 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -71.380 CLK 
+    Info (332119):     0.500         0.000 EDO.S10 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 390 megabytes
+    Info: Processing ended: Wed Oct 07 09:26:51 2015
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+

@@ -1,0 +1,31 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+ENTITY siete_segmentos2 IS
+PORT(B: in std_logic_vector(4 downto 1);
+     Y: out std_logic_vector(7 downto 1));
+END siete_segmentos2;
+
+architecture RTL of siete_segmentos2 is
+begin
+Process(B)
+
+begin
+case (B) is
+when "0000"		=>	Y <= "0000001";
+when "0001"		=>	Y <= "1001111";
+when "0010"		=>	Y <= "0010010";
+when "0011"		=>	Y <= "0000110";
+when "0100"		=>	Y <= "1001100";
+when "0101"		=>	Y <= "0100100";
+when "0110"		=>	Y <= "0100000";
+when "0111"		=>	Y <= "0001111";
+when "1000"		=>	Y <= "0000000";
+when "1001"		=>	Y <= "0001100";
+when others 	=> Y <= "1111110";
+end case;
+end process;
+
+END RTL;

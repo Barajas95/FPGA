@@ -1,0 +1,125 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'PANTALLA:C2|NUMEROS[0]'
+Slack : -12.502
+TNS   : -310.429
+
+Type  : Slow Model Setup 'MULTIPLEXORSIMON:D5|TEMP'
+Slack : -6.981
+TNS   : -518.463
+
+Type  : Slow Model Setup 'SWITCH_NIVEL1'
+Slack : -3.058
+TNS   : -3.058
+
+Type  : Slow Model Setup 'DIVISOR_FRECUENCIA:D1|CLKOUT'
+Slack : -2.688
+TNS   : -171.594
+
+Type  : Slow Model Setup 'CLOCK_50'
+Slack : 0.243
+TNS   : 0.000
+
+Type  : Slow Model Hold 'PANTALLA:C2|NUMEROS[0]'
+Slack : -9.563
+TNS   : -209.643
+
+Type  : Slow Model Hold 'MULTIPLEXORSIMON:D5|TEMP'
+Slack : -3.573
+TNS   : -4.752
+
+Type  : Slow Model Hold 'SWITCH_NIVEL1'
+Slack : 0.267
+TNS   : 0.000
+
+Type  : Slow Model Hold 'CLOCK_50'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow Model Hold 'DIVISOR_FRECUENCIA:D1|CLKOUT'
+Slack : 0.723
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'PANTALLA:C2|NUMEROS[0]'
+Slack : -6.475
+TNS   : -1116.526
+
+Type  : Slow Model Minimum Pulse Width 'CLOCK_50'
+Slack : -1.380
+TNS   : -3.380
+
+Type  : Slow Model Minimum Pulse Width 'SWITCH_NIVEL1'
+Slack : -1.222
+TNS   : -1.222
+
+Type  : Slow Model Minimum Pulse Width 'MULTIPLEXORSIMON:D5|TEMP'
+Slack : -0.500
+TNS   : -110.000
+
+Type  : Slow Model Minimum Pulse Width 'DIVISOR_FRECUENCIA:D1|CLKOUT'
+Slack : -0.500
+TNS   : -92.000
+
+Type  : Fast Model Setup 'PANTALLA:C2|NUMEROS[0]'
+Slack : -3.952
+TNS   : -95.190
+
+Type  : Fast Model Setup 'MULTIPLEXORSIMON:D5|TEMP'
+Slack : -3.182
+TNS   : -187.567
+
+Type  : Fast Model Setup 'SWITCH_NIVEL1'
+Slack : -1.283
+TNS   : -1.283
+
+Type  : Fast Model Setup 'DIVISOR_FRECUENCIA:D1|CLKOUT'
+Slack : -0.780
+TNS   : -35.742
+
+Type  : Fast Model Setup 'CLOCK_50'
+Slack : 0.637
+TNS   : 0.000
+
+Type  : Fast Model Hold 'PANTALLA:C2|NUMEROS[0]'
+Slack : -4.571
+TNS   : -100.431
+
+Type  : Fast Model Hold 'MULTIPLEXORSIMON:D5|TEMP'
+Slack : -2.105
+TNS   : -3.016
+
+Type  : Fast Model Hold 'SWITCH_NIVEL1'
+Slack : 0.116
+TNS   : 0.000
+
+Type  : Fast Model Hold 'CLOCK_50'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'DIVISOR_FRECUENCIA:D1|CLKOUT'
+Slack : 0.333
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'PANTALLA:C2|NUMEROS[0]'
+Slack : -2.491
+TNS   : -399.338
+
+Type  : Fast Model Minimum Pulse Width 'CLOCK_50'
+Slack : -1.380
+TNS   : -3.380
+
+Type  : Fast Model Minimum Pulse Width 'SWITCH_NIVEL1'
+Slack : -1.222
+TNS   : -1.222
+
+Type  : Fast Model Minimum Pulse Width 'MULTIPLEXORSIMON:D5|TEMP'
+Slack : -0.500
+TNS   : -110.000
+
+Type  : Fast Model Minimum Pulse Width 'DIVISOR_FRECUENCIA:D1|CLKOUT'
+Slack : -0.500
+TNS   : -92.000
+
+------------------------------------------------------------

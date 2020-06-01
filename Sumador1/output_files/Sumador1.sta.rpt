@@ -1,0 +1,804 @@
+TimeQuest Timing Analyzer report for Sumador1
+Thu Oct 01 19:24:53 2015
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Clocks
+  4. Slow Model Fmax Summary
+  5. Slow Model Setup Summary
+  6. Slow Model Hold Summary
+  7. Slow Model Recovery Summary
+  8. Slow Model Removal Summary
+  9. Slow Model Minimum Pulse Width Summary
+ 10. Propagation Delay
+ 11. Minimum Propagation Delay
+ 12. Fast Model Setup Summary
+ 13. Fast Model Hold Summary
+ 14. Fast Model Recovery Summary
+ 15. Fast Model Removal Summary
+ 16. Fast Model Minimum Pulse Width Summary
+ 17. Propagation Delay
+ 18. Minimum Propagation Delay
+ 19. Multicorner Timing Analysis Summary
+ 20. Progagation Delay
+ 21. Minimum Progagation Delay
+ 22. Clock Transfers
+ 23. Report TCCS
+ 24. Report RSKM
+ 25. Unconstrained Paths
+ 26. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                       ;
++--------------------+----------------------------------------------------+
+; Quartus II Version ; Version 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
+; Revision Name      ; Sumador1                                           ;
+; Device Family      ; Cyclone II                                         ;
+; Device Name        ; EP2C70F896C6                                       ;
+; Timing Models      ; Final                                              ;
+; Delay Model        ; Combined                                           ;
+; Rise/Fall Delays   ; Unavailable                                        ;
++--------------------+----------------------------------------------------+
+
+
+----------
+; Clocks ;
+----------
+No clocks to report.
+
+
+---------------------------
+; Slow Model Fmax Summary ;
+---------------------------
+No paths to report.
+
+
+----------------------------
+; Slow Model Setup Summary ;
+----------------------------
+No paths to report.
+
+
+---------------------------
+; Slow Model Hold Summary ;
+---------------------------
+No paths to report.
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
+------------------------------------------
+; Slow Model Minimum Pulse Width Summary ;
+------------------------------------------
+No paths to report.
+
+
++--------------------------------------------------------------+
+; Propagation Delay                                            ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; numeroA[0] ; salida[0]   ; 6.430  ; 6.430  ; 6.430  ; 6.430  ;
+; numeroA[0] ; salida[1]   ; 6.173  ; 6.173  ; 6.173  ; 6.173  ;
+; numeroA[0] ; salida[2]   ; 6.910  ; 6.910  ; 6.910  ; 6.910  ;
+; numeroA[0] ; salida[3]   ; 7.488  ; 7.488  ; 7.488  ; 7.488  ;
+; numeroA[0] ; salida[4]   ; 10.572 ; 10.572 ; 10.572 ; 10.572 ;
+; numeroA[0] ; salida[5]   ; 11.310 ; 11.310 ; 11.310 ; 11.310 ;
+; numeroA[0] ; salida[6]   ; 11.114 ; 11.114 ; 11.114 ; 11.114 ;
+; numeroA[0] ; salida[7]   ; 12.336 ; 12.336 ; 12.336 ; 12.336 ;
+; numeroA[0] ; salida[8]   ; 12.575 ;        ;        ; 12.575 ;
+; numeroA[1] ; salida[1]   ; 9.380  ; 9.380  ; 9.380  ; 9.380  ;
+; numeroA[1] ; salida[2]   ; 10.113 ; 10.113 ; 10.113 ; 10.113 ;
+; numeroA[1] ; salida[3]   ; 10.691 ; 10.691 ; 10.691 ; 10.691 ;
+; numeroA[1] ; salida[4]   ; 13.775 ; 13.775 ; 13.775 ; 13.775 ;
+; numeroA[1] ; salida[5]   ; 14.513 ; 14.513 ; 14.513 ; 14.513 ;
+; numeroA[1] ; salida[6]   ; 14.317 ; 14.317 ; 14.317 ; 14.317 ;
+; numeroA[1] ; salida[7]   ; 15.539 ; 15.539 ; 15.539 ; 15.539 ;
+; numeroA[1] ; salida[8]   ; 15.778 ;        ;        ; 15.778 ;
+; numeroA[2] ; salida[2]   ; 9.143  ; 9.143  ; 9.143  ; 9.143  ;
+; numeroA[2] ; salida[3]   ; 9.723  ; 9.723  ; 9.723  ; 9.723  ;
+; numeroA[2] ; salida[4]   ; 12.807 ; 12.807 ; 12.807 ; 12.807 ;
+; numeroA[2] ; salida[5]   ; 13.545 ; 13.545 ; 13.545 ; 13.545 ;
+; numeroA[2] ; salida[6]   ; 13.349 ; 13.349 ; 13.349 ; 13.349 ;
+; numeroA[2] ; salida[7]   ; 14.571 ; 14.571 ; 14.571 ; 14.571 ;
+; numeroA[2] ; salida[8]   ; 14.810 ;        ;        ; 14.810 ;
+; numeroA[3] ; salida[3]   ; 9.458  ; 9.458  ; 9.458  ; 9.458  ;
+; numeroA[3] ; salida[4]   ; 12.539 ; 12.539 ; 12.539 ; 12.539 ;
+; numeroA[3] ; salida[5]   ; 13.277 ; 13.277 ; 13.277 ; 13.277 ;
+; numeroA[3] ; salida[6]   ; 13.081 ; 13.081 ; 13.081 ; 13.081 ;
+; numeroA[3] ; salida[7]   ; 14.303 ; 14.303 ; 14.303 ; 14.303 ;
+; numeroA[3] ; salida[8]   ; 14.542 ;        ;        ; 14.542 ;
+; numeroA[4] ; salida[4]   ; 9.499  ; 9.499  ; 9.499  ; 9.499  ;
+; numeroA[4] ; salida[5]   ; 10.233 ; 10.233 ; 10.233 ; 10.233 ;
+; numeroA[4] ; salida[6]   ; 10.037 ; 10.037 ; 10.037 ; 10.037 ;
+; numeroA[4] ; salida[7]   ; 11.257 ; 11.257 ; 11.257 ; 11.257 ;
+; numeroA[4] ; salida[8]   ; 11.496 ;        ;        ; 11.496 ;
+; numeroA[5] ; salida[5]   ; 9.541  ; 9.541  ; 9.541  ; 9.541  ;
+; numeroA[5] ; salida[6]   ; 9.342  ; 9.342  ; 9.342  ; 9.342  ;
+; numeroA[5] ; salida[7]   ; 10.564 ; 10.564 ; 10.564 ; 10.564 ;
+; numeroA[5] ; salida[8]   ; 10.803 ;        ;        ; 10.803 ;
+; numeroA[6] ; salida[6]   ; 10.334 ; 10.334 ; 10.334 ; 10.334 ;
+; numeroA[6] ; salida[7]   ; 10.176 ; 10.176 ; 10.176 ; 10.176 ;
+; numeroA[6] ; salida[8]   ; 10.415 ;        ;        ; 10.415 ;
+; numeroA[7] ; salida[7]   ; 9.521  ; 9.521  ; 9.521  ; 9.521  ;
+; numeroA[7] ; salida[8]   ; 9.760  ;        ;        ; 9.760  ;
+; numeroB[0] ; salida[0]   ; 6.032  ; 6.032  ; 6.032  ; 6.032  ;
+; numeroB[0] ; salida[1]   ; 5.778  ; 5.778  ; 5.778  ; 5.778  ;
+; numeroB[0] ; salida[2]   ; 6.512  ; 6.512  ; 6.512  ; 6.512  ;
+; numeroB[0] ; salida[3]   ; 7.090  ; 7.090  ; 7.090  ; 7.090  ;
+; numeroB[0] ; salida[4]   ; 10.174 ; 10.174 ; 10.174 ; 10.174 ;
+; numeroB[0] ; salida[5]   ; 10.912 ; 10.912 ; 10.912 ; 10.912 ;
+; numeroB[0] ; salida[6]   ; 10.716 ; 10.716 ; 10.716 ; 10.716 ;
+; numeroB[0] ; salida[7]   ; 11.938 ; 11.938 ; 11.938 ; 11.938 ;
+; numeroB[0] ; salida[8]   ; 12.177 ;        ;        ; 12.177 ;
+; numeroB[1] ; salida[1]   ; 10.434 ; 10.434 ; 10.434 ; 10.434 ;
+; numeroB[1] ; salida[2]   ; 11.170 ; 11.170 ; 11.170 ; 11.170 ;
+; numeroB[1] ; salida[3]   ; 11.748 ; 11.748 ; 11.748 ; 11.748 ;
+; numeroB[1] ; salida[4]   ; 14.832 ; 14.832 ; 14.832 ; 14.832 ;
+; numeroB[1] ; salida[5]   ; 15.570 ; 15.570 ; 15.570 ; 15.570 ;
+; numeroB[1] ; salida[6]   ; 15.374 ; 15.374 ; 15.374 ; 15.374 ;
+; numeroB[1] ; salida[7]   ; 16.596 ; 16.596 ; 16.596 ; 16.596 ;
+; numeroB[1] ; salida[8]   ; 16.835 ;        ;        ; 16.835 ;
+; numeroB[2] ; salida[2]   ; 9.451  ; 9.451  ; 9.451  ; 9.451  ;
+; numeroB[2] ; salida[3]   ; 10.035 ; 10.035 ; 10.035 ; 10.035 ;
+; numeroB[2] ; salida[4]   ; 13.119 ; 13.119 ; 13.119 ; 13.119 ;
+; numeroB[2] ; salida[5]   ; 13.857 ; 13.857 ; 13.857 ; 13.857 ;
+; numeroB[2] ; salida[6]   ; 13.661 ; 13.661 ; 13.661 ; 13.661 ;
+; numeroB[2] ; salida[7]   ; 14.883 ; 14.883 ; 14.883 ; 14.883 ;
+; numeroB[2] ; salida[8]   ; 15.122 ;        ;        ; 15.122 ;
+; numeroB[3] ; salida[3]   ; 9.863  ; 9.863  ; 9.863  ; 9.863  ;
+; numeroB[3] ; salida[4]   ; 12.948 ; 12.948 ; 12.948 ; 12.948 ;
+; numeroB[3] ; salida[5]   ; 13.686 ; 13.686 ; 13.686 ; 13.686 ;
+; numeroB[3] ; salida[6]   ; 13.490 ; 13.490 ; 13.490 ; 13.490 ;
+; numeroB[3] ; salida[7]   ; 14.712 ; 14.712 ; 14.712 ; 14.712 ;
+; numeroB[3] ; salida[8]   ; 14.951 ;        ;        ; 14.951 ;
+; numeroB[4] ; salida[4]   ; 9.589  ; 9.589  ; 9.589  ; 9.589  ;
+; numeroB[4] ; salida[5]   ; 10.320 ; 10.320 ; 10.320 ; 10.320 ;
+; numeroB[4] ; salida[6]   ; 10.124 ; 10.124 ; 10.124 ; 10.124 ;
+; numeroB[4] ; salida[7]   ; 11.343 ; 11.343 ; 11.343 ; 11.343 ;
+; numeroB[4] ; salida[8]   ; 11.582 ;        ;        ; 11.582 ;
+; numeroB[5] ; salida[5]   ; 9.365  ; 9.365  ; 9.365  ; 9.365  ;
+; numeroB[5] ; salida[6]   ; 9.168  ; 9.168  ; 9.168  ; 9.168  ;
+; numeroB[5] ; salida[7]   ; 10.384 ; 10.384 ; 10.384 ; 10.384 ;
+; numeroB[5] ; salida[8]   ; 10.623 ;        ;        ; 10.623 ;
+; numeroB[6] ; salida[6]   ; 9.886  ; 9.886  ; 9.886  ; 9.886  ;
+; numeroB[6] ; salida[7]   ; 9.728  ; 9.728  ; 9.728  ; 9.728  ;
+; numeroB[6] ; salida[8]   ; 9.967  ;        ;        ; 9.967  ;
+; numeroB[7] ; salida[7]   ; 9.433  ; 9.433  ; 9.433  ; 9.433  ;
+; numeroB[7] ; salida[8]   ; 9.672  ;        ;        ; 9.672  ;
++------------+-------------+--------+--------+--------+--------+
+
+
++--------------------------------------------------------------+
+; Minimum Propagation Delay                                    ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; numeroA[0] ; salida[0]   ; 6.430  ; 6.430  ; 6.430  ; 6.430  ;
+; numeroA[0] ; salida[1]   ; 6.173  ; 6.173  ; 6.173  ; 6.173  ;
+; numeroA[0] ; salida[2]   ; 6.910  ; 6.910  ; 6.910  ; 6.910  ;
+; numeroA[0] ; salida[3]   ; 7.488  ; 7.488  ; 7.488  ; 7.488  ;
+; numeroA[0] ; salida[4]   ; 10.572 ; 10.572 ; 10.572 ; 10.572 ;
+; numeroA[0] ; salida[5]   ; 11.310 ; 11.310 ; 11.310 ; 11.310 ;
+; numeroA[0] ; salida[6]   ; 11.114 ; 11.114 ; 11.114 ; 11.114 ;
+; numeroA[0] ; salida[7]   ; 12.336 ; 12.336 ; 12.336 ; 12.336 ;
+; numeroA[0] ; salida[8]   ; 12.575 ;        ;        ; 12.575 ;
+; numeroA[1] ; salida[1]   ; 9.380  ; 9.380  ; 9.380  ; 9.380  ;
+; numeroA[1] ; salida[2]   ; 10.113 ; 10.113 ; 10.113 ; 10.113 ;
+; numeroA[1] ; salida[3]   ; 10.691 ; 10.691 ; 10.691 ; 10.691 ;
+; numeroA[1] ; salida[4]   ; 13.775 ; 13.775 ; 13.775 ; 13.775 ;
+; numeroA[1] ; salida[5]   ; 14.513 ; 14.513 ; 14.513 ; 14.513 ;
+; numeroA[1] ; salida[6]   ; 14.317 ; 14.317 ; 14.317 ; 14.317 ;
+; numeroA[1] ; salida[7]   ; 15.539 ; 15.539 ; 15.539 ; 15.539 ;
+; numeroA[1] ; salida[8]   ; 15.778 ;        ;        ; 15.778 ;
+; numeroA[2] ; salida[2]   ; 9.143  ; 9.143  ; 9.143  ; 9.143  ;
+; numeroA[2] ; salida[3]   ; 9.723  ; 9.723  ; 9.723  ; 9.723  ;
+; numeroA[2] ; salida[4]   ; 12.807 ; 12.807 ; 12.807 ; 12.807 ;
+; numeroA[2] ; salida[5]   ; 13.545 ; 13.545 ; 13.545 ; 13.545 ;
+; numeroA[2] ; salida[6]   ; 13.349 ; 13.349 ; 13.349 ; 13.349 ;
+; numeroA[2] ; salida[7]   ; 14.571 ; 14.571 ; 14.571 ; 14.571 ;
+; numeroA[2] ; salida[8]   ; 14.810 ;        ;        ; 14.810 ;
+; numeroA[3] ; salida[3]   ; 9.458  ; 9.458  ; 9.458  ; 9.458  ;
+; numeroA[3] ; salida[4]   ; 12.539 ; 12.539 ; 12.539 ; 12.539 ;
+; numeroA[3] ; salida[5]   ; 13.277 ; 13.277 ; 13.277 ; 13.277 ;
+; numeroA[3] ; salida[6]   ; 13.081 ; 13.081 ; 13.081 ; 13.081 ;
+; numeroA[3] ; salida[7]   ; 14.303 ; 14.303 ; 14.303 ; 14.303 ;
+; numeroA[3] ; salida[8]   ; 14.542 ;        ;        ; 14.542 ;
+; numeroA[4] ; salida[4]   ; 9.499  ; 9.499  ; 9.499  ; 9.499  ;
+; numeroA[4] ; salida[5]   ; 10.233 ; 10.233 ; 10.233 ; 10.233 ;
+; numeroA[4] ; salida[6]   ; 10.037 ; 10.037 ; 10.037 ; 10.037 ;
+; numeroA[4] ; salida[7]   ; 11.257 ; 11.257 ; 11.257 ; 11.257 ;
+; numeroA[4] ; salida[8]   ; 11.496 ;        ;        ; 11.496 ;
+; numeroA[5] ; salida[5]   ; 9.541  ; 9.541  ; 9.541  ; 9.541  ;
+; numeroA[5] ; salida[6]   ; 9.342  ; 9.342  ; 9.342  ; 9.342  ;
+; numeroA[5] ; salida[7]   ; 10.564 ; 10.564 ; 10.564 ; 10.564 ;
+; numeroA[5] ; salida[8]   ; 10.803 ;        ;        ; 10.803 ;
+; numeroA[6] ; salida[6]   ; 10.334 ; 10.334 ; 10.334 ; 10.334 ;
+; numeroA[6] ; salida[7]   ; 10.023 ; 10.023 ; 10.023 ; 10.023 ;
+; numeroA[6] ; salida[8]   ; 10.258 ;        ;        ; 10.258 ;
+; numeroA[7] ; salida[7]   ; 9.521  ; 9.521  ; 9.521  ; 9.521  ;
+; numeroA[7] ; salida[8]   ; 9.760  ;        ;        ; 9.760  ;
+; numeroB[0] ; salida[0]   ; 6.032  ; 6.032  ; 6.032  ; 6.032  ;
+; numeroB[0] ; salida[1]   ; 5.778  ; 5.778  ; 5.778  ; 5.778  ;
+; numeroB[0] ; salida[2]   ; 6.512  ; 6.512  ; 6.512  ; 6.512  ;
+; numeroB[0] ; salida[3]   ; 7.090  ; 7.090  ; 7.090  ; 7.090  ;
+; numeroB[0] ; salida[4]   ; 10.174 ; 10.174 ; 10.174 ; 10.174 ;
+; numeroB[0] ; salida[5]   ; 10.912 ; 10.912 ; 10.912 ; 10.912 ;
+; numeroB[0] ; salida[6]   ; 10.716 ; 10.716 ; 10.716 ; 10.716 ;
+; numeroB[0] ; salida[7]   ; 11.938 ; 11.938 ; 11.938 ; 11.938 ;
+; numeroB[0] ; salida[8]   ; 12.177 ;        ;        ; 12.177 ;
+; numeroB[1] ; salida[1]   ; 10.434 ; 10.434 ; 10.434 ; 10.434 ;
+; numeroB[1] ; salida[2]   ; 11.170 ; 11.170 ; 11.170 ; 11.170 ;
+; numeroB[1] ; salida[3]   ; 11.748 ; 11.748 ; 11.748 ; 11.748 ;
+; numeroB[1] ; salida[4]   ; 14.832 ; 14.832 ; 14.832 ; 14.832 ;
+; numeroB[1] ; salida[5]   ; 15.570 ; 15.570 ; 15.570 ; 15.570 ;
+; numeroB[1] ; salida[6]   ; 15.374 ; 15.374 ; 15.374 ; 15.374 ;
+; numeroB[1] ; salida[7]   ; 16.596 ; 16.596 ; 16.596 ; 16.596 ;
+; numeroB[1] ; salida[8]   ; 16.835 ;        ;        ; 16.835 ;
+; numeroB[2] ; salida[2]   ; 9.451  ; 9.451  ; 9.451  ; 9.451  ;
+; numeroB[2] ; salida[3]   ; 10.035 ; 10.035 ; 10.035 ; 10.035 ;
+; numeroB[2] ; salida[4]   ; 13.119 ; 13.119 ; 13.119 ; 13.119 ;
+; numeroB[2] ; salida[5]   ; 13.857 ; 13.857 ; 13.857 ; 13.857 ;
+; numeroB[2] ; salida[6]   ; 13.661 ; 13.661 ; 13.661 ; 13.661 ;
+; numeroB[2] ; salida[7]   ; 14.883 ; 14.883 ; 14.883 ; 14.883 ;
+; numeroB[2] ; salida[8]   ; 15.122 ;        ;        ; 15.122 ;
+; numeroB[3] ; salida[3]   ; 9.863  ; 9.863  ; 9.863  ; 9.863  ;
+; numeroB[3] ; salida[4]   ; 12.948 ; 12.948 ; 12.948 ; 12.948 ;
+; numeroB[3] ; salida[5]   ; 13.686 ; 13.686 ; 13.686 ; 13.686 ;
+; numeroB[3] ; salida[6]   ; 13.490 ; 13.490 ; 13.490 ; 13.490 ;
+; numeroB[3] ; salida[7]   ; 14.712 ; 14.712 ; 14.712 ; 14.712 ;
+; numeroB[3] ; salida[8]   ; 14.951 ;        ;        ; 14.951 ;
+; numeroB[4] ; salida[4]   ; 9.589  ; 9.589  ; 9.589  ; 9.589  ;
+; numeroB[4] ; salida[5]   ; 10.320 ; 10.320 ; 10.320 ; 10.320 ;
+; numeroB[4] ; salida[6]   ; 10.124 ; 10.124 ; 10.124 ; 10.124 ;
+; numeroB[4] ; salida[7]   ; 11.343 ; 11.343 ; 11.343 ; 11.343 ;
+; numeroB[4] ; salida[8]   ; 11.582 ;        ;        ; 11.582 ;
+; numeroB[5] ; salida[5]   ; 9.365  ; 9.365  ; 9.365  ; 9.365  ;
+; numeroB[5] ; salida[6]   ; 9.168  ; 9.168  ; 9.168  ; 9.168  ;
+; numeroB[5] ; salida[7]   ; 10.384 ; 10.384 ; 10.384 ; 10.384 ;
+; numeroB[5] ; salida[8]   ; 10.623 ;        ;        ; 10.623 ;
+; numeroB[6] ; salida[6]   ; 9.886  ; 9.886  ; 9.886  ; 9.886  ;
+; numeroB[6] ; salida[7]   ; 9.601  ; 9.601  ; 9.601  ; 9.601  ;
+; numeroB[6] ; salida[8]   ; 9.836  ;        ;        ; 9.836  ;
+; numeroB[7] ; salida[7]   ; 9.433  ; 9.433  ; 9.433  ; 9.433  ;
+; numeroB[7] ; salida[8]   ; 9.672  ;        ;        ; 9.672  ;
++------------+-------------+--------+--------+--------+--------+
+
+
+----------------------------
+; Fast Model Setup Summary ;
+----------------------------
+No paths to report.
+
+
+---------------------------
+; Fast Model Hold Summary ;
+---------------------------
+No paths to report.
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
+------------------------------------------
+; Fast Model Minimum Pulse Width Summary ;
+------------------------------------------
+No paths to report.
+
+
++----------------------------------------------------------+
+; Propagation Delay                                        ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; numeroA[0] ; salida[0]   ; 3.314 ; 3.314 ; 3.314 ; 3.314 ;
+; numeroA[0] ; salida[1]   ; 3.177 ; 3.177 ; 3.177 ; 3.177 ;
+; numeroA[0] ; salida[2]   ; 3.504 ; 3.504 ; 3.504 ; 3.504 ;
+; numeroA[0] ; salida[3]   ; 3.730 ; 3.730 ; 3.730 ; 3.730 ;
+; numeroA[0] ; salida[4]   ; 5.158 ; 5.158 ; 5.158 ; 5.158 ;
+; numeroA[0] ; salida[5]   ; 5.484 ; 5.484 ; 5.484 ; 5.484 ;
+; numeroA[0] ; salida[6]   ; 5.411 ; 5.411 ; 5.411 ; 5.411 ;
+; numeroA[0] ; salida[7]   ; 5.914 ; 5.914 ; 5.914 ; 5.914 ;
+; numeroA[0] ; salida[8]   ; 6.031 ;       ;       ; 6.031 ;
+; numeroA[1] ; salida[1]   ; 5.210 ; 5.210 ; 5.210 ; 5.210 ;
+; numeroA[1] ; salida[2]   ; 5.536 ; 5.536 ; 5.536 ; 5.536 ;
+; numeroA[1] ; salida[3]   ; 5.762 ; 5.762 ; 5.762 ; 5.762 ;
+; numeroA[1] ; salida[4]   ; 7.190 ; 7.190 ; 7.190 ; 7.190 ;
+; numeroA[1] ; salida[5]   ; 7.516 ; 7.516 ; 7.516 ; 7.516 ;
+; numeroA[1] ; salida[6]   ; 7.443 ; 7.443 ; 7.443 ; 7.443 ;
+; numeroA[1] ; salida[7]   ; 7.946 ; 7.946 ; 7.946 ; 7.946 ;
+; numeroA[1] ; salida[8]   ; 8.063 ;       ;       ; 8.063 ;
+; numeroA[2] ; salida[2]   ; 5.131 ; 5.131 ; 5.131 ; 5.131 ;
+; numeroA[2] ; salida[3]   ; 5.356 ; 5.356 ; 5.356 ; 5.356 ;
+; numeroA[2] ; salida[4]   ; 6.784 ; 6.784 ; 6.784 ; 6.784 ;
+; numeroA[2] ; salida[5]   ; 7.110 ; 7.110 ; 7.110 ; 7.110 ;
+; numeroA[2] ; salida[6]   ; 7.037 ; 7.037 ; 7.037 ; 7.037 ;
+; numeroA[2] ; salida[7]   ; 7.540 ; 7.540 ; 7.540 ; 7.540 ;
+; numeroA[2] ; salida[8]   ; 7.657 ;       ;       ; 7.657 ;
+; numeroA[3] ; salida[3]   ; 5.245 ; 5.245 ; 5.245 ; 5.245 ;
+; numeroA[3] ; salida[4]   ; 6.674 ; 6.674 ; 6.674 ; 6.674 ;
+; numeroA[3] ; salida[5]   ; 7.000 ; 7.000 ; 7.000 ; 7.000 ;
+; numeroA[3] ; salida[6]   ; 6.927 ; 6.927 ; 6.927 ; 6.927 ;
+; numeroA[3] ; salida[7]   ; 7.430 ; 7.430 ; 7.430 ; 7.430 ;
+; numeroA[3] ; salida[8]   ; 7.547 ;       ;       ; 7.547 ;
+; numeroA[4] ; salida[4]   ; 5.279 ; 5.279 ; 5.279 ; 5.279 ;
+; numeroA[4] ; salida[5]   ; 5.605 ; 5.605 ; 5.605 ; 5.605 ;
+; numeroA[4] ; salida[6]   ; 5.532 ; 5.532 ; 5.532 ; 5.532 ;
+; numeroA[4] ; salida[7]   ; 6.034 ; 6.034 ; 6.034 ; 6.034 ;
+; numeroA[4] ; salida[8]   ; 6.151 ;       ;       ; 6.151 ;
+; numeroA[5] ; salida[5]   ; 5.321 ; 5.321 ; 5.321 ; 5.321 ;
+; numeroA[5] ; salida[6]   ; 5.241 ; 5.241 ; 5.241 ; 5.241 ;
+; numeroA[5] ; salida[7]   ; 5.751 ; 5.751 ; 5.751 ; 5.751 ;
+; numeroA[5] ; salida[8]   ; 5.868 ;       ;       ; 5.868 ;
+; numeroA[6] ; salida[6]   ; 5.645 ; 5.645 ; 5.645 ; 5.645 ;
+; numeroA[6] ; salida[7]   ; 5.563 ; 5.563 ; 5.563 ; 5.563 ;
+; numeroA[6] ; salida[8]   ; 5.680 ;       ;       ; 5.680 ;
+; numeroA[7] ; salida[7]   ; 5.314 ; 5.314 ; 5.314 ; 5.314 ;
+; numeroA[7] ; salida[8]   ; 5.430 ;       ;       ; 5.430 ;
+; numeroB[0] ; salida[0]   ; 3.129 ; 3.129 ; 3.129 ; 3.129 ;
+; numeroB[0] ; salida[1]   ; 2.994 ; 2.994 ; 2.994 ; 2.994 ;
+; numeroB[0] ; salida[2]   ; 3.319 ; 3.319 ; 3.319 ; 3.319 ;
+; numeroB[0] ; salida[3]   ; 3.545 ; 3.545 ; 3.545 ; 3.545 ;
+; numeroB[0] ; salida[4]   ; 4.973 ; 4.973 ; 4.973 ; 4.973 ;
+; numeroB[0] ; salida[5]   ; 5.299 ; 5.299 ; 5.299 ; 5.299 ;
+; numeroB[0] ; salida[6]   ; 5.226 ; 5.226 ; 5.226 ; 5.226 ;
+; numeroB[0] ; salida[7]   ; 5.729 ; 5.729 ; 5.729 ; 5.729 ;
+; numeroB[0] ; salida[8]   ; 5.846 ;       ;       ; 5.846 ;
+; numeroB[1] ; salida[1]   ; 5.821 ; 5.821 ; 5.821 ; 5.821 ;
+; numeroB[1] ; salida[2]   ; 6.146 ; 6.146 ; 6.146 ; 6.146 ;
+; numeroB[1] ; salida[3]   ; 6.372 ; 6.372 ; 6.372 ; 6.372 ;
+; numeroB[1] ; salida[4]   ; 7.800 ; 7.800 ; 7.800 ; 7.800 ;
+; numeroB[1] ; salida[5]   ; 8.126 ; 8.126 ; 8.126 ; 8.126 ;
+; numeroB[1] ; salida[6]   ; 8.053 ; 8.053 ; 8.053 ; 8.053 ;
+; numeroB[1] ; salida[7]   ; 8.556 ; 8.556 ; 8.556 ; 8.556 ;
+; numeroB[1] ; salida[8]   ; 8.673 ;       ;       ; 8.673 ;
+; numeroB[2] ; salida[2]   ; 5.280 ; 5.280 ; 5.280 ; 5.280 ;
+; numeroB[2] ; salida[3]   ; 5.508 ; 5.508 ; 5.508 ; 5.508 ;
+; numeroB[2] ; salida[4]   ; 6.936 ; 6.936 ; 6.936 ; 6.936 ;
+; numeroB[2] ; salida[5]   ; 7.262 ; 7.262 ; 7.262 ; 7.262 ;
+; numeroB[2] ; salida[6]   ; 7.189 ; 7.189 ; 7.189 ; 7.189 ;
+; numeroB[2] ; salida[7]   ; 7.692 ; 7.692 ; 7.692 ; 7.692 ;
+; numeroB[2] ; salida[8]   ; 7.809 ;       ;       ; 7.809 ;
+; numeroB[3] ; salida[3]   ; 5.447 ; 5.447 ; 5.447 ; 5.447 ;
+; numeroB[3] ; salida[4]   ; 6.876 ; 6.876 ; 6.876 ; 6.876 ;
+; numeroB[3] ; salida[5]   ; 7.202 ; 7.202 ; 7.202 ; 7.202 ;
+; numeroB[3] ; salida[6]   ; 7.129 ; 7.129 ; 7.129 ; 7.129 ;
+; numeroB[3] ; salida[7]   ; 7.632 ; 7.632 ; 7.632 ; 7.632 ;
+; numeroB[3] ; salida[8]   ; 7.749 ;       ;       ; 7.749 ;
+; numeroB[4] ; salida[4]   ; 5.316 ; 5.316 ; 5.316 ; 5.316 ;
+; numeroB[4] ; salida[5]   ; 5.638 ; 5.638 ; 5.638 ; 5.638 ;
+; numeroB[4] ; salida[6]   ; 5.565 ; 5.565 ; 5.565 ; 5.565 ;
+; numeroB[4] ; salida[7]   ; 6.062 ; 6.062 ; 6.062 ; 6.062 ;
+; numeroB[4] ; salida[8]   ; 6.179 ;       ;       ; 6.179 ;
+; numeroB[5] ; salida[5]   ; 5.224 ; 5.224 ; 5.224 ; 5.224 ;
+; numeroB[5] ; salida[6]   ; 5.151 ; 5.151 ; 5.151 ; 5.151 ;
+; numeroB[5] ; salida[7]   ; 5.647 ; 5.647 ; 5.647 ; 5.647 ;
+; numeroB[5] ; salida[8]   ; 5.764 ;       ;       ; 5.764 ;
+; numeroB[6] ; salida[6]   ; 5.480 ; 5.480 ; 5.480 ; 5.480 ;
+; numeroB[6] ; salida[7]   ; 5.394 ; 5.394 ; 5.394 ; 5.394 ;
+; numeroB[6] ; salida[8]   ; 5.511 ;       ;       ; 5.511 ;
+; numeroB[7] ; salida[7]   ; 5.269 ; 5.269 ; 5.269 ; 5.269 ;
+; numeroB[7] ; salida[8]   ; 5.388 ;       ;       ; 5.388 ;
++------------+-------------+-------+-------+-------+-------+
+
+
++----------------------------------------------------------+
+; Minimum Propagation Delay                                ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; numeroA[0] ; salida[0]   ; 3.314 ; 3.314 ; 3.314 ; 3.314 ;
+; numeroA[0] ; salida[1]   ; 3.177 ; 3.177 ; 3.177 ; 3.177 ;
+; numeroA[0] ; salida[2]   ; 3.504 ; 3.504 ; 3.504 ; 3.504 ;
+; numeroA[0] ; salida[3]   ; 3.730 ; 3.730 ; 3.730 ; 3.730 ;
+; numeroA[0] ; salida[4]   ; 5.158 ; 5.158 ; 5.158 ; 5.158 ;
+; numeroA[0] ; salida[5]   ; 5.484 ; 5.484 ; 5.484 ; 5.484 ;
+; numeroA[0] ; salida[6]   ; 5.411 ; 5.411 ; 5.411 ; 5.411 ;
+; numeroA[0] ; salida[7]   ; 5.914 ; 5.914 ; 5.914 ; 5.914 ;
+; numeroA[0] ; salida[8]   ; 6.031 ;       ;       ; 6.031 ;
+; numeroA[1] ; salida[1]   ; 5.210 ; 5.210 ; 5.210 ; 5.210 ;
+; numeroA[1] ; salida[2]   ; 5.536 ; 5.536 ; 5.536 ; 5.536 ;
+; numeroA[1] ; salida[3]   ; 5.762 ; 5.762 ; 5.762 ; 5.762 ;
+; numeroA[1] ; salida[4]   ; 7.190 ; 7.190 ; 7.190 ; 7.190 ;
+; numeroA[1] ; salida[5]   ; 7.516 ; 7.516 ; 7.516 ; 7.516 ;
+; numeroA[1] ; salida[6]   ; 7.443 ; 7.443 ; 7.443 ; 7.443 ;
+; numeroA[1] ; salida[7]   ; 7.946 ; 7.946 ; 7.946 ; 7.946 ;
+; numeroA[1] ; salida[8]   ; 8.063 ;       ;       ; 8.063 ;
+; numeroA[2] ; salida[2]   ; 5.131 ; 5.131 ; 5.131 ; 5.131 ;
+; numeroA[2] ; salida[3]   ; 5.356 ; 5.356 ; 5.356 ; 5.356 ;
+; numeroA[2] ; salida[4]   ; 6.784 ; 6.784 ; 6.784 ; 6.784 ;
+; numeroA[2] ; salida[5]   ; 7.110 ; 7.110 ; 7.110 ; 7.110 ;
+; numeroA[2] ; salida[6]   ; 7.037 ; 7.037 ; 7.037 ; 7.037 ;
+; numeroA[2] ; salida[7]   ; 7.540 ; 7.540 ; 7.540 ; 7.540 ;
+; numeroA[2] ; salida[8]   ; 7.657 ;       ;       ; 7.657 ;
+; numeroA[3] ; salida[3]   ; 5.245 ; 5.245 ; 5.245 ; 5.245 ;
+; numeroA[3] ; salida[4]   ; 6.674 ; 6.674 ; 6.674 ; 6.674 ;
+; numeroA[3] ; salida[5]   ; 7.000 ; 7.000 ; 7.000 ; 7.000 ;
+; numeroA[3] ; salida[6]   ; 6.927 ; 6.927 ; 6.927 ; 6.927 ;
+; numeroA[3] ; salida[7]   ; 7.430 ; 7.430 ; 7.430 ; 7.430 ;
+; numeroA[3] ; salida[8]   ; 7.547 ;       ;       ; 7.547 ;
+; numeroA[4] ; salida[4]   ; 5.279 ; 5.279 ; 5.279 ; 5.279 ;
+; numeroA[4] ; salida[5]   ; 5.605 ; 5.605 ; 5.605 ; 5.605 ;
+; numeroA[4] ; salida[6]   ; 5.532 ; 5.532 ; 5.532 ; 5.532 ;
+; numeroA[4] ; salida[7]   ; 6.034 ; 6.034 ; 6.034 ; 6.034 ;
+; numeroA[4] ; salida[8]   ; 6.151 ;       ;       ; 6.151 ;
+; numeroA[5] ; salida[5]   ; 5.321 ; 5.321 ; 5.321 ; 5.321 ;
+; numeroA[5] ; salida[6]   ; 5.241 ; 5.241 ; 5.241 ; 5.241 ;
+; numeroA[5] ; salida[7]   ; 5.751 ; 5.751 ; 5.751 ; 5.751 ;
+; numeroA[5] ; salida[8]   ; 5.868 ;       ;       ; 5.868 ;
+; numeroA[6] ; salida[6]   ; 5.645 ; 5.645 ; 5.645 ; 5.645 ;
+; numeroA[6] ; salida[7]   ; 5.522 ; 5.522 ; 5.522 ; 5.522 ;
+; numeroA[6] ; salida[8]   ; 5.634 ;       ;       ; 5.634 ;
+; numeroA[7] ; salida[7]   ; 5.314 ; 5.314 ; 5.314 ; 5.314 ;
+; numeroA[7] ; salida[8]   ; 5.430 ;       ;       ; 5.430 ;
+; numeroB[0] ; salida[0]   ; 3.129 ; 3.129 ; 3.129 ; 3.129 ;
+; numeroB[0] ; salida[1]   ; 2.994 ; 2.994 ; 2.994 ; 2.994 ;
+; numeroB[0] ; salida[2]   ; 3.319 ; 3.319 ; 3.319 ; 3.319 ;
+; numeroB[0] ; salida[3]   ; 3.545 ; 3.545 ; 3.545 ; 3.545 ;
+; numeroB[0] ; salida[4]   ; 4.973 ; 4.973 ; 4.973 ; 4.973 ;
+; numeroB[0] ; salida[5]   ; 5.299 ; 5.299 ; 5.299 ; 5.299 ;
+; numeroB[0] ; salida[6]   ; 5.226 ; 5.226 ; 5.226 ; 5.226 ;
+; numeroB[0] ; salida[7]   ; 5.729 ; 5.729 ; 5.729 ; 5.729 ;
+; numeroB[0] ; salida[8]   ; 5.846 ;       ;       ; 5.846 ;
+; numeroB[1] ; salida[1]   ; 5.821 ; 5.821 ; 5.821 ; 5.821 ;
+; numeroB[1] ; salida[2]   ; 6.146 ; 6.146 ; 6.146 ; 6.146 ;
+; numeroB[1] ; salida[3]   ; 6.372 ; 6.372 ; 6.372 ; 6.372 ;
+; numeroB[1] ; salida[4]   ; 7.800 ; 7.800 ; 7.800 ; 7.800 ;
+; numeroB[1] ; salida[5]   ; 8.126 ; 8.126 ; 8.126 ; 8.126 ;
+; numeroB[1] ; salida[6]   ; 8.053 ; 8.053 ; 8.053 ; 8.053 ;
+; numeroB[1] ; salida[7]   ; 8.556 ; 8.556 ; 8.556 ; 8.556 ;
+; numeroB[1] ; salida[8]   ; 8.673 ;       ;       ; 8.673 ;
+; numeroB[2] ; salida[2]   ; 5.280 ; 5.280 ; 5.280 ; 5.280 ;
+; numeroB[2] ; salida[3]   ; 5.508 ; 5.508 ; 5.508 ; 5.508 ;
+; numeroB[2] ; salida[4]   ; 6.936 ; 6.936 ; 6.936 ; 6.936 ;
+; numeroB[2] ; salida[5]   ; 7.262 ; 7.262 ; 7.262 ; 7.262 ;
+; numeroB[2] ; salida[6]   ; 7.189 ; 7.189 ; 7.189 ; 7.189 ;
+; numeroB[2] ; salida[7]   ; 7.692 ; 7.692 ; 7.692 ; 7.692 ;
+; numeroB[2] ; salida[8]   ; 7.809 ;       ;       ; 7.809 ;
+; numeroB[3] ; salida[3]   ; 5.447 ; 5.447 ; 5.447 ; 5.447 ;
+; numeroB[3] ; salida[4]   ; 6.876 ; 6.876 ; 6.876 ; 6.876 ;
+; numeroB[3] ; salida[5]   ; 7.202 ; 7.202 ; 7.202 ; 7.202 ;
+; numeroB[3] ; salida[6]   ; 7.129 ; 7.129 ; 7.129 ; 7.129 ;
+; numeroB[3] ; salida[7]   ; 7.632 ; 7.632 ; 7.632 ; 7.632 ;
+; numeroB[3] ; salida[8]   ; 7.749 ;       ;       ; 7.749 ;
+; numeroB[4] ; salida[4]   ; 5.316 ; 5.316 ; 5.316 ; 5.316 ;
+; numeroB[4] ; salida[5]   ; 5.638 ; 5.638 ; 5.638 ; 5.638 ;
+; numeroB[4] ; salida[6]   ; 5.565 ; 5.565 ; 5.565 ; 5.565 ;
+; numeroB[4] ; salida[7]   ; 6.062 ; 6.062 ; 6.062 ; 6.062 ;
+; numeroB[4] ; salida[8]   ; 6.179 ;       ;       ; 6.179 ;
+; numeroB[5] ; salida[5]   ; 5.224 ; 5.224 ; 5.224 ; 5.224 ;
+; numeroB[5] ; salida[6]   ; 5.151 ; 5.151 ; 5.151 ; 5.151 ;
+; numeroB[5] ; salida[7]   ; 5.647 ; 5.647 ; 5.647 ; 5.647 ;
+; numeroB[5] ; salida[8]   ; 5.764 ;       ;       ; 5.764 ;
+; numeroB[6] ; salida[6]   ; 5.480 ; 5.480 ; 5.480 ; 5.480 ;
+; numeroB[6] ; salida[7]   ; 5.351 ; 5.351 ; 5.351 ; 5.351 ;
+; numeroB[6] ; salida[8]   ; 5.463 ;       ;       ; 5.463 ;
+; numeroB[7] ; salida[7]   ; 5.269 ; 5.269 ; 5.269 ; 5.269 ;
+; numeroB[7] ; salida[8]   ; 5.388 ;       ;       ; 5.388 ;
++------------+-------------+-------+-------+-------+-------+
+
+
++----------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                        ;
++------------------+-------+------+----------+---------+---------------------+
+; Clock            ; Setup ; Hold ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-------+------+----------+---------+---------------------+
+; Worst-case Slack ; N/A   ; N/A  ; N/A      ; N/A     ; N/A                 ;
+; Design-wide TNS  ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; 0.0                 ;
++------------------+-------+------+----------+---------+---------------------+
+
+
++--------------------------------------------------------------+
+; Progagation Delay                                            ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; numeroA[0] ; salida[0]   ; 6.430  ; 6.430  ; 6.430  ; 6.430  ;
+; numeroA[0] ; salida[1]   ; 6.173  ; 6.173  ; 6.173  ; 6.173  ;
+; numeroA[0] ; salida[2]   ; 6.910  ; 6.910  ; 6.910  ; 6.910  ;
+; numeroA[0] ; salida[3]   ; 7.488  ; 7.488  ; 7.488  ; 7.488  ;
+; numeroA[0] ; salida[4]   ; 10.572 ; 10.572 ; 10.572 ; 10.572 ;
+; numeroA[0] ; salida[5]   ; 11.310 ; 11.310 ; 11.310 ; 11.310 ;
+; numeroA[0] ; salida[6]   ; 11.114 ; 11.114 ; 11.114 ; 11.114 ;
+; numeroA[0] ; salida[7]   ; 12.336 ; 12.336 ; 12.336 ; 12.336 ;
+; numeroA[0] ; salida[8]   ; 12.575 ;        ;        ; 12.575 ;
+; numeroA[1] ; salida[1]   ; 9.380  ; 9.380  ; 9.380  ; 9.380  ;
+; numeroA[1] ; salida[2]   ; 10.113 ; 10.113 ; 10.113 ; 10.113 ;
+; numeroA[1] ; salida[3]   ; 10.691 ; 10.691 ; 10.691 ; 10.691 ;
+; numeroA[1] ; salida[4]   ; 13.775 ; 13.775 ; 13.775 ; 13.775 ;
+; numeroA[1] ; salida[5]   ; 14.513 ; 14.513 ; 14.513 ; 14.513 ;
+; numeroA[1] ; salida[6]   ; 14.317 ; 14.317 ; 14.317 ; 14.317 ;
+; numeroA[1] ; salida[7]   ; 15.539 ; 15.539 ; 15.539 ; 15.539 ;
+; numeroA[1] ; salida[8]   ; 15.778 ;        ;        ; 15.778 ;
+; numeroA[2] ; salida[2]   ; 9.143  ; 9.143  ; 9.143  ; 9.143  ;
+; numeroA[2] ; salida[3]   ; 9.723  ; 9.723  ; 9.723  ; 9.723  ;
+; numeroA[2] ; salida[4]   ; 12.807 ; 12.807 ; 12.807 ; 12.807 ;
+; numeroA[2] ; salida[5]   ; 13.545 ; 13.545 ; 13.545 ; 13.545 ;
+; numeroA[2] ; salida[6]   ; 13.349 ; 13.349 ; 13.349 ; 13.349 ;
+; numeroA[2] ; salida[7]   ; 14.571 ; 14.571 ; 14.571 ; 14.571 ;
+; numeroA[2] ; salida[8]   ; 14.810 ;        ;        ; 14.810 ;
+; numeroA[3] ; salida[3]   ; 9.458  ; 9.458  ; 9.458  ; 9.458  ;
+; numeroA[3] ; salida[4]   ; 12.539 ; 12.539 ; 12.539 ; 12.539 ;
+; numeroA[3] ; salida[5]   ; 13.277 ; 13.277 ; 13.277 ; 13.277 ;
+; numeroA[3] ; salida[6]   ; 13.081 ; 13.081 ; 13.081 ; 13.081 ;
+; numeroA[3] ; salida[7]   ; 14.303 ; 14.303 ; 14.303 ; 14.303 ;
+; numeroA[3] ; salida[8]   ; 14.542 ;        ;        ; 14.542 ;
+; numeroA[4] ; salida[4]   ; 9.499  ; 9.499  ; 9.499  ; 9.499  ;
+; numeroA[4] ; salida[5]   ; 10.233 ; 10.233 ; 10.233 ; 10.233 ;
+; numeroA[4] ; salida[6]   ; 10.037 ; 10.037 ; 10.037 ; 10.037 ;
+; numeroA[4] ; salida[7]   ; 11.257 ; 11.257 ; 11.257 ; 11.257 ;
+; numeroA[4] ; salida[8]   ; 11.496 ;        ;        ; 11.496 ;
+; numeroA[5] ; salida[5]   ; 9.541  ; 9.541  ; 9.541  ; 9.541  ;
+; numeroA[5] ; salida[6]   ; 9.342  ; 9.342  ; 9.342  ; 9.342  ;
+; numeroA[5] ; salida[7]   ; 10.564 ; 10.564 ; 10.564 ; 10.564 ;
+; numeroA[5] ; salida[8]   ; 10.803 ;        ;        ; 10.803 ;
+; numeroA[6] ; salida[6]   ; 10.334 ; 10.334 ; 10.334 ; 10.334 ;
+; numeroA[6] ; salida[7]   ; 10.176 ; 10.176 ; 10.176 ; 10.176 ;
+; numeroA[6] ; salida[8]   ; 10.415 ;        ;        ; 10.415 ;
+; numeroA[7] ; salida[7]   ; 9.521  ; 9.521  ; 9.521  ; 9.521  ;
+; numeroA[7] ; salida[8]   ; 9.760  ;        ;        ; 9.760  ;
+; numeroB[0] ; salida[0]   ; 6.032  ; 6.032  ; 6.032  ; 6.032  ;
+; numeroB[0] ; salida[1]   ; 5.778  ; 5.778  ; 5.778  ; 5.778  ;
+; numeroB[0] ; salida[2]   ; 6.512  ; 6.512  ; 6.512  ; 6.512  ;
+; numeroB[0] ; salida[3]   ; 7.090  ; 7.090  ; 7.090  ; 7.090  ;
+; numeroB[0] ; salida[4]   ; 10.174 ; 10.174 ; 10.174 ; 10.174 ;
+; numeroB[0] ; salida[5]   ; 10.912 ; 10.912 ; 10.912 ; 10.912 ;
+; numeroB[0] ; salida[6]   ; 10.716 ; 10.716 ; 10.716 ; 10.716 ;
+; numeroB[0] ; salida[7]   ; 11.938 ; 11.938 ; 11.938 ; 11.938 ;
+; numeroB[0] ; salida[8]   ; 12.177 ;        ;        ; 12.177 ;
+; numeroB[1] ; salida[1]   ; 10.434 ; 10.434 ; 10.434 ; 10.434 ;
+; numeroB[1] ; salida[2]   ; 11.170 ; 11.170 ; 11.170 ; 11.170 ;
+; numeroB[1] ; salida[3]   ; 11.748 ; 11.748 ; 11.748 ; 11.748 ;
+; numeroB[1] ; salida[4]   ; 14.832 ; 14.832 ; 14.832 ; 14.832 ;
+; numeroB[1] ; salida[5]   ; 15.570 ; 15.570 ; 15.570 ; 15.570 ;
+; numeroB[1] ; salida[6]   ; 15.374 ; 15.374 ; 15.374 ; 15.374 ;
+; numeroB[1] ; salida[7]   ; 16.596 ; 16.596 ; 16.596 ; 16.596 ;
+; numeroB[1] ; salida[8]   ; 16.835 ;        ;        ; 16.835 ;
+; numeroB[2] ; salida[2]   ; 9.451  ; 9.451  ; 9.451  ; 9.451  ;
+; numeroB[2] ; salida[3]   ; 10.035 ; 10.035 ; 10.035 ; 10.035 ;
+; numeroB[2] ; salida[4]   ; 13.119 ; 13.119 ; 13.119 ; 13.119 ;
+; numeroB[2] ; salida[5]   ; 13.857 ; 13.857 ; 13.857 ; 13.857 ;
+; numeroB[2] ; salida[6]   ; 13.661 ; 13.661 ; 13.661 ; 13.661 ;
+; numeroB[2] ; salida[7]   ; 14.883 ; 14.883 ; 14.883 ; 14.883 ;
+; numeroB[2] ; salida[8]   ; 15.122 ;        ;        ; 15.122 ;
+; numeroB[3] ; salida[3]   ; 9.863  ; 9.863  ; 9.863  ; 9.863  ;
+; numeroB[3] ; salida[4]   ; 12.948 ; 12.948 ; 12.948 ; 12.948 ;
+; numeroB[3] ; salida[5]   ; 13.686 ; 13.686 ; 13.686 ; 13.686 ;
+; numeroB[3] ; salida[6]   ; 13.490 ; 13.490 ; 13.490 ; 13.490 ;
+; numeroB[3] ; salida[7]   ; 14.712 ; 14.712 ; 14.712 ; 14.712 ;
+; numeroB[3] ; salida[8]   ; 14.951 ;        ;        ; 14.951 ;
+; numeroB[4] ; salida[4]   ; 9.589  ; 9.589  ; 9.589  ; 9.589  ;
+; numeroB[4] ; salida[5]   ; 10.320 ; 10.320 ; 10.320 ; 10.320 ;
+; numeroB[4] ; salida[6]   ; 10.124 ; 10.124 ; 10.124 ; 10.124 ;
+; numeroB[4] ; salida[7]   ; 11.343 ; 11.343 ; 11.343 ; 11.343 ;
+; numeroB[4] ; salida[8]   ; 11.582 ;        ;        ; 11.582 ;
+; numeroB[5] ; salida[5]   ; 9.365  ; 9.365  ; 9.365  ; 9.365  ;
+; numeroB[5] ; salida[6]   ; 9.168  ; 9.168  ; 9.168  ; 9.168  ;
+; numeroB[5] ; salida[7]   ; 10.384 ; 10.384 ; 10.384 ; 10.384 ;
+; numeroB[5] ; salida[8]   ; 10.623 ;        ;        ; 10.623 ;
+; numeroB[6] ; salida[6]   ; 9.886  ; 9.886  ; 9.886  ; 9.886  ;
+; numeroB[6] ; salida[7]   ; 9.728  ; 9.728  ; 9.728  ; 9.728  ;
+; numeroB[6] ; salida[8]   ; 9.967  ;        ;        ; 9.967  ;
+; numeroB[7] ; salida[7]   ; 9.433  ; 9.433  ; 9.433  ; 9.433  ;
+; numeroB[7] ; salida[8]   ; 9.672  ;        ;        ; 9.672  ;
++------------+-------------+--------+--------+--------+--------+
+
+
++----------------------------------------------------------+
+; Minimum Progagation Delay                                ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; numeroA[0] ; salida[0]   ; 3.314 ; 3.314 ; 3.314 ; 3.314 ;
+; numeroA[0] ; salida[1]   ; 3.177 ; 3.177 ; 3.177 ; 3.177 ;
+; numeroA[0] ; salida[2]   ; 3.504 ; 3.504 ; 3.504 ; 3.504 ;
+; numeroA[0] ; salida[3]   ; 3.730 ; 3.730 ; 3.730 ; 3.730 ;
+; numeroA[0] ; salida[4]   ; 5.158 ; 5.158 ; 5.158 ; 5.158 ;
+; numeroA[0] ; salida[5]   ; 5.484 ; 5.484 ; 5.484 ; 5.484 ;
+; numeroA[0] ; salida[6]   ; 5.411 ; 5.411 ; 5.411 ; 5.411 ;
+; numeroA[0] ; salida[7]   ; 5.914 ; 5.914 ; 5.914 ; 5.914 ;
+; numeroA[0] ; salida[8]   ; 6.031 ;       ;       ; 6.031 ;
+; numeroA[1] ; salida[1]   ; 5.210 ; 5.210 ; 5.210 ; 5.210 ;
+; numeroA[1] ; salida[2]   ; 5.536 ; 5.536 ; 5.536 ; 5.536 ;
+; numeroA[1] ; salida[3]   ; 5.762 ; 5.762 ; 5.762 ; 5.762 ;
+; numeroA[1] ; salida[4]   ; 7.190 ; 7.190 ; 7.190 ; 7.190 ;
+; numeroA[1] ; salida[5]   ; 7.516 ; 7.516 ; 7.516 ; 7.516 ;
+; numeroA[1] ; salida[6]   ; 7.443 ; 7.443 ; 7.443 ; 7.443 ;
+; numeroA[1] ; salida[7]   ; 7.946 ; 7.946 ; 7.946 ; 7.946 ;
+; numeroA[1] ; salida[8]   ; 8.063 ;       ;       ; 8.063 ;
+; numeroA[2] ; salida[2]   ; 5.131 ; 5.131 ; 5.131 ; 5.131 ;
+; numeroA[2] ; salida[3]   ; 5.356 ; 5.356 ; 5.356 ; 5.356 ;
+; numeroA[2] ; salida[4]   ; 6.784 ; 6.784 ; 6.784 ; 6.784 ;
+; numeroA[2] ; salida[5]   ; 7.110 ; 7.110 ; 7.110 ; 7.110 ;
+; numeroA[2] ; salida[6]   ; 7.037 ; 7.037 ; 7.037 ; 7.037 ;
+; numeroA[2] ; salida[7]   ; 7.540 ; 7.540 ; 7.540 ; 7.540 ;
+; numeroA[2] ; salida[8]   ; 7.657 ;       ;       ; 7.657 ;
+; numeroA[3] ; salida[3]   ; 5.245 ; 5.245 ; 5.245 ; 5.245 ;
+; numeroA[3] ; salida[4]   ; 6.674 ; 6.674 ; 6.674 ; 6.674 ;
+; numeroA[3] ; salida[5]   ; 7.000 ; 7.000 ; 7.000 ; 7.000 ;
+; numeroA[3] ; salida[6]   ; 6.927 ; 6.927 ; 6.927 ; 6.927 ;
+; numeroA[3] ; salida[7]   ; 7.430 ; 7.430 ; 7.430 ; 7.430 ;
+; numeroA[3] ; salida[8]   ; 7.547 ;       ;       ; 7.547 ;
+; numeroA[4] ; salida[4]   ; 5.279 ; 5.279 ; 5.279 ; 5.279 ;
+; numeroA[4] ; salida[5]   ; 5.605 ; 5.605 ; 5.605 ; 5.605 ;
+; numeroA[4] ; salida[6]   ; 5.532 ; 5.532 ; 5.532 ; 5.532 ;
+; numeroA[4] ; salida[7]   ; 6.034 ; 6.034 ; 6.034 ; 6.034 ;
+; numeroA[4] ; salida[8]   ; 6.151 ;       ;       ; 6.151 ;
+; numeroA[5] ; salida[5]   ; 5.321 ; 5.321 ; 5.321 ; 5.321 ;
+; numeroA[5] ; salida[6]   ; 5.241 ; 5.241 ; 5.241 ; 5.241 ;
+; numeroA[5] ; salida[7]   ; 5.751 ; 5.751 ; 5.751 ; 5.751 ;
+; numeroA[5] ; salida[8]   ; 5.868 ;       ;       ; 5.868 ;
+; numeroA[6] ; salida[6]   ; 5.645 ; 5.645 ; 5.645 ; 5.645 ;
+; numeroA[6] ; salida[7]   ; 5.522 ; 5.522 ; 5.522 ; 5.522 ;
+; numeroA[6] ; salida[8]   ; 5.634 ;       ;       ; 5.634 ;
+; numeroA[7] ; salida[7]   ; 5.314 ; 5.314 ; 5.314 ; 5.314 ;
+; numeroA[7] ; salida[8]   ; 5.430 ;       ;       ; 5.430 ;
+; numeroB[0] ; salida[0]   ; 3.129 ; 3.129 ; 3.129 ; 3.129 ;
+; numeroB[0] ; salida[1]   ; 2.994 ; 2.994 ; 2.994 ; 2.994 ;
+; numeroB[0] ; salida[2]   ; 3.319 ; 3.319 ; 3.319 ; 3.319 ;
+; numeroB[0] ; salida[3]   ; 3.545 ; 3.545 ; 3.545 ; 3.545 ;
+; numeroB[0] ; salida[4]   ; 4.973 ; 4.973 ; 4.973 ; 4.973 ;
+; numeroB[0] ; salida[5]   ; 5.299 ; 5.299 ; 5.299 ; 5.299 ;
+; numeroB[0] ; salida[6]   ; 5.226 ; 5.226 ; 5.226 ; 5.226 ;
+; numeroB[0] ; salida[7]   ; 5.729 ; 5.729 ; 5.729 ; 5.729 ;
+; numeroB[0] ; salida[8]   ; 5.846 ;       ;       ; 5.846 ;
+; numeroB[1] ; salida[1]   ; 5.821 ; 5.821 ; 5.821 ; 5.821 ;
+; numeroB[1] ; salida[2]   ; 6.146 ; 6.146 ; 6.146 ; 6.146 ;
+; numeroB[1] ; salida[3]   ; 6.372 ; 6.372 ; 6.372 ; 6.372 ;
+; numeroB[1] ; salida[4]   ; 7.800 ; 7.800 ; 7.800 ; 7.800 ;
+; numeroB[1] ; salida[5]   ; 8.126 ; 8.126 ; 8.126 ; 8.126 ;
+; numeroB[1] ; salida[6]   ; 8.053 ; 8.053 ; 8.053 ; 8.053 ;
+; numeroB[1] ; salida[7]   ; 8.556 ; 8.556 ; 8.556 ; 8.556 ;
+; numeroB[1] ; salida[8]   ; 8.673 ;       ;       ; 8.673 ;
+; numeroB[2] ; salida[2]   ; 5.280 ; 5.280 ; 5.280 ; 5.280 ;
+; numeroB[2] ; salida[3]   ; 5.508 ; 5.508 ; 5.508 ; 5.508 ;
+; numeroB[2] ; salida[4]   ; 6.936 ; 6.936 ; 6.936 ; 6.936 ;
+; numeroB[2] ; salida[5]   ; 7.262 ; 7.262 ; 7.262 ; 7.262 ;
+; numeroB[2] ; salida[6]   ; 7.189 ; 7.189 ; 7.189 ; 7.189 ;
+; numeroB[2] ; salida[7]   ; 7.692 ; 7.692 ; 7.692 ; 7.692 ;
+; numeroB[2] ; salida[8]   ; 7.809 ;       ;       ; 7.809 ;
+; numeroB[3] ; salida[3]   ; 5.447 ; 5.447 ; 5.447 ; 5.447 ;
+; numeroB[3] ; salida[4]   ; 6.876 ; 6.876 ; 6.876 ; 6.876 ;
+; numeroB[3] ; salida[5]   ; 7.202 ; 7.202 ; 7.202 ; 7.202 ;
+; numeroB[3] ; salida[6]   ; 7.129 ; 7.129 ; 7.129 ; 7.129 ;
+; numeroB[3] ; salida[7]   ; 7.632 ; 7.632 ; 7.632 ; 7.632 ;
+; numeroB[3] ; salida[8]   ; 7.749 ;       ;       ; 7.749 ;
+; numeroB[4] ; salida[4]   ; 5.316 ; 5.316 ; 5.316 ; 5.316 ;
+; numeroB[4] ; salida[5]   ; 5.638 ; 5.638 ; 5.638 ; 5.638 ;
+; numeroB[4] ; salida[6]   ; 5.565 ; 5.565 ; 5.565 ; 5.565 ;
+; numeroB[4] ; salida[7]   ; 6.062 ; 6.062 ; 6.062 ; 6.062 ;
+; numeroB[4] ; salida[8]   ; 6.179 ;       ;       ; 6.179 ;
+; numeroB[5] ; salida[5]   ; 5.224 ; 5.224 ; 5.224 ; 5.224 ;
+; numeroB[5] ; salida[6]   ; 5.151 ; 5.151 ; 5.151 ; 5.151 ;
+; numeroB[5] ; salida[7]   ; 5.647 ; 5.647 ; 5.647 ; 5.647 ;
+; numeroB[5] ; salida[8]   ; 5.764 ;       ;       ; 5.764 ;
+; numeroB[6] ; salida[6]   ; 5.480 ; 5.480 ; 5.480 ; 5.480 ;
+; numeroB[6] ; salida[7]   ; 5.351 ; 5.351 ; 5.351 ; 5.351 ;
+; numeroB[6] ; salida[8]   ; 5.463 ;       ;       ; 5.463 ;
+; numeroB[7] ; salida[7]   ; 5.269 ; 5.269 ; 5.269 ; 5.269 ;
+; numeroB[7] ; salida[8]   ; 5.388 ;       ;       ; 5.388 ;
++------------+-------------+-------+-------+-------+-------+
+
+
+-------------------
+; Clock Transfers ;
+-------------------
+Nothing to report.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 16    ; 16   ;
+; Unconstrained Input Port Paths  ; 88    ; 88   ;
+; Unconstrained Output Ports      ; 9     ; 9    ;
+; Unconstrained Output Port Paths ; 88    ; 88   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+    Info: Processing started: Thu Oct 01 19:24:50 2015
+Info: Command: quartus_sta Sumador1 -c Sumador1
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Sumador1.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info (332159): No clocks to report
+Info: Analyzing Slow Model
+Info (332140): No fmax paths to report
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332140): No Minimum Pulse Width paths to report
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332140): No Minimum Pulse Width paths to report
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 392 megabytes
+    Info: Processing ended: Thu Oct 01 19:24:53 2015
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
+
+

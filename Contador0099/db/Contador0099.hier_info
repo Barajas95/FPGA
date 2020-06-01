@@ -1,0 +1,149 @@
+|Contador0099
+CLK_DE2 => div_frec:elemento_1.CLK
+Z_7SEG[1] <= siete_segmentos:elemento_3.Z[1]
+Z_7SEG[2] <= siete_segmentos:elemento_3.Z[2]
+Z_7SEG[3] <= siete_segmentos:elemento_3.Z[3]
+Z_7SEG[4] <= siete_segmentos:elemento_3.Z[4]
+Z_7SEG[5] <= siete_segmentos:elemento_3.Z[5]
+Z_7SEG[6] <= siete_segmentos:elemento_3.Z[6]
+Z_7SEG[7] <= siete_segmentos:elemento_3.Z[7]
+Y_7SEG[1] <= siete_segmentos:elemento_5.Z[1]
+Y_7SEG[2] <= siete_segmentos:elemento_5.Z[2]
+Y_7SEG[3] <= siete_segmentos:elemento_5.Z[3]
+Y_7SEG[4] <= siete_segmentos:elemento_5.Z[4]
+Y_7SEG[5] <= siete_segmentos:elemento_5.Z[5]
+Y_7SEG[6] <= siete_segmentos:elemento_5.Z[6]
+Y_7SEG[7] <= siete_segmentos:elemento_5.Z[7]
+
+
+|Contador0099|div_frec:elemento_1
+CLK => ciclos[1].CLK
+CLK => ciclos[2].CLK
+CLK => ciclos[3].CLK
+CLK => ciclos[4].CLK
+CLK => ciclos[5].CLK
+CLK => ciclos[6].CLK
+CLK => ciclos[7].CLK
+CLK => ciclos[8].CLK
+CLK => ciclos[9].CLK
+CLK => ciclos[10].CLK
+CLK => ciclos[11].CLK
+CLK => ciclos[12].CLK
+CLK => ciclos[13].CLK
+CLK => ciclos[14].CLK
+CLK => ciclos[15].CLK
+CLK => ciclos[16].CLK
+CLK => ciclos[17].CLK
+CLK => ciclos[18].CLK
+CLK => ciclos[19].CLK
+CLK => ciclos[20].CLK
+CLK => ciclos[21].CLK
+CLK => ciclos[22].CLK
+CLK => ciclos[23].CLK
+CLK => ciclos[24].CLK
+CLK => CLK_Prima~reg0.CLK
+CLK_Prima <= CLK_Prima~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Contador0099|bcd_7_seg:elemento_2
+CLK => salida.CLK
+CLK => BCD[1].CLK
+CLK => BCD[2].CLK
+CLK => BCD[3].CLK
+CLK => BCD[4].CLK
+SAL[1] <= BCD[1].DB_MAX_OUTPUT_PORT_TYPE
+SAL[2] <= BCD[2].DB_MAX_OUTPUT_PORT_TYPE
+SAL[3] <= BCD[3].DB_MAX_OUTPUT_PORT_TYPE
+SAL[4] <= BCD[4].DB_MAX_OUTPUT_PORT_TYPE
+SALI <= salida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Contador0099|siete_segmentos:elemento_3
+A[1] => Mux0.IN19
+A[1] => Mux1.IN19
+A[1] => Mux2.IN19
+A[1] => Mux3.IN19
+A[1] => Mux4.IN19
+A[1] => Mux5.IN19
+A[1] => Mux6.IN19
+A[2] => Mux0.IN18
+A[2] => Mux1.IN18
+A[2] => Mux2.IN18
+A[2] => Mux3.IN18
+A[2] => Mux4.IN18
+A[2] => Mux5.IN18
+A[2] => Mux6.IN18
+A[3] => Mux0.IN17
+A[3] => Mux1.IN17
+A[3] => Mux2.IN17
+A[3] => Mux3.IN17
+A[3] => Mux4.IN17
+A[3] => Mux5.IN17
+A[3] => Mux6.IN17
+A[4] => Mux0.IN16
+A[4] => Mux1.IN16
+A[4] => Mux2.IN16
+A[4] => Mux3.IN16
+A[4] => Mux4.IN16
+A[4] => Mux5.IN16
+A[4] => Mux6.IN16
+Z[1] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+Z[2] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+Z[3] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+Z[4] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+Z[5] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+Z[6] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+Z[7] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Contador0099|bcd_7_seg:elemento_4
+CLK => salida.CLK
+CLK => BCD[1].CLK
+CLK => BCD[2].CLK
+CLK => BCD[3].CLK
+CLK => BCD[4].CLK
+SAL[1] <= BCD[1].DB_MAX_OUTPUT_PORT_TYPE
+SAL[2] <= BCD[2].DB_MAX_OUTPUT_PORT_TYPE
+SAL[3] <= BCD[3].DB_MAX_OUTPUT_PORT_TYPE
+SAL[4] <= BCD[4].DB_MAX_OUTPUT_PORT_TYPE
+SALI <= salida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Contador0099|siete_segmentos:elemento_5
+A[1] => Mux0.IN19
+A[1] => Mux1.IN19
+A[1] => Mux2.IN19
+A[1] => Mux3.IN19
+A[1] => Mux4.IN19
+A[1] => Mux5.IN19
+A[1] => Mux6.IN19
+A[2] => Mux0.IN18
+A[2] => Mux1.IN18
+A[2] => Mux2.IN18
+A[2] => Mux3.IN18
+A[2] => Mux4.IN18
+A[2] => Mux5.IN18
+A[2] => Mux6.IN18
+A[3] => Mux0.IN17
+A[3] => Mux1.IN17
+A[3] => Mux2.IN17
+A[3] => Mux3.IN17
+A[3] => Mux4.IN17
+A[3] => Mux5.IN17
+A[3] => Mux6.IN17
+A[4] => Mux0.IN16
+A[4] => Mux1.IN16
+A[4] => Mux2.IN16
+A[4] => Mux3.IN16
+A[4] => Mux4.IN16
+A[4] => Mux5.IN16
+A[4] => Mux6.IN16
+Z[1] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+Z[2] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+Z[3] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+Z[4] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+Z[5] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+Z[6] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+Z[7] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,135 @@
+|Sumador1
+numeroA[0] => halfadder:elemento1.AHA
+numeroA[1] => fulladder:elemento2.AFA
+numeroA[2] => fulladder:elemento3.AFA
+numeroA[3] => fulladder:elemento4.AFA
+numeroA[4] => fulladder:elemento5.AFA
+numeroA[5] => fulladder:elemento6.AFA
+numeroA[6] => fulladder:elemento7.AFA
+numeroA[7] => fulladder:elemento8.AFA
+numeroB[0] => halfadder:elemento1.BHA
+numeroB[1] => fulladder:elemento2.BFA
+numeroB[2] => fulladder:elemento3.BFA
+numeroB[3] => fulladder:elemento4.BFA
+numeroB[4] => fulladder:elemento5.BFA
+numeroB[5] => fulladder:elemento6.BFA
+numeroB[6] => fulladder:elemento7.BFA
+numeroB[7] => fulladder:elemento8.BFA
+salida[0] <= halfadder:elemento1.SHA
+salida[1] <= fulladder:elemento2.SFA
+salida[2] <= fulladder:elemento3.SFA
+salida[3] <= fulladder:elemento4.SFA
+salida[4] <= fulladder:elemento5.SFA
+salida[5] <= fulladder:elemento6.SFA
+salida[6] <= fulladder:elemento7.SFA
+salida[7] <= fulladder:elemento8.SFA
+salida[8] <= fulladder:elemento8.COFA
+
+
+|Sumador1|halfadder:elemento1
+AHA => SHA~0.IN0
+AHA => COHA~0.IN0
+BHA => SHA~0.IN1
+BHA => COHA~0.IN1
+SHA <= SHA~0.DB_MAX_OUTPUT_PORT_TYPE
+COHA <= COHA~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sumador1|fulladder:elemento2
+AFA => SFA~0.IN0
+AFA => COFA~0.IN0
+AFA => COFA~1.IN0
+BFA => SFA~0.IN1
+BFA => COFA~0.IN1
+BFA => COFA~3.IN0
+CIFA => SFA~1.IN1
+CIFA => COFA~1.IN1
+CIFA => COFA~3.IN1
+SFA <= SFA~1.DB_MAX_OUTPUT_PORT_TYPE
+COFA <= COFA~4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sumador1|fulladder:elemento3
+AFA => SFA~0.IN0
+AFA => COFA~0.IN0
+AFA => COFA~1.IN0
+BFA => SFA~0.IN1
+BFA => COFA~0.IN1
+BFA => COFA~3.IN0
+CIFA => SFA~1.IN1
+CIFA => COFA~1.IN1
+CIFA => COFA~3.IN1
+SFA <= SFA~1.DB_MAX_OUTPUT_PORT_TYPE
+COFA <= COFA~4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sumador1|fulladder:elemento4
+AFA => SFA~0.IN0
+AFA => COFA~0.IN0
+AFA => COFA~1.IN0
+BFA => SFA~0.IN1
+BFA => COFA~0.IN1
+BFA => COFA~3.IN0
+CIFA => SFA~1.IN1
+CIFA => COFA~1.IN1
+CIFA => COFA~3.IN1
+SFA <= SFA~1.DB_MAX_OUTPUT_PORT_TYPE
+COFA <= COFA~4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sumador1|fulladder:elemento5
+AFA => SFA~0.IN0
+AFA => COFA~0.IN0
+AFA => COFA~1.IN0
+BFA => SFA~0.IN1
+BFA => COFA~0.IN1
+BFA => COFA~3.IN0
+CIFA => SFA~1.IN1
+CIFA => COFA~1.IN1
+CIFA => COFA~3.IN1
+SFA <= SFA~1.DB_MAX_OUTPUT_PORT_TYPE
+COFA <= COFA~4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sumador1|fulladder:elemento6
+AFA => SFA~0.IN0
+AFA => COFA~0.IN0
+AFA => COFA~1.IN0
+BFA => SFA~0.IN1
+BFA => COFA~0.IN1
+BFA => COFA~3.IN0
+CIFA => SFA~1.IN1
+CIFA => COFA~1.IN1
+CIFA => COFA~3.IN1
+SFA <= SFA~1.DB_MAX_OUTPUT_PORT_TYPE
+COFA <= COFA~4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sumador1|fulladder:elemento7
+AFA => SFA~0.IN0
+AFA => COFA~0.IN0
+AFA => COFA~1.IN0
+BFA => SFA~0.IN1
+BFA => COFA~0.IN1
+BFA => COFA~3.IN0
+CIFA => SFA~1.IN1
+CIFA => COFA~1.IN1
+CIFA => COFA~3.IN1
+SFA <= SFA~1.DB_MAX_OUTPUT_PORT_TYPE
+COFA <= COFA~4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sumador1|fulladder:elemento8
+AFA => SFA~0.IN0
+AFA => COFA~0.IN0
+AFA => COFA~1.IN0
+BFA => SFA~0.IN1
+BFA => COFA~0.IN1
+BFA => COFA~3.IN0
+CIFA => SFA~1.IN1
+CIFA => COFA~1.IN1
+CIFA => COFA~3.IN1
+SFA <= SFA~1.DB_MAX_OUTPUT_PORT_TYPE
+COFA <= COFA~4.DB_MAX_OUTPUT_PORT_TYPE
+
+
